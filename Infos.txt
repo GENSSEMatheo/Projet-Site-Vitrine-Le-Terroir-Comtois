@@ -1,0 +1,13 @@
+SITE VITRINE
+-> Vente de produits
+
+Pages :
+	- Accueil				-> Nom entreprise, Logo, Slogan
+	- Présentation de l'activité
+	- Historique
+	- Catalogue de produits
+	- Organigramme				-> Image, Fiche de Poste (téléchargeable)
+
+----------------------------------------
+VENTE DE PRODUITS LOCAUX
+Nom entreprise : Régal Comtois

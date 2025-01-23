@@ -1,0 +1,208 @@
+/*------------------------------------*/
+/*CONTENU IDENTIQUE A TOUTES LES PAGES*/
+/*------------------------------------*/
+.slide-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.slide-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100vh;
+    width: 20vw;
+    z-index: 2;
+}
+#ensembleNav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    width: 18vw;
+    height: 100vh;
+    border-right: black solid 1px;
+    padding: 1vw;
+}
+#ensembleNav #logoEntrepriseRond{
+    display: flex;
+    align-self: center;
+}
+#menuGlob{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 2.5vh;
+    border-top: solid black;
+    padding-top: 2vh;
+    text-transform: uppercase;
+}
+#menuGlob #mainMenuLi{
+    padding: 0;
+}
+#menuGlob a{
+    text-decoration: none;
+    color: black;
+    transition: color 0.5s ease;
+}
+#menuGlob #mainMenuLi::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: #aa7d00;
+    transition: width 0.2s ease;
+}
+
+#menuGlob #mainMenuLi:hover::after {
+    width: 18vw;
+    left: 1vw;
+    background: #aa7d00;
+}
+#menuGlob #mainMenuLi:hover a{
+    color:#aa7d00 ;
+}
+nav #logoEntrepriseRond{
+    width: 15vw;
+    border: solid black;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+#listeSousMenu{
+    display: flex;
+    text-align: left;
+    list-style:none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #aa7d00;
+    width: 30vw;
+    height: 100vh;
+    top: -100vh;
+    left: 20vw;
+    transition: top ease 0.3s;
+    transition-delay: 0.3s;
+}
+.interfaceSousMenuGlob:hover #listeSousMenu{
+    display: flex;
+}
+.interfaceSousMenuGlob:hover #listeSousMenu{
+    top: 0;
+}
+#TitreSousMenu{
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    padding: 1vw;
+    text-align: center;
+}
+#sousTitreSousMenu{
+    text-transform: uppercase;
+    background-color: white;
+    padding: 1vw;
+}
+
+
+
+
+#entetePage{
+    background-color: #ffffff;
+    width: 100%;
+    height: 60vh;
+    justify-self: left;
+    margin: 0;
+    display: flex;
+    background-color: #0000006e;
+    justify-content: space-evenly;
+    justify-self: left;
+}
+#texteTitresEntete{
+    text-transform: uppercase;
+    color: white;
+    padding: 2vw;
+    align-self: last baseline;
+    width: 100%;
+}
+#texteTitresEntete h1{
+    font-size: 3vw;
+    align-items: baseline;
+}
+#texteTitresEntete h1:hover,#texteTitresEntete p:hover{
+    color: #aa7d00;
+}
+#texteTitresEntete p{
+    font-size: 1vw;
+    align-items: baseline;
+}
+
+footer{
+    text-align: center;
+    padding-top: 1vw;
+    border-top: solid 0.5px;
+    padding-bottom: 1vw;
+    background-color: #aa7d00a6;
+    font-style: italic;
+    margin-top: 1vw;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-direction: row;
+    padding-left: 0;
+}
+
+footer li{
+    margin-inline: 1vw;
+}
+
+
+/*---------------*/
+/*CONTENU ACCUEIL*/
+/*---------------*/
+#bienvenueSection{
+    background-color: rgba(255, 255, 255, 0.712);
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+#bienvenueSection img{
+    width: 20vw;
+    margin: 2vw;
+    transition: all ease 1s;
+}
+#texteBienvenueSectionAccueil{
+    border-left: solid black 1px;
+    margin: 2vw 0;
+    padding-left: 1vw;
+}
+#texteBienvenueSectionAccueil h2{
+    font-size: 1vw;
+}
+#bienvenueSection img:hover{
+    transform: scale(0.9);
+}
+#horaireSection{
+    background-color: rgba(255, 255, 255, 0.712);
+    text-align: center;
+    padding: 1vw;
+    margin-top: 1vw;
+}
+#horaireSection h2{
+    text-transform: uppercase;
+}
