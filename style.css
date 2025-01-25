@@ -96,6 +96,13 @@ nav #logoEntrepriseRond{
     left: 20vw;
     transition: top ease 0.3s;
     transition-delay: 0.3s;
+    cursor: pointer;
+}
+#listeSousMenu li{
+    cursor: pointer;
+}
+#listeSousMenu li:hover{
+    color: white;
 }
 .interfaceSousMenuGlob:hover #listeSousMenu{
     display: flex;
@@ -148,7 +155,28 @@ nav #logoEntrepriseRond{
     font-size: 1vw;
     align-items: baseline;
 }
-
+#sectionGlobFondBlanc{
+    background-color: rgba(255, 255, 255, 0.712);
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+#sectionGlobFondBlanc img{
+    width: 20vw;
+    margin: 2vw;
+    transition: all ease 1s;
+}
+#sectionFondBlancTexte{
+    border-left: solid black 1px;
+    margin: 2vw 0;
+    padding-left: 1vw;
+}
+#sectionFondBlancTexte h2{
+    font-size: 1vw;
+}
+#sectionGlobFondBlanc img:hover{
+    transform: scale(0.9);
+}
 footer{
     text-align: center;
     padding-top: 1vw;
@@ -172,31 +200,10 @@ footer li{
 }
 
 
+
 /*---------------*/
 /*CONTENU ACCUEIL*/
 /*---------------*/
-#bienvenueSection{
-    background-color: rgba(255, 255, 255, 0.712);
-    height: auto;
-    display: flex;
-    flex-direction: row;
-}
-#bienvenueSection img{
-    width: 20vw;
-    margin: 2vw;
-    transition: all ease 1s;
-}
-#texteBienvenueSectionAccueil{
-    border-left: solid black 1px;
-    margin: 2vw 0;
-    padding-left: 1vw;
-}
-#texteBienvenueSectionAccueil h2{
-    font-size: 1vw;
-}
-#bienvenueSection img:hover{
-    transform: scale(0.9);
-}
 #horaireSection{
     background-color: rgba(255, 255, 255, 0.712);
     text-align: center;
@@ -205,4 +212,176 @@ footer li{
 }
 #horaireSection h2{
     text-transform: uppercase;
+}
+
+/*----------------*/
+/*CONTENU HISTOIRE*/
+/*----------------*/
+#sectionGlobFondHistoire{
+    background-color: #0000006e;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+#titreEtAnnee{
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+#titreEtAnnee{
+    display: flex;
+    align-items: center;
+}
+#sectionFondHistoireTexte p{
+    margin-left: 8vw;
+}
+#titreEtAnnee h2{
+    margin: 0;
+    text-transform: uppercase;
+}
+#titreEtAnnee #titre{
+    padding: 1vh 0;
+}
+#titreEtAnnee #annee{
+    margin-right: 1vw;
+    background-color: #aa7d00;
+    padding: 1vh 2vw;
+    border-radius: 0 50vw 50vw 0;
+    width: 2.5vw;
+}
+/*--------------*/
+/*CONTENU EQUIPE*/
+/*--------------*/
+#sectionGlobFondEquipe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #0000006e;
+    color: white;
+    text-align: center;
+    
+}
+#sectionGlobFondEquipe img{
+    width: auto;
+    max-width: 19vw;
+    border: solid #000000;
+    transition: transform ease 0.5s;
+}
+#sectionGlobFondEquipe img:hover{
+    transform: scale(0.9);
+}
+#personne{
+    background-color: #aa7d00;
+    margin: 1vw;
+    width: auto;
+    max-width: 20vw;
+    padding: 1vw;
+    padding-bottom: 14vh;
+    border-radius: 0 0 50vw 50vw;
+}
+#buttonFicheDePoste{
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    background-color: #aa7d00;
+    border-radius: 1vw;
+    padding: 1vh;
+    border: solid;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1vw;
+    transition: font-size ease 0.5s;
+}
+#buttonFicheDePoste:hover{
+    font-size:0.9vw ;
+}
+.ficheDePosteGlob{
+    position:fixed;
+    font-size: 1vw;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    padding: 10vh 10vw;
+    transform: scale(0);
+    transition: transform ease 1s;
+}
+#fichePoste{
+    background-color: white;
+    width: 80vw;
+    height: 80vh;
+    padding: 1vh 1vw;
+    text-align: center;
+    overflow:scroll;
+    border: solid black;
+}
+#croixFermetureFichePoste{
+    display: block;
+    cursor: pointer;
+    position: fixed;
+}
+#fichePoste ul{
+    list-style: none;
+}
+
+/*--------------------*/
+/*CONTENU FOURNISSEURS*/
+/*--------------------*/
+#fournisseursGlob{
+    background-color: #0000006e;
+    text-align: center;
+}
+#fournisseursGlob h1{
+    margin: 0;
+    text-transform: uppercase;
+    padding: 2vh 0;
+    font-size: xx-large;
+    background-color:black ;
+    color: white;
+}
+#fournisseursListe{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+
+}
+#fournisseursListe li{
+    background-color:#000000 ;
+    margin: 1vw;
+    padding: 1vw;
+    border-radius:1vw ;
+    color: white;
+    flex-wrap: wrap;
+    width: 19vw;
+}
+#fournisseursListe img{
+    width: 18vw;
+    border-radius: 1vw;
+    aspect-ratio: 4/3;
+    border: solid;
+    transition: transform ease 0.5s;
+}
+#fournisseursListe img:hover{
+    transform: scale(0.9);
+}
+#buttonDecouvrirFournisseur{
+    padding: 1vw;
+    font-size: 0.8vw;
+    border-radius: 50vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #aa7d00;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+#buttonDecouvrirFournisseur:hover{
+    transform: scale(0.9);
+    background-color: #aa7d00a1;
 }

@@ -63,22 +63,22 @@
                         <li>Les Salaisons Comtoises</li>
                     </ul>
                 </li><br>
-                <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="personnel.html">Notre personnel</a>
+                <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="personnel.html">Notre équipe</a>
                     <ul id="listeSousMenu">
-                        <h2 id="TitreSousMenu">Notre personnel</h2>
-                        <li>Pierre Marmier - Gérant</li>
+                        <h2 id="TitreSousMenu">Notre équipe</h2>
+                        <li onclick="ouvertureFicheDePoste('#fichePostePierreMarmierGlob')">Pierre Marmier - Gérant</li>
                         <h3 id="sousTitreSousMenu">Nos responsables</h3>
-                        <li>Sophie Girardot - Responsable des stocks</li>
-                        <li>Antoine Perrenot - Responsable des relations clients</li>
-                        <h3 id="sousTitreSousMenu">Nos vendeur.euse</h3>
-                        <li>Lucie Jeannerot - Vendeuse</li>
-                        <li>Thomas Manzoni - Vendeur</li>
-                        <li>François Gigot - Vendeur</li>
-                        <li>Hélène Vouillot - Vendeuse</li>
-                        <li>Nicolas Cart - Vendeur</li>
-                        <h3 id="sousTitreSousMenu">Nos Caissier.e</h3>
-                        <li>Elodie Millot - Caissière</li>
-                        <li>Marine Pelot - Caissière</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteSophieGirardotGlob')">Sophie Girardot - Responsable des stocks</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteAntoinePerrenotGlob')">Antoine Perrenot - Responsable des relations clients</li>
+                        <h3 id="sousTitreSousMenu">Nos vendeurs(euses)</h3>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteLucieJeannerotGlob')">Lucie Jeannerot - Vendeuse</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteThomasManzoniGlob')">Thomas Manzoni - Vendeur</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteFrancoisGigotrGlob')">François Gigot - Vendeur</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteHeleneVouillotGlob')">Hélène Vouillot - Vendeuse</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteNicolasCartGlob')">Nicolas Cart - Vendeur</li>
+                        <h3 id="sousTitreSousMenu">Nos Caissiers(es)</h3>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteElodieMillotGlob')">Elodie Millot - Caissière</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot - Caissière</li>
                     </ul>
                 </li><br>
                 <li id="mainMenuLi"><a href="contact.html">Contact</a></li>
@@ -93,42 +93,93 @@
                 <h1 class="slide-in">Le Terroir Comtois</h1>
             </div>
         </header>
-        <section id="bienvenueSection">
-            <img src="Images/carteFC.png" alt="Carte Franche Comté">
-            <div id="texteBienvenueSectionAccueil">
-                <h2 class="slide-in">Le Terroir Comtois : Une vitrine des saveurs locales de Franche-Comté</h2>
-                <p class="slide-in">Fondé en 1985, le Terroir Comtois est une boutique emblématique dédiée à la mise en
-                    valeur des produits locaux de Franche-Comté. Située dans le charmant village de Larnod, à seulement
-                    quelques kilomètres de Besançon, la boutique offre un véritable écrin pour découvrir le meilleur des
-                    saveurs régionales.</p>
-                <p class="slide-in">Le Terroir Comtois travaille main dans la main avec des producteurs locaux pour
-                    proposer une gamme variée de produits d'exception. Fromagers, vignerons, brasseurs et artisans
-                    régionaux sont soigneusement sélectionnés afin de garantir des produits authentiques et de qualité.
-                    Grâce à ces partenariats, la boutique regroupe les meilleurs trésors culinaires de la Franche-Comté,
-                    permettant ainsi de découvrir des saveurs uniques et typiques du terroir.</p>
-                <p class="slide-in">Dans un espace chaleureux et convivial de 120 m², le Terroir Comtois offre une
-                    expérience de shopping agréable. Chaque produit raconte une histoire : celle d’un savoir-faire local
-                    transmis de génération en génération.</p>
-                <p class="slide-in">Vous y trouverez une large sélection de fromages AOP comme le Comté, le Morbier ou
-                    le Mont d’Or, provenant des meilleures fruitières régionales. À cela s’ajoutent des spécialités
-                    locales comme la cancoillotte, des petits fromages fermiers, ainsi que des produits laitiers frais.
+        <section id="sectionGlobFondBlanc">
+            <img src="Images/vinsEnsemble.png" alt="Vins">
+            <div id="sectionFondBlancTexte">
+                <h2 class="slide-in">UNE LARGE COLLECTION DE VINS DE FRANCHE-COMTÉ</h2>
+                <p class="slide-in">Découvrez l’excellence des vins de Franche-Comté, une région viticole authentique qui offre des crus d’exception. Nos fournisseurs sélectionnés, reconnus pour leur savoir-faire et leur respect des traditions, proposent une gamme variée de vins issus des célèbres terroirs du Jura.</p>
+                <p class="slide-in">Nos partenaires incluent les domaines les plus emblématiques de la région :  
+                    <ul class="slide-in">
+                        <li><strong>Domaine TISSOT</strong></li>
+                        <li><strong>Domaine HENRI MAIRE</strong></li>
+                        <li><strong>Domaine BADOZ</strong></li>
+                        <li><strong>Domaine BERTHET-BONDET</strong></li>
+                        <li><strong>Domaine CABELIER</strong></li>
+                    </ul>  
+                    Chaque domaine exprime, à travers ses vins, la richesse des sols jurassiens et le caractère unique des cépages locaux comme le Savagnin, le Chardonnay, et le Poulsard.
                 </p>
-                <p class="slide-in">Côté charcuterie, la célèbre saucisse de Morteau, le jambon fumé et d'autres délices
-                    artisanaux raviront les amateurs de viande.</p>
-                <p class="slide-in">Pour accompagner ces mets, la boutique propose une sélection de vins régionaux issus
-                    des vignobles jurassiens, des bières artisanales, et même des spiritueux locaux.</p>
+                <p class="slide-in">Nous vous proposons une diversité de vins pour satisfaire tous les palais :  
+                    <ul class="slide-in">
+                        <li><strong>Vins rouges</strong>, élégants et fruités, parfaits pour accompagner vos plats régionaux.</li>
+                        <li><strong>Vins blancs</strong>, d’une grande finesse, idéaux pour les poissons, fruits de mer ou fromages.</li>
+                        <li><strong>Vin Jaune</strong>, emblème du Jura, reconnu pour sa puissance aromatique et sa longue garde.</li>
+                        <li><strong>Vin de Paille</strong>, sucré et intense, issu d’une méthode unique de raisin séché.</li>
+                        <li><strong>Macvin du Jura</strong>, un vin de liqueur riche et généreux, parfait pour l’apéritif.</li>
+                        <li><strong>Rosés légers et rafraîchissants</strong>, à partager entre amis.</li>
+                        <li><strong>Crémants du Jura</strong>, pétillants et raffinés, pour vos moments festifs.</li>
+                    </ul>
+                </p>
+                <p class="slide-in">Chaque bouteille est une invitation à explorer le patrimoine viticole comtois. Nos vins reflètent l’authenticité, l’histoire et la passion de vignerons dévoués, dont le travail respecte les traditions ancestrales tout en s’ouvrant à l’innovation.</p>
             </div>
+            
         </section>
-        <section id="horaireSection">
-            <div id="horaireTexte">
-                <h2 class="slide-in">Horaires d'ouverture</h2>
-                <h3 class="slide-in">Lundi, mardi, mercredi, jeudi et samedi</h3>
-                <p class="slide-in">9h00-12h30 et 14h00-18h30</p>
-                <h3 class="slide-in">Vendredi</h3>
-                <p class="slide-in">9h00-12h30 et 14h00-19h00</p>
-                <h3 class="slide-in">Fermé le dimanche et les jours fériés.</h3>
+        <br>
+        <section id="sectionGlobFondBlanc">
+            <img src="Images/fromagesEnsemble.png" alt="Fromages">
+            <div id="sectionFondBlancTexte">
+                <h2 class="slide-in">UNE GAMME DE FROMAGES QUI REFLETE LE SAVOIR FAIRE DE NOTRE REGION</h2>
+                <p class="slide-in">Plongez dans l’univers savoureux des fromages emblématiques de la Franche-Comté, une région riche en traditions fromagères. Chaque fromage reflète le terroir unique et le savoir-faire ancestral des producteurs locaux, qui perpétuent des techniques d'affinage authentiques.</p>
+                <p class="slide-in">Voici notre sélection de fromages d'exception :</p>
+                <ul class="slide-in">
+                    <li>
+                        <strong>Comté</strong> – Véritable trésor de la région, ce fromage à pâte pressée cuite est apprécié pour ses arômes riches et variés. Qu’il soit jeune ou affiné jusqu’à 36 mois, le Comté révèle des notes de noisette, de beurre et parfois même de fruits secs. Parfait pour accompagner vos plateaux, raclettes ou gratins.
+                    </li>
+                    <li>
+                        <strong>Morbier</strong> – Ce fromage à pâte pressée non cuite est reconnaissable à sa célèbre ligne de cendre qui traverse son cœur. Doux et fondant, le Morbier offre des saveurs équilibrées entre la crème et des notes légèrement boisées. Idéal pour être dégusté tel quel ou dans une tartiflette revisitée.
+                    </li>
+                    <li>
+                        <strong>Mont d’Or</strong> – Aussi appelé "Vacherin Mont d’Or", ce fromage saisonnier est entouré d’une sangle d’épicéa qui lui confère un parfum boisé unique. Crémeux et fondant à souhait, il se déguste souvent chaud, directement dans sa boîte, accompagné de pommes de terre et de charcuteries.
+                    </li>
+                    <li>
+                        <strong>Cancoillotte</strong> – Spécialité typiquement comtoise, ce fromage fondu est léger et onctueux. Nature, à l’ail, ou aromatisée (échalote, Savagnin…), la cancoillotte est parfaite pour accompagner des pommes de terre, des légumes vapeur ou simplement en tartine.
+                    </li>
+                </ul>
+                <p class="slide-in">Chaque fromage de notre sélection est le fruit d’une tradition locale et du travail passionné des artisans fromagers de Franche-Comté. Nos produits sont fabriqués à partir de lait de haute qualité, provenant de vaches élevées dans le respect des prairies et montagnes de la région.</p>
+                <p class="slide-in">Que vous soyez amateur de saveurs douces ou intenses, nos fromages sauront combler toutes vos envies. Laissez-vous tenter par un voyage gustatif au cœur des montagnes comtoises !</p>
             </div>
+            
         </section>
+        <br>
+        <section id="sectionGlobFondBlanc">
+            <img src="Images/saucissesEnsemble.png" alt="Charcuterie">
+            <div id="sectionFondBlancTexte">
+                <h2 class="slide-in">DE LA CHARCUTERIE VENU TOUT DROIT DU HAUT-DOUBS</h2>
+                <p class="slide-in">Découvrez l’authenticité et la richesse des charcuteries de Franche-Comté, élaborées selon des savoir-faire traditionnels et un profond respect des terroirs locaux. Chaque produit reflète le caractère unique de la région et le talent de ses artisans charcutiers.</p>
+                <p class="slide-in">Nos charcuteries sont soigneusement sélectionnées auprès de fournisseurs renommés, dont :</p>
+                <ul class="slide-in">
+                    <li><strong>MORTEAU SAUCISSE</strong> – Un gage d’excellence pour des produits emblématiques de la région.</li>
+                    <li><strong>Salaisons Renaudot</strong> – Reconnu pour son savoir-faire artisanal et ses saveurs authentiques.</li>
+                    <li><strong>Les Salaisons Comtoises</strong> – Spécialistes de la tradition comtoise, avec une gamme variée de charcuteries fumées.</li>
+                </ul>
+                <p class="slide-in">Voici quelques incontournables de notre sélection :</p>
+                <ul class="slide-in">
+                    <li>
+                        <strong>Saucisse de Morteau</strong> – Véritable emblème de la Franche-Comté, cette saucisse fumée au bois de résineux dans des tuyés traditionnels est parfaite pour sublimer vos plats. Que ce soit dans une potée, avec des lentilles ou simplement pochée, son goût unique séduit tous les amateurs de charcuterie.
+                    </li>
+                    <li>
+                        <strong>Saucisse de Montbéliard</strong> – Moins imposante mais tout aussi savoureuse que sa cousine la Morteau, cette saucisse fumée offre des arômes subtils de fumée et d’épices. Un incontournable pour vos plats mijotés ou vos grillades.
+                    </li>
+                    <li>
+                        <strong>Jambon fumé du Haut-Doubs</strong> – Ce jambon sec, fumé lentement au bois de résineux, est une spécialité de la région. Sa texture fondante et ses saveurs délicatement boisées en font une pièce maîtresse pour vos plateaux de charcuterie ou pour accompagner un verre de vin blanc jurassien.
+                    </li>
+                </ul>
+                <p class="slide-in">Nos produits sont élaborés dans le respect des traditions artisanales et sont issus de viandes de qualité supérieure, provenant d’animaux élevés dans des conditions respectueuses. La fumaison, étape clé des charcuteries comtoises, est réalisée dans des tuyés typiques de la région, garantissant des saveurs authentiques et inimitables.</p>
+                <p class="slide-in">Que vous cherchiez à préparer un repas convivial ou à savourer un apéritif gourmand, notre sélection de charcuterie de Franche-Comté est le choix idéal pour combler toutes vos envies !</p>
+            </div>
+            
+            
+        </section>
+        
         <footer>
             A propos <br>
             --- <br>

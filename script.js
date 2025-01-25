@@ -25,4 +25,34 @@ function manageScrollAnimations() {
     checkElementsVisibility();
 }
 
-document.addEventListener('DOMContentLoaded', manageScrollAnimations);
+function ouvertureFicheDePoste(idFichePoste) {
+    if (!window.location.href.includes('personnel.html')) {
+        window.location.href = `personnel.html${idFichePoste}`;
+    }
+    const ficheElement = document.querySelector(idFichePoste);
+    ficheElement.style.transform = 'scale(1)';
+    document.body.style.overflow = 'hidden';
+}
+
+function fermetureFicheDePoste(idFichePoste) {
+    const ficheElement = document.querySelector(idFichePoste);
+    if (ficheElement) {
+        ficheElement.style.transform = 'scale(0)';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    manageScrollAnimations();
+    if (window.location.href.includes('personnel.html')) {
+        const urlHash = window.location.hash; 
+        if (urlHash) {
+            const ficheElement = document.querySelector(urlHash);
+            if (ficheElement) {
+                ficheElement.style.transform = 'scale(1)';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+    }
+});
+
