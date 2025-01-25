@@ -42,6 +42,24 @@ function fermetureFicheDePoste(idFichePoste) {
     }
 }
 
+
+function ouvertureInfosFournisseur(idFournisseurBox) {
+    if (!window.location.href.includes('fournisseurs.html')) {
+        window.location.href = `fournisseurs.html${idFournisseurBox}`;
+    }
+    const ficheElement = document.querySelector(idFournisseurBox);
+    ficheElement.style.transform = 'scale(1)';
+    document.body.style.overflow = 'hidden';
+}
+
+function fermetureInfosFournisseur(idFournisseurBox) {
+    const ficheElement = document.querySelector(idFournisseurBox);
+    if (ficheElement) {
+        ficheElement.style.transform = 'scale(0)';
+        document.body.style.overflow = 'auto';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     manageScrollAnimations();
     if (window.location.href.includes('personnel.html')) {

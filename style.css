@@ -385,3 +385,31 @@ footer li{
     transform: scale(0.9);
     background-color: #aa7d00a1;
 }
+
+
+
+.infosFournisseurGlob{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 2;
+    transition: transform ease 1s;
+    transform: scale(0);
+}
+#infosFournisseur{
+    margin: 10vh 10vw;
+    background-color: white;
+    width: 80vw;
+    height: 80vh;
+    padding: 1vw;
+    border: solid;
+    overflow: scroll;
+    text-align: center;
+}
+#infosFournisseur li{
+    list-style: none;
+}
+#infosFournisseur img{
+    width: 20vw;
+    border: solid;
+}
