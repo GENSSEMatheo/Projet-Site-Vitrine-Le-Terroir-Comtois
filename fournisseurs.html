@@ -204,21 +204,27 @@
                     <h2>MORTEAU SAUCISSE</h2>
                     <p>Situé à</p>
                     <h3>MORTEAU (25)</h3>
-                    <button id="buttonDecouvrirFournisseur">Découvrir le boucher</button>
+                    <button id="buttonDecouvrirFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobMorteauSaucisse')">Découvrir le
+                        boucher</button>
                 </li>
                 <li>
                     <img src="Images/salaisonsRenaudot.jpg" alt="SALAISONS RENAUDOT">
                     <h2>SALAISONS RENAUDOT</h2>
                     <p>Situé à</p>
                     <h3>PONTARLIER (25)</h3>
-                    <button id="buttonDecouvrirFournisseur">Découvrir le boucher</button>
+                    <button id="buttonDecouvrirFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsRenaudot')">Découvrir le
+                        boucher</button>
                 </li>
                 <li>
                     <img src="Images/salaisonsComtoises.jpg" alt="LES SALAISONS COMTOISES">
                     <h2>LES SALAISONS COMTOISES</h2>
                     <p>Situé à</p>
                     <h3>BELLEHERDE (25)</h3>
-                    <button id="buttonDecouvrirFournisseur">Découvrir le boucher</button>
+                    <button id="buttonDecouvrirFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsComtoises')">Découvrir le
+                        boucher</button>
                 </li>
             </ul>
 
@@ -310,7 +316,6 @@
                     </p>
                 </div>
             </div>
-
             <div id="infosFournisseurGlobHenriMaire" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
                     <div id="croixFermetureFichePoste"
@@ -490,7 +495,6 @@
                     </p>
                 </div>
             </div>
-
             <div id="infosFournisseurGlobBerthet-Bondet" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
                     <div id="croixFermetureFichePoste"
@@ -577,7 +581,6 @@
                     </p>
                 </div>
             </div>
-
             <div id="infosFournisseurGlobCabelier" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
                     <div id="croixFermetureFichePoste"
@@ -662,9 +665,6 @@
                     </p>
                 </div>
             </div>
-
-
-
 
 
             <div id="infosFournisseurGlobPlateauArboisien" class="infosFournisseurGlob">
@@ -940,85 +940,308 @@
                         onclick="fermetureInfosFournisseur('#infosFournisseurGlobJuraFlore')">✕
                     </div>
                     <img src="Images/cremerieJuraFlore.png" alt="Crémerie Juraflore">
-                    <h2>À la découverte de la Fromagerie Sancey-Richard</h2>
+                    <h2>À la découverte de la Crèmerie Jura Flore</h2>
                     <p>
-                        La <strong>Fromagerie Sancey-Richard</strong>, fondée en 1939, est un acteur clé de la
-                        production de fromages traditionnels en Franche-Comté. Située au cœur du Haut-Doubs, cette
-                        fromagerie familiale perpétue un savoir-faire artisanal tout en innovant pour proposer des
-                        fromages qui subliment les saveurs du terroir franc-comtois.
+                        La <strong>Crèmerie Jura Flore</strong>, implantée au cœur de la Franche-Comté, est une
+                        référence incontournable pour les amateurs de fromages de qualité. Depuis ses débuts, elle
+                        s'attache à promouvoir les saveurs uniques du terroir jurassien, tout en respectant les
+                        savoir-faire ancestraux qui font la richesse gastronomique de la région.
                     </p>
 
-                    <h3>Une histoire riche et authentique</h3>
+                    <h3>Un hommage au terroir franc-comtois</h3>
                     <p>
-                        La Fromagerie Sancey-Richard puise ses racines dans une région où l’élevage et la production
-                        laitière sont une tradition séculaire. Forte de plusieurs décennies d’expérience, elle s’est
-                        imposée comme une référence dans la fabrication de fromages typiques de la région, tout en
-                        restant fidèle à ses valeurs d’authenticité, de qualité et de respect des traditions.
+                        La Crèmerie Jura Flore s'engage à valoriser les productions locales, en collaborant étroitement
+                        avec des producteurs laitiers et des affineurs passionnés. Grâce à son expertise et son amour du
+                        métier, elle sélectionne les meilleurs fromages, tout en veillant à maintenir un lien fort avec
+                        les traditions.
                     </p>
 
-                    <h3>Les spécialités fromagères de la Fromagerie Sancey-Richard</h3>
+                    <h3>Les fromages emblématiques de Jura Flore</h3>
                     <p>
-                        La Fromagerie Sancey-Richard est renommée pour une gamme variée de fromages emblématiques de la
-                        région, fabriqués avec passion et minutie :
+                        La Crèmerie Jura Flore propose une gamme variée de fromages typiques de la région, conçus avec
+                        passion et savoir-faire :
                     </p>
                     <ul>
                         <li>
-                            <strong>Comté AOP</strong> – Ce fromage d’exception, affiné entre 4 et 36 mois, se distingue
-                            par ses arômes complexes et sa texture fondante.
+                            <strong>Comté AOP</strong> – Affiné pendant plusieurs mois pour révéler des arômes riches et
+                            complexes, ce fromage est l’un des fleurons de la gastronomie franc-comtoise.
                         </li>
                         <li>
-                            <strong>Morbier AOP</strong> – Un fromage doux et onctueux, célèbre pour sa ligne de cendre
-                            et son goût subtil, légèrement fruité.
+                            <strong>Morbier AOP</strong> – Ce fromage à la célèbre ligne de cendre offre une texture
+                            onctueuse et un goût délicatement fruité.
                         </li>
                         <li>
-                            <strong>Mont d’Or AOP</strong> – Produit emblématique de la saison hivernale, ce fromage
-                            crémeux, entouré d’une sangle d’épicéa, est parfait à déguster chaud ou à la cuillère.
+                            <strong>Mont d’Or AOP</strong> – Ce fromage saisonnier, crémeux et enveloppé dans une sangle
+                            d’épicéa, est parfait pour des moments chaleureux et gourmands.
                         </li>
                         <li>
-                            <strong>Cancoillotte</strong> – Une spécialité légère et fondante, préparée dans le respect
-                            de la tradition franc-comtoise, déclinée en plusieurs saveurs (nature, ail, vin blanc).
+                            <strong>Cancoillotte</strong> – Une spécialité locale légère et savoureuse, idéale pour
+                            accompagner une cuisine conviviale.
                         </li>
                         <li>
-                            <strong>Raclette</strong> – Idéale pour des moments conviviaux, cette raclette artisanale
-                            offre des saveurs généreuses et une texture parfaite pour fondre.
+                            <strong>Bleu de Gex AOP</strong> – Un fromage bleu typique de la région, à la saveur douce
+                            et subtile, élaboré avec soin.
                         </li>
                     </ul>
 
-                    <h3>Un savoir-faire artisanal</h3>
+                    <h3>Un engagement pour la qualité et l’environnement</h3>
                     <p>
-                        Les fromages de la Fromagerie Sancey-Richard sont élaborés avec du lait de qualité supérieure,
-                        fourni par des producteurs locaux qui partagent les mêmes valeurs d’excellence. Transformé
-                        chaque jour selon des méthodes traditionnelles, le lait est sublimé pour offrir des fromages
-                        d’exception, aux saveurs authentiques et variées.
+                        À la Crèmerie Jura Flore, chaque fromage est le fruit d’un travail minutieux, basé sur des
+                        techniques artisanales et respectueuses de l’environnement. Les producteurs partenaires
+                        utilisent le lait de vaches Montbéliardes et Simmental, nourries dans des pâturages locaux, ce
+                        qui garantit un lait de haute qualité.
+                    </p>
+                    <p>
+                        Soucieuse de préserver le patrimoine naturel et agricole, la crèmerie privilégie les circuits
+                        courts et soutient activement les agriculteurs locaux. Chaque produit vendu est une célébration
+                        des valeurs durables et de la richesse du terroir.
                     </p>
 
-                    <h3>Un engagement pour le local et l’environnement</h3>
+                    <h3>Une expérience unique pour les gourmets</h3>
                     <p>
-                        La Fromagerie Sancey-Richard s’inscrit dans une démarche durable, privilégiant les circuits
-                        courts et soutenant l’agriculture locale. Les vaches, majoritairement de race Montbéliarde, sont
-                        élevées dans le respect de la nature et nourries avec des pâturages locaux, garantissant un lait
-                        d’une qualité incomparable.
+                        La Crèmerie Jura Flore offre bien plus qu'une simple dégustation : elle invite ses visiteurs à
+                        explorer le savoir-faire local à travers des visites et des échanges avec les producteurs. Une
+                        véritable immersion dans l’univers du fromage et de la culture franc-comtoise.
                     </p>
 
-                    <h3>Une expérience gourmande et immersive</h3>
+                    <h3>Pourquoi choisir la Crèmerie Jura Flore ?</h3>
                     <p>
-                        La Fromagerie Sancey-Richard invite les amateurs de fromages à découvrir son univers à travers
-                        des visites et des dégustations. C’est une véritable immersion dans l’histoire et le
-                        savoir-faire de la région, offrant une opportunité unique de comprendre ce qui rend les fromages
-                        franc-comtois si spéciaux.
+                        En choisissant les fromages de la Crèmerie Jura Flore, vous optez pour l’authenticité, la
+                        qualité et le respect des traditions. Vous soutenez également des producteurs locaux passionnés,
+                        engagés à préserver un savoir-faire unique.
+                    </p>
+                    <p>
+                        Pour découvrir leur gamme complète de produits, organiser une visite ou en savoir plus sur leur
+                        engagement, rendez-vous sur leur site officiel :
+                        <a href="https://www.juraflore.com" target="_blank">www.juraflore.com</a>.
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="infosFournisseurGlobMorteauSaucisse" class="infosFournisseurGlob">
+                <div id="infosFournisseur">
+                    <div id="croixFermetureFichePoste"
+                        onclick="fermetureInfosFournisseur('#infosFournisseurGlobMorteauSaucisse')">✕
+                    </div>
+                    <img src="Images/morteauSaucisse.jpg" alt="MORTEAU SAUCISSE">
+                    <h2>À la découverte de Morteau Saucisse</h2>
+                    <p>
+                        <strong>Morteau Saucisse</strong>, véritable emblème gastronomique de la Franche-Comté, est une
+                        entreprise spécialisée dans la production de charcuterie artisanale, et plus particulièrement de
+                        la célèbre <strong>Saucisse de Morteau</strong>. Avec un savoir-faire transmis de génération en
+                        génération, cette entreprise incarne l’authenticité et la tradition de la région.
                     </p>
 
-                    <h3>Pourquoi choisir la Fromagerie Sancey-Richard ?</h3>
+                    <h3>Un produit emblématique : La Saucisse de Morteau</h3>
                     <p>
-                        En choisissant les produits de la Fromagerie Sancey-Richard, vous soutenez une agriculture
-                        responsable et des artisans passionnés qui valorisent le patrimoine gastronomique local. Leurs
-                        fromages, issus de traditions séculaires, sont une véritable invitation à explorer les richesses
-                        gustatives de la Franche-Comté.
+                        La <strong>Saucisse de Morteau</strong>, également appelée « Belle de Morteau », est reconnue
+                        pour sa saveur inimitable et sa qualité exceptionnelle. Fabriquée exclusivement en
+                        Franche-Comté, elle respecte des critères stricts de fabrication, garantissant un produit
+                        authentique :
+                    </p>
+                    <ul>
+                        <li>Un hachage de viande grossier, typique des traditions locales.</li>
+                        <li>Un boyau naturel, soigneusement sélectionné.</li>
+                        <li>Un fumage traditionnel à la sciure de bois de résineux, réalisé dans des tuyés (grandes
+                            cheminées caractéristiques de la région).</li>
+                    </ul>
+                    <p>
+                        Ce processus artisanal confère à la Saucisse de Morteau sa texture ferme et son goût
+                        délicatement fumé, faisant d’elle un incontournable des tables franc-comtoises.
+                    </p>
+
+                    <h3>Une gamme de charcuteries d’exception</h3>
+                    <p>
+                        En plus de la Saucisse de Morteau, l’entreprise propose une variété de produits de charcuterie
+                        traditionnelle, notamment :
+                    </p>
+                    <ul>
+                        <li><strong>Saucisse de Montbéliard</strong> – Une autre spécialité régionale, légèrement plus
+                            petite et subtilement fumée.</li>
+                        <li><strong>Jambon fumé du Haut-Doubs</strong> – Préparé selon des méthodes ancestrales, ce
+                            jambon est séché et fumé pour un goût unique.</li>
+                        <li><strong>Rillons, saucissons et terrines</strong> – Des produits gourmands fabriqués avec la
+                            même exigence de qualité.</li>
+                    </ul>
+
+                    <h3>Un engagement envers la tradition et la qualité</h3>
+                    <p>
+                        Morteau Saucisse perpétue les traditions artisanales de la Franche-Comté, en valorisant des
+                        techniques de fabrication ancestrales. La sélection des viandes est rigoureuse : elle provient
+                        d’élevages locaux, garantissant des produits tracés et de qualité supérieure.
                     </p>
                     <p>
-                        Pour en savoir plus sur leurs produits, organiser une visite ou découvrir leur engagement,
-                        rendez-vous sur leur site officiel :
-                        <a href="https://fromageriedumontdor.com/" target="_blank">https://fromageriedumontdor.com/</a>.
+                        De plus, l’entreprise est fière de promouvoir des pratiques respectueuses de l’environnement et
+                        de soutenir l’économie locale en collaborant étroitement avec les éleveurs et artisans de la
+                        région.
+                    </p>
+
+                    <h3>Un savoir-faire primé et reconnu</h3>
+                    <p>
+                        Les produits de Morteau Saucisse ont été récompensés à de nombreuses reprises pour leur
+                        excellence. La Saucisse de Morteau bénéficie d’une Indication Géographique Protégée (IGP), gage
+                        de son origine et de sa qualité exceptionnelle.
+                    </p>
+
+                    <h3>Pourquoi choisir Morteau Saucisse ?</h3>
+                    <p>
+                        En choisissant Morteau Saucisse, vous savourez des produits de charcuterie authentiques et de
+                        haute qualité, fabriqués avec soin et passion. C’est aussi une manière de soutenir un
+                        savoir-faire local et des valeurs profondément enracinées dans le terroir franc-comtois.
+                    </p>
+                    <p>
+                        Pour en savoir plus sur leur gamme de produits ou visiter l’entreprise, rendez-vous sur leur
+                        site officiel :
+                        <a href="https://www.morteausaucisse.com/" target="_blank">https://www.morteausaucisse.com/</a>.
+                    </p>
+
+                </div>
+            </div>
+            <div id="infosFournisseurGlobSalaisonsRenaudot" class="infosFournisseurGlob">
+                <div id="infosFournisseur">
+                    <div id="croixFermetureFichePoste"
+                        onclick="fermetureInfosFournisseur('#infosFournisseurGlobSalaisonsRenaudot')">✕
+                    </div>
+                    <img src="Images/salaisonsRenaudot.jpg" alt="Salaisons Renaudot">
+                    <h2>À la découverte des Salaisons Renaudot</h2>
+                    <p>
+                        Les <strong>Salaisons Renaudot</strong>, situées au cœur de la Franche-Comté, incarnent depuis
+                        des générations la tradition de la salaison artisanale. Entre savoir-faire ancestral et
+                        innovation, cette entreprise familiale est un acteur incontournable de la charcuterie
+                        franc-comtoise, célébrant les saveurs authentiques de la région.
+                    </p>
+
+                    <h3>Une expertise reconnue dans la salaison artisanale</h3>
+                    <p>
+                        Depuis sa création, les Salaisons Renaudot s'engagent à perpétuer les techniques traditionnelles
+                        de salaison, transmises de génération en génération. Chaque produit est fabriqué avec soin en
+                        utilisant des ingrédients de qualité et des méthodes respectueuses des traditions locales.
+                    </p>
+
+                    <p>
+                        Les Salaisons Renaudot s'attachent également à promouvoir les produits du terroir franc-comtois,
+                        en mettant en avant des recettes authentiques et des saveurs uniques, issues d'une production
+                        locale et responsable.
+                    </p>
+
+                    <h3>Des produits emblématiques</h3>
+                    <p>
+                        Les Salaisons Renaudot proposent une gamme variée de charcuteries artisanales, parmi lesquelles
+                        :
+                    </p>
+                    <ul>
+                        <li><strong>Saucisse de Morteau IGP</strong> – Fumée à la sciure de bois dans des tuyés
+                            traditionnels, elle offre une saveur intense et authentique.</li>
+                        <li><strong>Saucisse de Montbéliard IGP</strong> – Une spécialité légèrement épicée et fumée,
+                            idéale pour des plats conviviaux.</li>
+                        <li><strong>Jambon fumé du Haut-Doubs</strong> – Préparé avec soin et fumé lentement pour un
+                            goût raffiné et typiquement régional.</li>
+                        <li><strong>Saucissons secs et saucissons artisanaux</strong> – Une sélection de charcuteries
+                            sèches élaborées avec des recettes traditionnelles.</li>
+                    </ul>
+
+                    <h3>Un engagement pour la qualité et le terroir</h3>
+                    <p>
+                        Les Salaisons Renaudot privilégient les circuits courts et collaborent étroitement avec des
+                        éleveurs locaux pour garantir des produits de qualité supérieure. La viande utilisée provient
+                        d’animaux élevés dans le respect des normes environnementales et éthiques, favorisant ainsi une
+                        production durable et respectueuse.
+                    </p>
+                    <p>
+                        L’entreprise attache une grande importance à l’authenticité et au respect des traditions, tout
+                        en s'adaptant aux attentes modernes en matière de traçabilité et de sécurité alimentaire.
+                    </p>
+
+                    <h3>Une reconnaissance de l'excellence</h3>
+                    <p>
+                        Les Salaisons Renaudot sont fières de leurs certifications, notamment l'Indication Géographique
+                        Protégée (IGP) pour leurs saucisses de Morteau et de Montbéliard. Ces distinctions attestent du
+                        savoir-faire unique et de la qualité exceptionnelle des produits.
+                    </p>
+
+                    <h3>Pourquoi choisir les Salaisons Renaudot ?</h3>
+                    <p>
+                        En choisissant les Salaisons Renaudot, vous optez pour des produits de charcuterie savoureux,
+                        fabriqués avec soin dans le respect des traditions et des valeurs du terroir franc-comtois.
+                        C’est aussi une façon de soutenir une entreprise locale engagée dans la préservation du
+                        patrimoine gastronomique régional.
+                    </p>
+                    <p>
+                        Pour explorer leur gamme complète ou découvrir leur univers, rendez-vous sur leur site
+                        officiel :
+                        <a href="https://boucherie-renaudot.fr/" target="_blank">https://boucherie-renaudot.fr/</a>.
+                    </p>
+                </div>
+            </div>
+            <div id="infosFournisseurGlobSalaisonsComtoises" class="infosFournisseurGlob">
+                <div id="infosFournisseur">
+                    <div id="croixFermetureFichePoste"
+                        onclick="fermetureInfosFournisseur('#infosFournisseurGlobSalaisonsComtoises')">✕
+                    </div>
+                    <img src="Images/salaisonsComtoises.jpg" alt="Salaisons Comtoises">
+                    <h2>À la découverte des Salaisons Comtoises</h2>
+                    <p>
+                        Les <strong>Salaisons Comtoises</strong>, basées au cœur de la Franche-Comté, sont une référence
+                        incontournable dans le domaine de la charcuterie artisanale. Depuis plusieurs décennies, cette
+                        entreprise familiale perpétue les traditions culinaires de la région en proposant des produits
+                        de qualité exceptionnelle, élaborés dans le respect des savoir-faire ancestraux.
+                    </p>
+
+                    <h3>Un savoir-faire traditionnel</h3>
+                    <p>
+                        Les Salaisons Comtoises incarnent l’authenticité de la gastronomie franc-comtoise grâce à des
+                        méthodes de fabrication artisanales. Chaque produit est préparé selon des recettes transmises de
+                        génération en génération, en utilisant des ingrédients soigneusement sélectionnés et des
+                        techniques de fumage typiques de la région, notamment dans des tuyés traditionnels.
+                    </p>
+
+                    <h3>Une gamme variée de spécialités régionales</h3>
+                    <p>
+                        Les Salaisons Comtoises proposent une large gamme de produits qui séduisent les amateurs de
+                        charcuterie :
+                    </p>
+                    <ul>
+                        <li><strong>Saucisse de Morteau IGP</strong> – Une spécialité emblématique, fumée à la sciure de
+                            bois et reconnue pour son goût intense et authentique.</li>
+                        <li><strong>Saucisse de Montbéliard IGP</strong> – Plus petite et épicée, elle est parfaite pour
+                            accompagner des plats traditionnels ou être dégustée seule.</li>
+                        <li><strong>Jambon fumé</strong> – Fumé lentement pour un goût riche et raffiné, parfait pour
+                            les plateaux de charcuterie ou les recettes gourmandes.</li>
+                        <li><strong>Saucissons secs et produits salés</strong> – Une sélection savoureuse, fabriquée
+                            avec soin et passion.</li>
+                    </ul>
+
+                    <h3>Engagement pour la qualité et le terroir</h3>
+                    <p>
+                        Les Salaisons Comtoises collaborent étroitement avec des éleveurs locaux pour garantir la
+                        qualité supérieure de leurs produits. Les viandes utilisées sont issues d’animaux élevés dans le
+                        respect des normes environnementales et éthiques, valorisant ainsi les circuits courts et la
+                        production durable.
+                    </p>
+                    <p>
+                        Chaque produit est fabriqué avec le souci du détail, dans le respect des traditions locales,
+                        tout en répondant aux exigences modernes en matière de traçabilité et de sécurité alimentaire.
+                    </p>
+
+                    <h3>Une reconnaissance bien méritée</h3>
+                    <p>
+                        Les Salaisons Comtoises sont fières de leurs certifications, notamment l'Indication Géographique
+                        Protégée (IGP) pour leurs saucisses de Morteau et de Montbéliard. Ces distinctions attestent de
+                        leur engagement à produire des spécialités authentiques, respectant l’héritage gastronomique de
+                        la Franche-Comté.
+                    </p>
+
+                    <h3>Pourquoi choisir les Salaisons Comtoises ?</h3>
+                    <p>
+                        En optant pour les produits des Salaisons Comtoises, vous découvrez des saveurs uniques, issues
+                        d’une production artisanale et locale. Vous soutenez également une entreprise engagée dans la
+                        préservation des traditions et du patrimoine culinaire franc-comtois.
+                    </p>
+                    <p>
+                        Pour explorer leur gamme complète ou en savoir plus sur leur univers, rendez-vous sur leur site
+                        officiel :
+                        <a href="https://www.salaisons-comtoises.fr/" target="_blank">https://www.salaisons-comtoises.fr/</a>.
                     </p>
                 </div>
             </div>
