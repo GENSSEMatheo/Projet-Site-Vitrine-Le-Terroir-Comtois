@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Terroir Comtois - Nos produits</title>
+    <link rel="icon" type="image/png" href="Images/logo.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
+    <nav>
+        <section id="ensembleNav">
+            <img src="Images/logo.png" alt="Logo de notre entreprise" id="logoEntrepriseRond">
+            <ul id="menuGlob">
+                <li id="mainMenuLi"><a href="index.html">Accueil</a></li><br>
+                <li id="mainMenuLi"><a href="activite.html">Notre activité</a></li><br>
+                <li id="mainMenuLi"><a href="histoire.html">Notre histoire</a></li><br>
+                <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="produits.html">Nos produits </a>
+                    <ul id="listeSousMenu">
+                        <h2 id="TitreSousMenu">Nos produits</h2>
+                        <h3 id="sousTitreSousMenu">Nos vins</h3>
+                        <li>Vins rouges</li>
+                        <li>Vins blancs</li>
+                        <li>Vin Jaune</li>
+                        <li>Vin de Paille</li>
+                        <li>Macvin du Jura</li>
+                        <li>Rosés</li>
+                        <li>Crémants du Jura</li>
+                        <h3 id="sousTitreSousMenu">Nos fromages</h3>
+                        <li>Comté</li>
+                        <li>Morbier</li>
+                        <li>Mont d'or</li>
+                        <li>Cancoillote</li>
+                        <h3 id="sousTitreSousMenu">Notre charcuterie</h3>
+                        <li>Saucisse de Morteau</li>
+                        <li>Saucisse de Montbéliard</li>
+                        <li>Jambon fumé du Haut-Doubs</li>
+                    </ul>
+                </li><br>
+                <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="fournisseurs.html">Nos fournisseurs</a>
+                    <ul id="listeSousMenu">
+                        <h2 id="TitreSousMenu">Nos fournisseurs</h2>
+                        <h3 id="sousTitreSousMenu">Nos vins</h3>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Domaine TISSOT</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobHenriMaire')">Domaine HENRI MAIRE
+                        </li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBadoz')">Domaine BADOZ</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBerthet-Bondet')">Domaine
+                            BERTHET-BONDET</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobCabelier')">Domaine CABELIER</li>
+                        <h3 id="sousTitreSousMenu">Nos fromages</h3>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPlateauArboisien')">Fruitière du
+                            plateau arboisien</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPerrin')">Fromagerie Perrin</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSancey-Richard')">Fromagerie
+                            Sancey-Richard</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobJuraFlore')">Crèmerie Juraflore
+                        </li>
+                        <h3 id="sousTitreSousMenu">Notre charcuterie</h3>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobMorteauSaucisse')">MORTEAU SAUCISSE
+                        </li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsRenaudot')">Salaisons
+                            Renaudot</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsComtoises')">Les Salaisons
+                            Comtoises</li>
+                    </ul>
+                </li><br>
+                <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="personnel.html">Notre équipe</a>
+                    <ul id="listeSousMenu">
+                        <h2 id="TitreSousMenu">Notre équipe</h2>
+                        <li onclick="ouvertureFicheDePoste('#fichePostePierreMarmierGlob')">Pierre Marmier - Gérant</li>
+                        <h3 id="sousTitreSousMenu">Nos responsables</h3>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteSophieGirardotGlob')">Sophie Girardot -
+                            Responsable des stocks</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteAntoinePerrenotGlob')">Antoine Perrenot -
+                            Responsable des relations clients</li>
+                        <h3 id="sousTitreSousMenu">Nos vendeurs(euses)</h3>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteLucieJeannerotGlob')">Lucie Jeannerot - Vendeuse
+                        </li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteThomasManzoniGlob')">Thomas Manzoni - Vendeur
+                        </li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteFrancoisGigotrGlob')">François Gigot - Vendeur
+                        </li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteHeleneVouillotGlob')">Hélène Vouillot - Vendeuse
+                        </li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteNicolasCartGlob')">Nicolas Cart - Vendeur</li>
+                        <h3 id="sousTitreSousMenu">Nos Caissiers(es)</h3>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteElodieMillotGlob')">Elodie Millot - Caissière
+                        </li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot - Caissière</li>
+                    </ul>
+                </li><br>
+                <li id="mainMenuLi"><a href="contact.html">Contact</a></li>
+            </ul>
+        </section>
+
+    </nav>
+    <section id="contenu"
+        style="background-image: url(Images/fondDroiteProduits.jpg);background-repeat: no-repeat;background-size: cover;background-attachment: fixed;width: 80%;">
+        <header id="entetePage">
+            <div id="texteTitresEntete">
+                <p class="slide-in">Nos produits</p>
+                <h1 class="slide-in">Le Terroir Comtois</h1>
+            </div>
+        </header>
+
+        <section id="fournisseursOuProdGlob">
+            <div id="barreFiltresProduits">
+                <p>Que recherchez-vous ?</p>
+                <div id="barreFiltreProduitsCheckboxListes">
+                    <div class="listeParTypeProdGlob" id="nosVins">
+                        <h2>Nos Vins</h2>
+                        <ul>
+                            <li><input type="checkbox">Vins Rouges</li>
+                            <li><input type="checkbox">Vins Blancs</li>
+                            <li><input type="checkbox">Vin Jaune</li>
+                            <li><input type="checkbox">Vin de Paille</li>
+                            <li><input type="checkbox">Macvin</li>
+                            <li><input type="checkbox">Rosé</li>
+                        </ul>
+                    </div>
+                    <div class="listeParTypeProdGlob" id="nosFromages">
+                        <h2>Nos Fromages</h2>
+                        <ul>
+                            <li><input type="checkbox">Comté</li>
+                            <li><input type="checkbox">Morbier</li>
+                            <li><input type="checkbox">Mont d'Or</li>
+                            <li><input type="checkbox">Cancoillote</li>
+                        </ul>
+                    </div>
+                    <div class="listeParTypeProdGlob" id="nosCharcuterie">
+                        <h2>Nos Charcuterie</h2>
+                        <ul>
+                            <li><input type="checkbox">Saucisse de Morteau</li>
+                            <li><input type="checkbox">Saucisse de Montbéliard</li>
+                            <li><input type="checkbox">Jambon Fumé du Haut-Doubs</li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="buttonAppliquerFiltres">Appliquer les filtres</button>
+
+            </div>
+            <ul id="fournisseursOuProdListe">
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/cremantDuJuraBlancBrutTissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>Crémant du Jura Blanc Brut</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>15,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/cremantDuJuraRoseBrutTissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>Crémant du Jura Rosé Brut</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>16,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisRoséDecouverte2023Tissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS ROSÉ "DÉCOUVERTE" 2023</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>11,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisChardonnayLesCorveeSousCuron2022Tissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS CHARDONNAY "LES CORVÉES SOUS CURON" 2022</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>21,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisChardonnayLaMailloche2022Tissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS CHARDONNAY " LA MAILLOCHE " 2022</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>23,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisNatureSavagninFloral2022Tissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS NATURÉ "SAVAGNIN FLORAL" 2022</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>18,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisChardonnay2020Tissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS CHARDONNAY 2020</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>15,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisBlancTypeTradition2020Tissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS BLANC TYPÉ "TRADITION" 2020</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>17,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisSavagnin2018Tissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS SAVAGNIN 2018</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>22,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisPoulsard2019GrandeReserveTissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS POULSARD 2019 "GRANDE RÉSERVE"</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>15,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisTrousseau2021Tissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS TROUSSEAU 2021</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>17,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisPinotNoirGrandeReserve2022Tissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS PINOT NOIR "GRANDE RÉSERVE" 2022</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>17,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisVinJaune2017Tissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS VIN JAUNE 2017</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>40,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/arboisVinPaille2018Tissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>ARBOIS VIN DE PAILLE 2018</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>30,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/macvinDuJuraBlancTissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>MACVIN DU JURA BLANC</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>22,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/macvinDuJuraRougeTissot.jpg">
+                    <p>Domaine TISSOT</p>
+                    <h2>MACVIN DU JURA ROUGE</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>29,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+
+
+
+
+
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/chardonnay2023TerroirDuRevermontBadoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Chardonnay 2022 "Terroir du Revermont"</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>15,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/chardonnay2023BiosLesRoussotsBadoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Chardonnay 2023 BIO "les Roussots"</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>18,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
+                        produit</button>
+                </li>
+            </ul>
+
+        </section>
+
+        <footer>
+            A propos <br>
+            --- <br>
+            Le Terroir Comtois <br>
+            Franche-Comté (25)<br>
+            <br>
+            Created by Mathéo GENSSE
+            <br>
+            © 2025 <br>
+            ---
+        </footer>
+    </section>
+
+
+</body>
+
+</html>

@@ -329,22 +329,24 @@ footer li{
     list-style: none;
 }
 
-/*--------------------*/
-/*CONTENU FOURNISSEURS*/
-/*--------------------*/
-#fournisseursGlob{
+/*--------------------------------*/
+/*CONTENU FOURNISSEURS ET PRODUITS*/
+/*--------------------------------*/
+#fournisseursOuProdGlob{
     background-color: #0000006e;
     text-align: center;
 }
-#fournisseursGlob h1{
+#fournisseursOuProdGlob h1{
     margin: 0;
     text-transform: uppercase;
     padding: 2vh 0;
     font-size: xx-large;
-    background-color:black ;
-    color: white;
+    background-color:white ;
+    color: black;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
 }
-#fournisseursListe{
+#fournisseursOuProdListe{
     display: flex;
     justify-content: space-around;
     list-style: none;
@@ -352,26 +354,31 @@ footer li{
     flex-wrap: wrap;
 
 }
-#fournisseursListe li{
-    background-color:#000000 ;
+#fournisseursOuProdListe li{
+    background-color:white ;
     margin: 1vw;
     padding: 1vw;
-    border-radius:1vw ;
-    color: white;
+    border-radius:0.5vw ;
+    color: black;
     flex-wrap: wrap;
     width: 19vw;
+    border: solid black 1px;
 }
-#fournisseursListe img{
+#fournisseursOuProdListe img{
     width: 18vw;
-    border-radius: 1vw;
+    border-radius: 0.5vw;
     aspect-ratio: 4/3;
     border: solid;
     transition: transform ease 0.5s;
 }
-#fournisseursListe img:hover{
+#fournisseursOuProdListe img:hover{
     transform: scale(0.9);
 }
-#buttonDecouvrirFournisseur{
+/*--------------------*/
+/*CONTENU FOURNISSEURS*/
+/*--------------------*/
+
+#buttonEnSavoirPlusSurProduitsOuFournisseur{
     padding: 1vw;
     font-size: 0.8vw;
     border-radius: 50vw;
@@ -381,7 +388,7 @@ footer li{
     cursor: pointer;
     transition: all ease 0.5s;
 }
-#buttonDecouvrirFournisseur:hover{
+#buttonEnSavoirPlusSurProduitsOuFournisseur:hover{
     transform: scale(0.9);
     background-color: #aa7d00a1;
 }
@@ -412,4 +419,45 @@ footer li{
 #infosFournisseur img{
     width: 20vw;
     border: solid;
+}
+
+/*----------------*/
+/*CONTENU PRODUITS*/
+/*----------------*/
+#barreFiltresProduits{
+    background-color: white;
+    padding: 3vh 0;
+}
+#barreFiltresProduits p{
+    text-transform: uppercase;
+}
+#barreFiltreProduitsCheckboxListes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#barreFiltreProduitsCheckboxListes ul{
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+#barreFiltreProduitsCheckboxListes .listeParTypeProdGlob{
+    border-left: solid 1px black;
+    padding-left: 1vw;
+}
+#buttonAppliquerFiltres{
+    padding: 1vw;
+    background-color: #aa7d00;
+    border-radius: 50vw;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+#buttonAppliquerFiltres:hover{
+    transform: scale(0.9);
+}
+
+#fournisseursOuProdListe .imageProduitVins{
+    aspect-ratio: 9/20;
+    border: 0;
 }

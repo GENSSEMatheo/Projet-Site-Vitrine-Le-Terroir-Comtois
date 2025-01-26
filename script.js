@@ -72,5 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+    if (window.location.href.includes('fournisseurs.html')) {
+        const urlHash = window.location.hash; 
+        if (urlHash) {
+            const ficheElement = document.querySelector(urlHash);
+            if (ficheElement) {
+                ficheElement.style.transform = 'scale(1)';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+    }
 });
 

@@ -47,20 +47,20 @@
                     <ul id="listeSousMenu">
                         <h2 id="TitreSousMenu">Nos fournisseurs</h2>
                         <h3 id="sousTitreSousMenu">Nos vins</h3>
-                        <li>Domaine TISSOT</li>
-                        <li>Domaine HENRI MAIRE</li>
-                        <li>Domaine BADOZ</li>
-                        <li>Domaine BERTHET-BONDET</li>
-                        <li>Domaine CABELIER</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Domaine TISSOT</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobHenriMaire')">Domaine HENRI MAIRE</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBadoz')">Domaine BADOZ</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBerthet-Bondet')">Domaine BERTHET-BONDET</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobCabelier')">Domaine CABELIER</li>
                         <h3 id="sousTitreSousMenu">Nos fromages</h3>
-                        <li>Fruitière du plateau arboisien</li>
-                        <li>Fromagerie Perrin</li>
-                        <li>Fromagerie Sancey-Richard</li>
-                        <li>Crèmerie Juraflore</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPlateauArboisien')">Fruitière du plateau arboisien</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPerrin')">Fromagerie Perrin</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSancey-Richard')">Fromagerie Sancey-Richard</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobJuraFlore')">Crèmerie Juraflore</li>
                         <h3 id="sousTitreSousMenu">Notre charcuterie</h3>
-                        <li>MORTEAU SAUCISSE</li>
-                        <li>Salaisons Renaudot</li>
-                        <li>Les Salaisons Comtoises</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobMorteauSaucisse')">MORTEAU SAUCISSE</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsRenaudot')">Salaisons Renaudot</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsComtoises')">Les Salaisons Comtoises</li>
                     </ul>
                 </li><br>
                 <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="personnel.html">Notre équipe</a>
@@ -101,16 +101,16 @@
                 <h1 class="slide-in">Le Terroir Comtois</h1>
             </div>
         </header>
-        <section id="fournisseursGlob">
+        <section id="fournisseursOuProdGlob">
             <h1>Nos vins</h1>
-            <ul id="fournisseursListe">
+            <ul id="fournisseursOuProdListe">
                 <li>
                     <img src="Images/domaineTissot.jpg" alt="Domaine TISSOT">
                     <p>Domaine</p>
-                    <h2>ANDRE & MIREILLE TISSOT</h2>
+                    <h2>JACQUES TISSOT</h2>
                     <p>Situé à</p>
                     <h3>ARBOIS (39)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
                         vigneron</button>
                 </li>
@@ -120,7 +120,7 @@
                     <h2>HENRI MAIRE</h2>
                     <p>Situé à</p>
                     <h3>ARBOIS (39)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobHenriMaire')">Découvrir le
                         vigneron</button>
                 </li>
@@ -130,7 +130,7 @@
                     <h2>BENOIT BADOZ</h2>
                     <p>Situé à</p>
                     <h3>POLIGNY (39)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBadoz')">Découvrir le vigneron</button>
                 </li>
                 <li>
@@ -139,7 +139,7 @@
                     <h2>CHANTAL & JEAN BERTHET-BONDET</h2>
                     <p>Situé à</p>
                     <h3>CHATEAU CHALON (39)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBerthet-Bondet')">Découvrir le
                         vigneron</button>
                 </li>
@@ -149,20 +149,20 @@
                     <h2>MARCEL CABELIER</h2>
                     <p>Situé à</p>
                     <h3>HAUTEROCHE (39)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobCabelier')">Découvrir le
                         vigneron</button>
                 </li>
             </ul>
             <h1>Nos fromages</h1>
-            <ul id="fournisseursListe">
+            <ul id="fournisseursOuProdListe">
                 <li>
                     <img src="Images/fruitierePlateauArboisien.png" alt="Fruitière du plateau arboisien">
                     <p>Fruitière du</p>
                     <h2>PLATEAU ARBOISIEN</h2>
                     <p>Situé à</p>
                     <h3>ARBOIS (39)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPlateauArboisien')">Découvrir le
                         fromager</button>
                 </li>
@@ -172,7 +172,7 @@
                     <h2>PERRIN</h2>
                     <p>Situé à</p>
                     <h3>CLERON (25)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPerrin')">Découvrir le
                         fromager</button>
                 </li>
@@ -182,7 +182,7 @@
                     <h2>SANCEY-RICHARD</h2>
                     <p>Situé à</p>
                     <h3>METABIEF (25)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSancey-Richard')">Découvrir le
                         fromager</button>
                 </li>
@@ -192,19 +192,19 @@
                     <h2>Juraflore</h2>
                     <p>Situé à</p>
                     <h3>POLIGNY (39)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobJuraFlore')">Découvrir le
                         fromager</button>
                 </li>
             </ul>
             <h1>Notre charcuterie</h1>
-            <ul id="fournisseursListe">
+            <ul id="fournisseursOuProdListe">
                 <li>
                     <img src="Images/morteauSaucisse.jpg" alt="MORTEAU SAUCISSE">
                     <h2>MORTEAU SAUCISSE</h2>
                     <p>Situé à</p>
                     <h3>MORTEAU (25)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobMorteauSaucisse')">Découvrir le
                         boucher</button>
                 </li>
@@ -213,7 +213,7 @@
                     <h2>SALAISONS RENAUDOT</h2>
                     <p>Situé à</p>
                     <h3>PONTARLIER (25)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsRenaudot')">Découvrir le
                         boucher</button>
                 </li>
@@ -222,7 +222,7 @@
                     <h2>LES SALAISONS COMTOISES</h2>
                     <p>Situé à</p>
                     <h3>BELLEHERDE (25)</h3>
-                    <button id="buttonDecouvrirFournisseur"
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsComtoises')">Découvrir le
                         boucher</button>
                 </li>
@@ -312,7 +312,7 @@
                     <p>
                         Pour en savoir plus sur le domaine, découvrir leurs produits ou planifier votre visite,
                         rendez-vous sur leur site officiel :
-                        <a href="http://www.stephane-tissot.com/" target="_blank">http://www.stephane-tissot.com/</a>.
+                        <a href="https://www.domaine-jacques-tissot.fr/" target="_blank">https://www.domaine-jacques-tissot.fr/</a>.
                     </p>
                 </div>
             </div>
