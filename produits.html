@@ -37,7 +37,7 @@
                         <li>Morbier</li>
                         <li>Mont d'or</li>
                         <li>Cancoillote</li>
-                        <h3 id="sousTitreSousMenu">Notre charcuterie</h3>
+                        <h3 id="sousTitreSousMenu">Notre charcuteries</h3>
                         <li>Saucisse de Morteau</li>
                         <li>Saucisse de Montbéliard</li>
                         <li>Jambon fumé du Haut-Doubs</li>
@@ -48,16 +48,12 @@
                         <h2 id="TitreSousMenu">Nos fournisseurs</h2>
                         <h3 id="sousTitreSousMenu">Nos vins</h3>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Domaine TISSOT</li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobHenriMaire')">Domaine HENRI MAIRE
-                        </li>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBadoz')">Domaine BADOZ</li>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBerthet-Bondet')">Domaine
                             BERTHET-BONDET</li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobCabelier')">Domaine CABELIER</li>
                         <h3 id="sousTitreSousMenu">Nos fromages</h3>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPlateauArboisien')">Fruitière du
                             plateau arboisien</li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPerrin')">Fromagerie Perrin</li>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSancey-Richard')">Fromagerie
                             Sancey-Richard</li>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobJuraFlore')">Crèmerie Juraflore
@@ -65,8 +61,6 @@
                         <h3 id="sousTitreSousMenu">Notre charcuterie</h3>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobMorteauSaucisse')">MORTEAU SAUCISSE
                         </li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsRenaudot')">Salaisons
-                            Renaudot</li>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsComtoises')">Les Salaisons
                             Comtoises</li>
                     </ul>
@@ -96,7 +90,7 @@
                         <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot - Caissière</li>
                     </ul>
                 </li><br>
-                <li id="mainMenuLi"><a href="contact.html">Contact</a></li>
+                <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a></li>
             </ul>
         </section>
 
@@ -110,43 +104,48 @@
             </div>
         </header>
 
-        <section id="fournisseursOuProdGlob">
-            <div id="barreFiltresProduits">
-                <p>Que recherchez-vous ?</p>
-                <div id="barreFiltreProduitsCheckboxListes">
-                    <div class="listeParTypeProdGlob" id="nosVins">
-                        <h2>Nos Vins</h2>
-                        <ul>
-                            <li><input type="checkbox">Vins Rouges</li>
-                            <li><input type="checkbox">Vins Blancs</li>
-                            <li><input type="checkbox">Vin Jaune</li>
-                            <li><input type="checkbox">Vin de Paille</li>
-                            <li><input type="checkbox">Macvin</li>
-                            <li><input type="checkbox">Rosé</li>
-                        </ul>
-                    </div>
-                    <div class="listeParTypeProdGlob" id="nosFromages">
-                        <h2>Nos Fromages</h2>
-                        <ul>
-                            <li><input type="checkbox">Comté</li>
-                            <li><input type="checkbox">Morbier</li>
-                            <li><input type="checkbox">Mont d'Or</li>
-                            <li><input type="checkbox">Cancoillote</li>
-                        </ul>
-                    </div>
-                    <div class="listeParTypeProdGlob" id="nosCharcuterie">
-                        <h2>Nos Charcuterie</h2>
-                        <ul>
-                            <li><input type="checkbox">Saucisse de Morteau</li>
-                            <li><input type="checkbox">Saucisse de Montbéliard</li>
-                            <li><input type="checkbox">Jambon Fumé du Haut-Doubs</li>
-                        </ul>
-                    </div>
-                </div>
-                <button id="buttonAppliquerFiltres">Appliquer les filtres</button>
 
+        <div id="barreFiltresProduits">
+            <p>Que recherchez-vous ?</p>
+            <div id="barreFiltreProduitsCheckboxListesPartieSuperieur">
+                <div class="listeParTypeProdGlob" id="nosVins">
+                    <h2>Nos Vins</h2>
+                    <ul>
+                        <li><input type="checkbox">Vins Rouges</li>
+                        <li><input type="checkbox">Vins Blancs</li>
+                        <li><input type="checkbox">Vin Jaune</li>
+                        <li><input type="checkbox">Vin de Paille</li>
+                        <li><input type="checkbox">Macvin</li>
+                        <li><input type="checkbox">Rosé</li>
+                    </ul>
+                </div>
+                <div class="listeParTypeProdGlob" id="nosFromages">
+                    <h2>Nos Fromages</h2>
+                    <ul>
+                        <li><input type="checkbox">Comté</li>
+                        <li><input type="checkbox">Morbier</li>
+                        <li><input type="checkbox">Mont d'Or</li>
+                        <li><input type="checkbox">Cancoillote</li>
+                    </ul>
+                </div>
+                <div class="listeParTypeProdGlob" id="nosCharcuteries">
+                    <h2>Nos Charcuteries</h2>
+                    <ul>
+                        <li><input type="checkbox">Saucisse de Morteau</li>
+                        <li><input type="checkbox">Saucisse de Montbéliard</li>
+                        <li><input type="checkbox">Jambon Fumé du Haut-Doubs</li>
+                    </ul>
+                </div>
+                
             </div>
-            <ul id="fournisseursOuProdListe">
+            <div id="barreFiltreProduitsCheckboxListesPartieInferieur">
+                <input type="text" placeholder="Recherchez">
+                <button id="buttonAppliquerFiltres">Appliquer les filtres</button>
+            </div>
+
+        </div>
+        <section id="sectionProduitsGlob">
+            <ul id="listesProduitsUl">
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/cremantDuJuraBlancBrutTissot.jpg">
                     <p>Domaine TISSOT</p>
@@ -154,8 +153,7 @@
                     <p>Prix à l'unité</p>
                     <h3>15,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/cremantDuJuraRoseBrutTissot.jpg">
@@ -164,8 +162,7 @@
                     <p>Prix à l'unité</p>
                     <h3>16,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/arboisRoséDecouverte2023Tissot.jpg">
@@ -174,18 +171,17 @@
                     <p>Prix à l'unité</p>
                     <h3>11,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
-                    <img class="imageProduitVins" src="Images/Produits/arboisChardonnayLesCorveeSousCuron2022Tissot.jpg">
+                    <img class="imageProduitVins"
+                        src="Images/Produits/arboisChardonnayLesCorveeSousCuron2022Tissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS CHARDONNAY "LES CORVÉES SOUS CURON" 2022</h2>
                     <p>Prix à l'unité</p>
                     <h3>21,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/arboisChardonnayLaMailloche2022Tissot.jpg">
@@ -194,8 +190,7 @@
                     <p>Prix à l'unité</p>
                     <h3>23,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/arboisNatureSavagninFloral2022Tissot.jpg">
@@ -204,8 +199,7 @@
                     <p>Prix à l'unité</p>
                     <h3>18,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/arboisChardonnay2020Tissot.jpg">
@@ -214,8 +208,7 @@
                     <p>Prix à l'unité</p>
                     <h3>15,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/arboisBlancTypeTradition2020Tissot.jpg">
@@ -224,8 +217,7 @@
                     <p>Prix à l'unité</p>
                     <h3>17,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/arboisSavagnin2018Tissot.jpg">
@@ -234,8 +226,7 @@
                     <p>Prix à l'unité</p>
                     <h3>22,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/arboisPoulsard2019GrandeReserveTissot.jpg">
@@ -244,8 +235,7 @@
                     <p>Prix à l'unité</p>
                     <h3>15,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/arboisTrousseau2021Tissot.jpg">
@@ -254,8 +244,7 @@
                     <p>Prix à l'unité</p>
                     <h3>17,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/arboisPinotNoirGrandeReserve2022Tissot.jpg">
@@ -264,8 +253,7 @@
                     <p>Prix à l'unité</p>
                     <h3>17,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/arboisVinJaune2017Tissot.jpg">
@@ -274,8 +262,7 @@
                     <p>Prix à l'unité</p>
                     <h3>40,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/arboisVinPaille2018Tissot.jpg">
@@ -284,8 +271,7 @@
                     <p>Prix à l'unité</p>
                     <h3>30,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/macvinDuJuraBlancTissot.jpg">
@@ -294,8 +280,7 @@
                     <p>Prix à l'unité</p>
                     <h3>22,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/macvinDuJuraRougeTissot.jpg">
@@ -304,8 +289,7 @@
                     <p>Prix à l'unité</p>
                     <h3>29,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
 
 
@@ -319,8 +303,7 @@
                     <p>Prix à l'unité</p>
                     <h3>15,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
                 <li>
                     <img class="imageProduitVins" src="Images/Produits/chardonnay2023BiosLesRoussotsBadoz.jpg">
@@ -329,11 +312,467 @@
                     <p>Prix à l'unité</p>
                     <h3>18,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        produit</button>
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
                 </li>
-            </ul>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/cuvéeArrogance2023BioBadoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Cuvée Arrogance 2023 BIO</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>22,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/cuvéeEdouard2023BioBadoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>cuvée Edouard 2023 BIO</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>31,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins"
+                        src="Images/Produits/cuvéeVictoriaBadoz2020BioSavagninOuilléBadoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Cuvée Victoria Badoz 2020 BIO Savagnin "ouillé"</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>20,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/savagninType2020Badoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Savagnin "Typé" 2020</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>27,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/traditionBio2022ChardonnaySavagninBadoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>TRADITION 2022 BIO Chardonnay/Savagnin</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>21,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/roseEte2023BiosCuveeGustaveCourbetBadoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Rosé d'été 2023 BIO Cuvée "Gustave Courbet"</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>11,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/pinotNoir2022ArboisPupillinBadoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Pinot Noir 2022 Arbois Pupillin</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>16,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/trousseau2022Badoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Trousseau 2022</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>19,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/chateauChalon2017Badoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Château-Chalon 2017</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>41,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/vinJaune2016LesRoussotBadoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Vin Jaune 2016 les Roussots</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>40,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/vinDePaille2018Badoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Vin de Paille 2018</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>31,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/vinDePaille2020BioBadoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Vin de Paille 2020 BIO</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>35,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/blancDeBlancBrutBadoz.png">
+                    <p>Domaine BADOZ</p>
+                    <h2>Blanc de blancs - Brut</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>14,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/macvinDuJuraBlancBioBadoz.jpg">
+                    <p>Domaine BADOZ</p>
+                    <h2>Macvin du Jura Blanc BIO</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>23,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
 
+
+
+
+
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/tradition2020Berthet-Bondet.jpg">
+                    <p>Domaine BERTHET-BONDET</p>
+                    <h2>Tradition 2020</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>22,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/savagnin2019Berthet-Bondet.jpg">
+                    <p>Domaine BERTHET-BONDET</p>
+                    <h2>Savagnin 2019</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>29,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/chateauChalon2017Berthet-Bondet.jpg">
+                    <p>Domaine BERTHET-BONDET</p>
+                    <h2>Château-Chalon 2017</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>52,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/laSource2023Berthet-Bondet.jpg">
+                    <p>Domaine BERTHET-BONDET</p>
+                    <h2>La source 2023</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>17,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/savagnier2022Berthet-Bondet.jpg">
+                    <p>Domaine BERTHET-BONDET</p>
+                    <h2>Savagnier 2022</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>21,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/laPoirière2023Berthet-Bondet.jpg">
+                    <p>Domaine BERTHET-BONDET</p>
+                    <h2>La Poirière 2023</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>22,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/lAcasia2022Berthet-Bondet.jpg">
+                    <p>Domaine BERTHET-BONDET</p>
+                    <h2>L'Acasia 2022</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>25,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/trio2023Berthet-Bondet.jpg">
+                    <p>Domaine BERTHET-BONDET</p>
+                    <h2>Trio 2023</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>23,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/laQueueDuRenard2022Berthet-Bondet.jpg">
+                    <p>Domaine BERTHET-BONDET</p>
+                    <h2>La Queue du Renard 2022</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>27,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitVins" src="Images/Produits/cremantBrutNatureBerthet-Bondet.jpg">
+                    <p>Domaine BERTHET-BONDET</p>
+                    <h2>Crémant Brut Nature</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>21,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+
+
+
+
+
+
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/comteDouxFruitierePlateauArboisien.jpg">
+                    <p>Fruitière du plateau arboisien</p>
+                    <h2>Comté Doux</h2>
+                    <h3>Affinage : 6 à 8 mois</h3>
+                    <p>Prix au kg</p>
+                    <h3>15,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/comteFruiteFruitierePlateauArboisien.jpg">
+                    <p>Fruitière du plateau arboisien</p>
+                    <h2>Comté Fruité</h2>
+                    <h3>Affinage : 12 à 14 mois</h3>
+                    <p>Prix au kg</p>
+                    <h3>18,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/comte18moisFruitierePlateauArboisien.jpg">
+                    <p>Fruitière du plateau arboisien</p>
+                    <h2>Comté Fruité</h2>
+                    <h3>Affinage : 18 mois maximum</h3>
+                    <p>Prix au kg</p>
+                    <h3>22,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/comtePrestigeFruitierePlateauArboisien.jpg">
+                    <p>Fruitière du plateau arboisien</p>
+                    <h2>Comté Prestige</h2>
+                    <h3>Affinage : Entre 24 et 30 mois</h3>
+                    <p>Prix au kg</p>
+                    <h3>31,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/morbierJeuneFruitierePlateauArboisien.jpg">
+                    <p>Fruitière du plateau arboisien</p>
+                    <h2>Morbier Jeune</h2>
+                    <h3>Affinage : 50 à 60 jours</h3>
+                    <p>Prix au kg</p>
+                    <h3>16,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/morbierVieuxFruitierePlateauArboisien.jpg">
+                    <p>Fruitière du plateau arboisien</p>
+                    <h2>Morbier Vieux</h2>
+                    <h3>Affinage : 70 à 80 jours</h3>
+                    <p>Prix au kg</p>
+                    <h3>17,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+
+
+
+
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/montDOrFromagerieSanceyRichard.jpg">
+                    <p>Fromagerie Sancey-Richard</p>
+                    <h2>Mont d'Or</h2>
+                    <p>Prix au kg</p>
+                    <h3>14,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+
+
+
+
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/cancoilloteAbsintheJuraFlore.png">
+                    <p>Crèmerie Jura Flore</p>
+                    <h2>Cancoillote à l'Absinthe</h2>
+                    <p>Prix au kg</p>
+                    <h3>6,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/cancoilloteAilDesOursJuraFlore.png">
+                    <p>Crèmerie Jura Flore</p>
+                    <h2>Cancoillote à l'Ail des ours</h2>
+                    <p>Prix au kg</p>
+                    <h3>6,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/cancoilloteAilJuraFlore.png">
+                    <p>Crèmerie Jura Flore</p>
+                    <h2>Cancoillote à l'Ail</h2>
+                    <p>Prix au kg</p>
+                    <h3>6,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/cancoilloteBasilicJuraFlore.png">
+                    <p>Crèmerie Jura Flore</p>
+                    <h2>Cancoillote au Basilic</h2>
+                    <p>Prix au kg</p>
+                    <h3>6,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/cancoilloteCuminJuraFlore.png">
+                    <p>Crèmerie Jura Flore</p>
+                    <h2>Cancoillote au Cumin</h2>
+                    <p>Prix au kg</p>
+                    <h3>6,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/cancoilloteEchalotteJuraFlore.png">
+                    <p>Crèmerie Jura Flore</p>
+                    <h2>Cancoillote à l'échalotte</h2>
+                    <p>Prix au kg</p>
+                    <h3>6,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/cancoilloteMorilleJuraFlore.png">
+                    <p>Crèmerie Jura Flore</p>
+                    <h2>Cancoillote aux Morilles</h2>
+                    <p>Prix au kg</p>
+                    <h3>6,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/cancoilloteNatureJuraFlore.png">
+                    <p>Crèmerie Jura Flore</p>
+                    <h2>Cancoillote Nature</h2>
+                    <p>Prix au kg</p>
+                    <h3>6,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitFromage" src="Images/Produits/cancoilloteSavagninJuraFlore.png">
+                    <p>Crèmerie Jura Flore</p>
+                    <h2>Cancoillote au Savagnin</h2>
+                    <p>Prix au kg</p>
+                    <h3>6,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+
+
+
+
+
+
+                <li>
+                    <img class="imageProduitCharcuterie"
+                        src="Images/Produits/ptioteMorteauIGPCuitesMorteauSaucisses.jpg">
+                    <p>Morteau Saucisse</p>
+                    <h2>P'tiote Morteau IGP cuites</h2>
+                    <p>Prix au kg</p>
+                    <h3>10,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitCharcuterie"
+                        src="Images/Produits/saucissesDeMorteauIGPCuitesMorteauSaucisses.jpg">
+                    <p>Morteau Saucisse</p>
+                    <h2>Saucisse de Morteau IGP cuite</h2>
+                    <p>Prix au kg</p>
+                    <h3>12,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitCharcuterie"
+                        src="Images/Produits/saucisseDeMorteauACuireMorteauSaucisse.png">
+                    <p>Morteau Saucisse</p>
+                    <h2>Saucisses de Morteau à cuire</h2>
+                    <p>Prix au kg</p>
+                    <h3>12,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+
+
+
+
+
+
+                <li>
+                    <img class="imageProduitCharcuterie"
+                        src="Images/Produits/saucisseMontbéliardSalaisonsComtoises.png">
+                    <p>Les Salaisons Comtoises</p>
+                    <h2>Saucisse de Montbéliard IGP</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>8,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitCharcuterie" src="Images/Produits/jambonFumeEntierSalaisonsComtoises.jpg">
+                    <p>Les Salaisons Comtoises</p>
+                    <h2>Jambon Fumé entier</h2>
+                    <p>Prix à l'unité</p>
+                    <h3>102,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+                <li>
+                    <img class="imageProduitCharcuterie"
+                        src="Images/Produits/jambonFume4TranchesSalaisonsComtoises.jpg">
+                    <p>Les Salaisons Comtoises</p>
+                    <h2>Jambon Fumé (4 tranches)</h2>
+                    <p>Prix</p>
+                    <h3>13,00 €</h3>
+                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
+                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                </li>
+
+            </ul>
         </section>
 
         <footer>

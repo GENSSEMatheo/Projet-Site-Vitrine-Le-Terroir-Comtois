@@ -48,18 +48,14 @@
                         <h2 id="TitreSousMenu">Nos fournisseurs</h2>
                         <h3 id="sousTitreSousMenu">Nos vins</h3>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Domaine TISSOT</li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobHenriMaire')">Domaine HENRI MAIRE</li>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBadoz')">Domaine BADOZ</li>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBerthet-Bondet')">Domaine BERTHET-BONDET</li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobCabelier')">Domaine CABELIER</li>
                         <h3 id="sousTitreSousMenu">Nos fromages</h3>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPlateauArboisien')">Fruitière du plateau arboisien</li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPerrin')">Fromagerie Perrin</li>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSancey-Richard')">Fromagerie Sancey-Richard</li>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobJuraFlore')">Crèmerie Juraflore</li>
                         <h3 id="sousTitreSousMenu">Notre charcuterie</h3>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobMorteauSaucisse')">MORTEAU SAUCISSE</li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsRenaudot')">Salaisons Renaudot</li>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsComtoises')">Les Salaisons Comtoises</li>
                     </ul>
                 </li><br>
@@ -88,7 +84,7 @@
                         <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot - Caissière</li>
                     </ul>
                 </li><br>
-                <li id="mainMenuLi"><a href="contact.html">Contact</a></li>
+                <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a></li>
             </ul>
         </section>
 
@@ -101,9 +97,9 @@
                 <h1 class="slide-in">Le Terroir Comtois</h1>
             </div>
         </header>
-        <section id="fournisseursOuProdGlob">
+        <section id="sectionGlobTousFournisseurs">
             <h1>Nos vins</h1>
-            <ul id="fournisseursOuProdListe">
+            <ul id="listeDesFournisseursUl">
                 <li>
                     <img src="Images/domaineTissot.jpg" alt="Domaine TISSOT">
                     <p>Domaine</p>
@@ -112,16 +108,6 @@
                     <h3>ARBOIS (39)</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le
-                        vigneron</button>
-                </li>
-                <li>
-                    <img src="Images/domaineHenriMaire.png" alt="Domaine HENRI MAIRE">
-                    <p>Domaine</p>
-                    <h2>HENRI MAIRE</h2>
-                    <p>Situé à</p>
-                    <h3>ARBOIS (39)</h3>
-                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobHenriMaire')">Découvrir le
                         vigneron</button>
                 </li>
                 <li>
@@ -143,19 +129,9 @@
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBerthet-Bondet')">Découvrir le
                         vigneron</button>
                 </li>
-                <li>
-                    <img src="Images/domaineCabellier.png" alt="Domaine CABELIER">
-                    <p>Domaine</p>
-                    <h2>MARCEL CABELIER</h2>
-                    <p>Situé à</p>
-                    <h3>HAUTEROCHE (39)</h3>
-                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobCabelier')">Découvrir le
-                        vigneron</button>
-                </li>
             </ul>
             <h1>Nos fromages</h1>
-            <ul id="fournisseursOuProdListe">
+            <ul id="listeDesFournisseursUl">
                 <li>
                     <img src="Images/fruitierePlateauArboisien.png" alt="Fruitière du plateau arboisien">
                     <p>Fruitière du</p>
@@ -164,16 +140,6 @@
                     <h3>ARBOIS (39)</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPlateauArboisien')">Découvrir le
-                        fromager</button>
-                </li>
-                <li>
-                    <img src="Images/fromageriePerrin.png" alt="Fromagerie Perrin">
-                    <p>Fromagerie</p>
-                    <h2>PERRIN</h2>
-                    <p>Situé à</p>
-                    <h3>CLERON (25)</h3>
-                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPerrin')">Découvrir le
                         fromager</button>
                 </li>
                 <li>
@@ -198,7 +164,7 @@
                 </li>
             </ul>
             <h1>Notre charcuterie</h1>
-            <ul id="fournisseursOuProdListe">
+            <ul id="listeDesFournisseursUl">
                 <li>
                     <img src="Images/morteauSaucisse.jpg" alt="MORTEAU SAUCISSE">
                     <h2>MORTEAU SAUCISSE</h2>
@@ -206,15 +172,6 @@
                     <h3>MORTEAU (25)</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
                         onclick="ouvertureInfosFournisseur('#infosFournisseurGlobMorteauSaucisse')">Découvrir le
-                        boucher</button>
-                </li>
-                <li>
-                    <img src="Images/salaisonsRenaudot.jpg" alt="SALAISONS RENAUDOT">
-                    <h2>SALAISONS RENAUDOT</h2>
-                    <p>Situé à</p>
-                    <h3>PONTARLIER (25)</h3>
-                    <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsRenaudot')">Découvrir le
                         boucher</button>
                 </li>
                 <li>
@@ -313,94 +270,6 @@
                         Pour en savoir plus sur le domaine, découvrir leurs produits ou planifier votre visite,
                         rendez-vous sur leur site officiel :
                         <a href="https://www.domaine-jacques-tissot.fr/" target="_blank">https://www.domaine-jacques-tissot.fr/</a>.
-                    </p>
-                </div>
-            </div>
-            <div id="infosFournisseurGlobHenriMaire" class="infosFournisseurGlob">
-                <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
-                        onclick="fermetureInfosFournisseur('#infosFournisseurGlobHenriMaire')">✕
-                    </div>
-                    <img src="Images/domaineHenriMaire.png" alt="Domaine Henri Maire">
-                    <h2>À la découverte du Domaine Henri Maire</h2>
-                    <p>
-                        Le <strong>Domaine Henri Maire</strong> est une véritable institution dans le Jura, reconnu
-                        comme l’un des pionniers ayant contribué à la renommée mondiale des vins jurassiens. Fondé en
-                        1632, ce domaine incarne près de quatre siècles d’histoire, de passion et de savoir-faire
-                        transmis de génération en génération.
-                    </p>
-                    <p>
-                        Situé à Arbois, capitale historique des vins du Jura, le Domaine Henri Maire est un acteur
-                        emblématique de la région, produisant une large gamme de vins qui reflètent l’excellence et la
-                        diversité du terroir jurassien.
-                    </p>
-
-                    <h3>Un engagement envers le terroir</h3>
-                    <p>
-                        Le Domaine Henri Maire possède l’un des plus vastes vignobles du Jura, réparti sur plus de 200
-                        hectares de vignes. Grâce à une attention minutieuse portée à chaque étape de la production, des
-                        vendanges manuelles à la vinification, le domaine propose des vins qui capturent l’essence même
-                        des sols riches et variés de la région.
-                    </p>
-                    <p>
-                        Fervent défenseur des cépages typiques du Jura, tels que le Savagnin, le Chardonnay, le
-                        Trousseau et le Poulsard, le domaine s’efforce de préserver l’authenticité tout en innovant pour
-                        répondre aux attentes des amateurs de vins du monde entier.
-                    </p>
-
-                    <h3>Les spécialités du Domaine Henri Maire</h3>
-                    <p>
-                        La gamme du Domaine Henri Maire comprend des crus incontournables qui séduiront aussi bien les
-                        amateurs que les connaisseurs :
-                    </p>
-                    <ul>
-                        <li>
-                            <strong>Vin Jaune</strong> – Symbole du Jura, ce vin unique est élevé sous voile pendant
-                            plus de six ans et se distingue par ses arômes de noix, de curry et d’épices.
-                        </li>
-                        <li>
-                            <strong>Vin de Paille</strong> – Ce vin doux et délicat est issu de raisins passerillés,
-                            offrant des notes de fruits confits et de miel.
-                        </li>
-                        <li>
-                            <strong>Macvin du Jura</strong> – Un apéritif emblématique, élaboré en mélangeant moût de
-                            raisin et eau-de-vie, idéal pour accompagner desserts ou fromages.
-                        </li>
-                        <li>
-                            <strong>Crémants du Jura</strong> – Des bulles élégantes et festives, parfaites pour toutes
-                            les occasions.
-                        </li>
-                        <li>
-                            <strong>Vins rouges</strong> – Des rouges légers et fruités, issus des cépages Poulsard et
-                            Trousseau, parfaits avec les plats de la gastronomie régionale.
-                        </li>
-                        <li>
-                            <strong>Vins blancs</strong> – Des Chardonnay et Savagnin riches en arômes, adaptés aux
-                            poissons, volailles et fromages.
-                        </li>
-                    </ul>
-
-                    <h3>Une visite incontournable</h3>
-                    <p>
-                        Le Domaine Henri Maire propose des visites captivantes pour les amateurs de vin. Plongez au cœur
-                        de l’histoire viticole jurassienne à travers un parcours guidé des caves historiques, où des
-                        fûts de chêne abritent des vins d’exception. Vous aurez également l’opportunité de déguster une
-                        sélection de crus et d’échanger avec des experts passionnés qui partagent leur amour pour le vin
-                        et le terroir.
-                    </p>
-
-                    <h3>Pourquoi choisir les vins du Domaine Henri Maire ?</h3>
-                    <p>
-                        Choisir le Domaine Henri Maire, c’est opter pour l’héritage, la qualité et l’innovation. Avec
-                        des méthodes de production respectueuses de l’environnement et un profond respect pour les
-                        traditions viticoles, le domaine offre des vins qui marient modernité et authenticité. Que ce
-                        soit pour un repas entre amis, une grande occasion ou un cadeau, les vins Henri Maire sont une
-                        valeur sûre.
-                    </p>
-                    <p>
-                        Pour découvrir davantage sur le domaine, consulter leurs produits ou organiser une visite,
-                        rendez-vous sur leur site officiel :
-                        <a href="https://www.henri-maire.fr" target="_blank">www.henri-maire.fr</a>.
                     </p>
                 </div>
             </div>
@@ -581,90 +450,6 @@
                     </p>
                 </div>
             </div>
-            <div id="infosFournisseurGlobCabelier" class="infosFournisseurGlob">
-                <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
-                        onclick="fermetureInfosFournisseur('#infosFournisseurGlobCabelier')">✕
-                    </div>
-                    <img src="Images/domaineCabellier.png" alt="Domaine Berthet-Bondet">
-                    <h2>À la découverte du Domaine Cabelier</h2>
-                    <p>
-                        Le <strong>Domaine Cabelier</strong>, situé à Arbois, au cœur du vignoble jurassien, est une
-                        maison incontournable pour les amateurs de vins du Jura. Reconnu pour la qualité et
-                        l’authenticité de ses crus, le domaine combine respect des traditions viticoles et modernité
-                        dans ses techniques de production. Le Domaine Cabelier est un véritable ambassadeur des vins
-                        d’Arbois, réputés pour leur finesse et leur caractère unique.
-                    </p>
-
-                    <h3>Un domaine riche en histoire</h3>
-                    <p>
-                        Fondé dans une région viticole d’exception, le Domaine Cabelier cultive des vignes dans un
-                        environnement privilégié, avec des sols calcaires et un climat idéal. Ces caractéristiques
-                        permettent de produire des vins qui expriment pleinement la richesse et la diversité des cépages
-                        jurassiens. Fort d’un savoir-faire transmis de génération en génération, le domaine est
-                        aujourd’hui une référence dans la région.
-                    </p>
-
-                    <h3>Une gamme variée et authentique</h3>
-                    <p>
-                        Le Domaine Cabelier propose une sélection de vins qui ravissent tous les palais. Voici
-                        quelques-unes de leurs spécialités :
-                    </p>
-                    <ul>
-                        <li>
-                            <strong>Vin Jaune</strong> – Ce vin emblématique du Jura, élevé sous voile pendant 6 ans et
-                            3 mois, est un véritable trésor aux arômes de noix, de curry et d’épices.
-                        </li>
-                        <li>
-                            <strong>Vin de Paille</strong> – Un vin liquoreux rare et précieux, aux saveurs intenses de
-                            fruits confits et de miel, parfait pour accompagner desserts et foie gras.
-                        </li>
-                        <li>
-                            <strong>Macvin du Jura</strong> – Ce vin doux, issu du mariage du moût de raisin et
-                            d’eau-de-vie, est un incontournable pour les apéritifs et les desserts.
-                        </li>
-                        <li>
-                            <strong>Crémants du Jura</strong> – Des vins effervescents raffinés, élaborés selon la
-                            méthode traditionnelle, parfaits pour toutes les célébrations.
-                        </li>
-                        <li>
-                            <strong>Vins blancs</strong> – Des Chardonnay et Savagnin qui reflètent la minéralité et la
-                            richesse des sols jurassiens.
-                        </li>
-                        <li>
-                            <strong>Vins rouges</strong> – Des rouges élaborés avec les cépages Poulsard, Trousseau et
-                            Pinot Noir, pour des vins fruités et élégants.
-                        </li>
-                        <li>
-                            <strong>Rosés</strong> – Des vins frais et légers, parfaits pour des moments conviviaux en
-                            été.
-                        </li>
-                    </ul>
-
-                    <h3>Un savoir-faire moderne et durable</h3>
-                    <p>
-                        Le Domaine Cabelier allie respect des traditions viticoles et innovation. En mettant en œuvre
-                        des pratiques respectueuses de l’environnement, ils s’efforcent de préserver le terroir
-                        jurassien pour les générations futures. L’attention portée à chaque étape de la production
-                        garantit des vins de qualité supérieure.
-                    </p>
-
-                    <h3>Une invitation à la découverte</h3>
-                    <p>
-                        Les visiteurs sont chaleureusement accueillis au Domaine Cabelier pour découvrir les coulisses
-                        de leur production. Entre les visites des vignes et des caves et les dégustations commentées,
-                        vous vivrez une expérience unique au cœur de l’univers viticole jurassien.
-                    </p>
-
-                    <h3>Pourquoi choisir le Domaine Cabelier ?</h3>
-                    <p>
-                        Le Domaine Cabelier se distingue par son exigence de qualité et son profond respect du terroir.
-                        Leurs vins, largement primés et reconnus, offrent une immersion dans l’authenticité et
-                        l’excellence du Jura. Que vous soyez un amateur éclairé ou un curieux, les crus du domaine
-                        sauront vous séduire.
-                    </p>
-                </div>
-            </div>
 
 
             <div id="infosFournisseurGlobPlateauArboisien" class="infosFournisseurGlob">
@@ -757,99 +542,10 @@
 
                 </div>
             </div>
-            <div id="infosFournisseurGlobPerrin" class="infosFournisseurGlob">
-                <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
-                        onclick="fermetureInfosFournisseur('#infosFournisseurGlobPerrin')">✕
-                    </div>
-                    <img src="Images/fromageriePerrin.png" alt="Fromagerie PERRIN">
-                    <h2>À la découverte de la Fromagerie Jean Perrin</h2>
-                    <p>
-                        La <strong>Fromagerie Jean Perrin</strong>, située dans le cœur du Jura, est une entreprise
-                        familiale qui perpétue depuis plusieurs décennies l’art de la fabrication artisanale des
-                        fromages emblématiques de la région. Connue pour son respect des traditions et son exigence de
-                        qualité, la Fromagerie Jean Perrin est un acteur incontournable du paysage fromager
-                        franc-comtois.
-                    </p>
-
-                    <h3>Un héritage familial</h3>
-                    <p>
-                        Fondée dans les années 1960, la Fromagerie Jean Perrin s'est construite autour des valeurs
-                        d'authenticité, de respect du terroir et de transmission du savoir-faire. Aujourd’hui, elle
-                        continue de produire des fromages d’exception grâce à une maîtrise artisanale et un attachement
-                        profond à l’identité franc-comtoise.
-                    </p>
-
-                    <h3>Les spécialités de la Fromagerie Jean Perrin</h3>
-                    <p>
-                        La fromagerie est renommée pour une sélection de fromages typiques, alliant tradition et
-                        innovation :
-                    </p>
-                    <ul>
-                        <li>
-                            <strong>Cancoillotte Perrin</strong> – Une spécialité légère et fondante, emblématique de la
-                            région. Préparée avec soin, elle se décline en plusieurs saveurs : nature, ail, vin blanc,
-                            et autres.
-                        </li>
-                        <li>
-                            <strong>Comté</strong> – Ce fromage d’appellation d'origine protégée (AOP) est affiné dans
-                            des caves naturelles pour développer des arômes riches et variés.
-                        </li>
-                        <li>
-                            <strong>Morbier</strong> – Fromage au lait cru, reconnaissable par sa ligne de cendre
-                            caractéristique et ses saveurs douces et fruitées.
-                        </li>
-                        <li>
-                            <strong>Raclette Jean Perrin</strong> – Idéale pour les repas gourmands, cette raclette
-                            offre une texture fondante et des saveurs généreuses.
-                        </li>
-                        <li>
-                            <strong>Tomme au lait cru</strong> – Un fromage traditionnel à pâte pressée non cuite,
-                            parfait pour les amateurs de goûts authentiques.
-                        </li>
-                    </ul>
-
-                    <h3>Un savoir-faire artisanal</h3>
-                    <p>
-                        La Fromagerie Jean Perrin sélectionne des laits de qualité supérieure issus de vaches
-                        principalement de race Montbéliarde, élevées dans des fermes locales. Le respect des techniques
-                        artisanales et une attention méticuleuse aux détails à chaque étape de la fabrication
-                        garantissent des fromages au goût unique et authentique.
-                    </p>
-
-                    <h3>Une démarche responsable</h3>
-                    <p>
-                        Soucieuse de préserver l’environnement et de valoriser le travail des agriculteurs locaux, la
-                        Fromagerie Jean Perrin privilégie les circuits courts et des pratiques durables. L’entreprise
-                        s’engage à réduire son impact environnemental tout en maintenant des standards élevés de qualité
-                        et d’éthique.
-                    </p>
-
-                    <h3>Une expérience gustative unique</h3>
-                    <p>
-                        La Fromagerie Jean Perrin ouvre également ses portes aux curieux et aux gourmands souhaitant
-                        découvrir le processus de fabrication et déguster des fromages directement à la source. Une
-                        immersion dans le monde de la tradition fromagère franc-comtoise, enrichie par l’histoire et le
-                        savoir-faire familial.
-                    </p>
-
-                    <h3>Pourquoi choisir la Fromagerie Jean Perrin ?</h3>
-                    <p>
-                        Choisir les produits de la Fromagerie Jean Perrin, c’est opter pour une qualité irréprochable,
-                        un respect des traditions, et une profonde connexion avec le terroir jurassien. Leurs fromages,
-                        reconnus et primés, sont parfaits pour sublimer vos repas et ravir vos papilles.
-                    </p>
-                    <p>
-                        Pour en savoir plus sur leurs produits, organiser une visite ou explorer leur histoire,
-                        rendez-vous sur leur site officiel :
-                        <a href="https://www.jean-perrin.com/" target="_blank">https://www.jean-perrin.com/</a>.
-                    </p>
-                </div>
-            </div>
             <div id="infosFournisseurGlobSancey-Richard" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
                     <div id="croixFermetureFichePoste"
-                        onclick="fermetureInfosFournisseur('#nfosFournisseurGlobSancey-Richard')">✕
+                        onclick="fermetureInfosFournisseur('#infosFournisseurGlobSancey-Richard')">✕
                     </div>
                     <img src="Images/fromagerieSanceyRichard.png" alt="Fromagerie Sancey-Richard">
                     <h2>À la découverte de la Fromagerie Sancey-Richard</h2>
@@ -1096,82 +792,6 @@
                         <a href="https://www.morteausaucisse.com/" target="_blank">https://www.morteausaucisse.com/</a>.
                     </p>
 
-                </div>
-            </div>
-            <div id="infosFournisseurGlobSalaisonsRenaudot" class="infosFournisseurGlob">
-                <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
-                        onclick="fermetureInfosFournisseur('#infosFournisseurGlobSalaisonsRenaudot')">✕
-                    </div>
-                    <img src="Images/salaisonsRenaudot.jpg" alt="Salaisons Renaudot">
-                    <h2>À la découverte des Salaisons Renaudot</h2>
-                    <p>
-                        Les <strong>Salaisons Renaudot</strong>, situées au cœur de la Franche-Comté, incarnent depuis
-                        des générations la tradition de la salaison artisanale. Entre savoir-faire ancestral et
-                        innovation, cette entreprise familiale est un acteur incontournable de la charcuterie
-                        franc-comtoise, célébrant les saveurs authentiques de la région.
-                    </p>
-
-                    <h3>Une expertise reconnue dans la salaison artisanale</h3>
-                    <p>
-                        Depuis sa création, les Salaisons Renaudot s'engagent à perpétuer les techniques traditionnelles
-                        de salaison, transmises de génération en génération. Chaque produit est fabriqué avec soin en
-                        utilisant des ingrédients de qualité et des méthodes respectueuses des traditions locales.
-                    </p>
-
-                    <p>
-                        Les Salaisons Renaudot s'attachent également à promouvoir les produits du terroir franc-comtois,
-                        en mettant en avant des recettes authentiques et des saveurs uniques, issues d'une production
-                        locale et responsable.
-                    </p>
-
-                    <h3>Des produits emblématiques</h3>
-                    <p>
-                        Les Salaisons Renaudot proposent une gamme variée de charcuteries artisanales, parmi lesquelles
-                        :
-                    </p>
-                    <ul>
-                        <li><strong>Saucisse de Morteau IGP</strong> – Fumée à la sciure de bois dans des tuyés
-                            traditionnels, elle offre une saveur intense et authentique.</li>
-                        <li><strong>Saucisse de Montbéliard IGP</strong> – Une spécialité légèrement épicée et fumée,
-                            idéale pour des plats conviviaux.</li>
-                        <li><strong>Jambon fumé du Haut-Doubs</strong> – Préparé avec soin et fumé lentement pour un
-                            goût raffiné et typiquement régional.</li>
-                        <li><strong>Saucissons secs et saucissons artisanaux</strong> – Une sélection de charcuteries
-                            sèches élaborées avec des recettes traditionnelles.</li>
-                    </ul>
-
-                    <h3>Un engagement pour la qualité et le terroir</h3>
-                    <p>
-                        Les Salaisons Renaudot privilégient les circuits courts et collaborent étroitement avec des
-                        éleveurs locaux pour garantir des produits de qualité supérieure. La viande utilisée provient
-                        d’animaux élevés dans le respect des normes environnementales et éthiques, favorisant ainsi une
-                        production durable et respectueuse.
-                    </p>
-                    <p>
-                        L’entreprise attache une grande importance à l’authenticité et au respect des traditions, tout
-                        en s'adaptant aux attentes modernes en matière de traçabilité et de sécurité alimentaire.
-                    </p>
-
-                    <h3>Une reconnaissance de l'excellence</h3>
-                    <p>
-                        Les Salaisons Renaudot sont fières de leurs certifications, notamment l'Indication Géographique
-                        Protégée (IGP) pour leurs saucisses de Morteau et de Montbéliard. Ces distinctions attestent du
-                        savoir-faire unique et de la qualité exceptionnelle des produits.
-                    </p>
-
-                    <h3>Pourquoi choisir les Salaisons Renaudot ?</h3>
-                    <p>
-                        En choisissant les Salaisons Renaudot, vous optez pour des produits de charcuterie savoureux,
-                        fabriqués avec soin dans le respect des traditions et des valeurs du terroir franc-comtois.
-                        C’est aussi une façon de soutenir une entreprise locale engagée dans la préservation du
-                        patrimoine gastronomique régional.
-                    </p>
-                    <p>
-                        Pour explorer leur gamme complète ou découvrir leur univers, rendez-vous sur leur site
-                        officiel :
-                        <a href="https://boucherie-renaudot.fr/" target="_blank">https://boucherie-renaudot.fr/</a>.
-                    </p>
                 </div>
             </div>
             <div id="infosFournisseurGlobSalaisonsComtoises" class="infosFournisseurGlob">
