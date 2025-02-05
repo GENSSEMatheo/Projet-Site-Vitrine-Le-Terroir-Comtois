@@ -563,7 +563,11 @@ footer li{
     border-right: solid 1px;
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     padding: 0 2vw;
+=======
+    margin-left:2vw ;
+>>>>>>> 9eef5547a34d177b0cf09d9b4f3dacdf238053b0
 }
 #imageDetailProd{
     height: 45vh;
