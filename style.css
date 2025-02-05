@@ -182,9 +182,8 @@ footer{
     padding-top: 1vw;
     border-top: solid 0.5px;
     padding-bottom: 1vw;
-    background-color: #aa7d00a6;
+    background-color: #aa7d00;
     font-style: italic;
-    margin-top: 1vw;
 }
 
 footer ul{
@@ -265,9 +264,17 @@ footer li{
     text-align: center;
     
 }
+#sectionGlobFondEquipe.simpleEmploye img{
+    max-width: 7vw;
+}
+#sectionGlobFondEquipe.simpleEmploye #personne{
+    max-width: 7vw;
+    font-size: 0.5vw;
+    padding-bottom: 5vw;
+}
 #sectionGlobFondEquipe img{
     width: auto;
-    max-width: 19vw;
+    max-width: 13vw;
     border: solid #000000;
     transition: transform ease 0.5s;
 }
@@ -275,10 +282,10 @@ footer li{
     transform: scale(0.9);
 }
 #personne{
-    background-color: #aa7d00;
+    background-color: #615d5e;
     margin: 1vw;
     width: auto;
-    max-width: 20vw;
+    max-width: 15vw;
     padding: 1vw;
     padding-bottom: 14vh;
     border-radius: 0 0 50vw 50vw;
@@ -287,17 +294,17 @@ footer li{
     text-transform: uppercase;
     color: black;
     text-decoration: none;
-    background-color: #aa7d00;
+    background-color: #ffffff;
     border-radius: 1vw;
     padding: 1vh;
     border: solid;
     font-weight: bold;
     cursor: pointer;
-    font-size: 1vw;
-    transition: font-size ease 0.5s;
+    font-size: 0.8vw;
+    transition: transform ease 0.5s;
 }
 #buttonFicheDePoste:hover{
-    font-size:0.9vw ;
+    transform: scale(0.9);
 }
 .ficheDePosteGlob{
     position:fixed;
@@ -312,12 +319,13 @@ footer li{
     transition: transform ease 1s;
 }
 #fichePoste{
-    background-color: white;
+    background-color: #615d5e;
+    color: white;
     width: 80vw;
     height: 80vh;
     padding: 1vh 1vw;
     text-align: center;
-    overflow:scroll;
+    overflow-y:scroll;
     border: solid black;
 }
 #croixFermetureFichePoste{
@@ -327,6 +335,20 @@ footer li{
 }
 #fichePoste ul{
     list-style: none;
+}
+#telechargerOrganigramme{
+    padding: 1vw;
+    font-size: 1vw;
+    color: white;
+    text-transform: uppercase;
+    border: solid black;
+    border-radius: 50vw;
+    background-color: #615d5e;
+    margin: 1vw;
+    transition: all ease 0.5s;
+}
+#telechargerOrganigramme:hover{
+    transform: scale(0.9);
 }
 
 /*--------------------------------*/
@@ -338,13 +360,16 @@ footer li{
     border-radius: 50vw;
     text-transform: uppercase;
     font-weight: bold;
-    background-color: #aa7d00;
+    background-color: white;
     cursor: pointer;
     transition: all ease 0.5s;
+    border: 0;
 }
 #buttonEnSavoirPlusSurProduitsOuFournisseur:hover{
     transform: scale(0.9);
-    background-color: #aa7d00a1;
+    background-color: black;
+    color: white;
+    border: none;
 }
 /*--------------------*/
 /*CONTENU FOURNISSEURS*/
@@ -358,10 +383,10 @@ footer li{
     text-transform: uppercase;
     padding: 2vh 0;
     font-size: xx-large;
-    background-color:white ;
-    color: black;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
+    background-color:#375110 ;
+    color: white;
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
 }
 #listeDesFournisseursUl{
     display: flex;
@@ -369,23 +394,23 @@ footer li{
     list-style: none;
     padding: 0;
     flex-wrap: wrap;
+    margin: 0;
 
 }
 #listeDesFournisseursUl li{
-    background-color:white ;
+    background-color:#375110 ;
     margin: 1vw;
     padding: 1vw;
     border-radius:0.5vw ;
-    color: black;
+    color: white;
     flex-wrap: wrap;
     width: 19vw;
-    border: solid black 1px;
+    border: solid white 2px;
 }
 #listeDesFournisseursUl img{
     width: 18vw;
     border-radius: 0.5vw;
     aspect-ratio: 4/3;
-    border: solid;
     transition: transform ease 0.5s;
 }
 #listeDesFournisseursUl img:hover{
@@ -405,12 +430,13 @@ footer li{
 }
 #infosFournisseur{
     margin: 10vh 10vw;
-    background-color: white;
+    background-color: #375110;
+    color: white;
     width: 80vw;
     height: 80vh;
     padding: 1vw;
     border: solid;
-    overflow: scroll;
+    overflow-y: scroll;
     text-align: center;
 }
 #infosFournisseur li{
@@ -437,15 +463,7 @@ footer li{
     flex-direction: row;
     justify-content: space-around;
 }
-#barreFiltreProduitsCheckboxListesPartieInferieur{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 2vh 20vw;
-    
-    width: 40vw;
 
-}
 #barreFiltreProduitsCheckboxListesPartieSuperieur ul{
     list-style: none;
     text-align: left;
@@ -455,21 +473,11 @@ footer li{
     border-left: solid 1px black;
     padding-left: 1vw;
 }
-#buttonAppliquerFiltres{
-    padding: 1vw;
-    background-color: #aa7d00;
-    border-radius: 50vw;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.5s ease;
-}
-#buttonAppliquerFiltres:hover{
-    transform: scale(0.9);
-}
 
 #sectionProduitsGlob{
     background-color: #0000006e;
     text-align: center;
+    margin-top: -1vw;
 }
 #sectionProduitsGlob h1{
     margin: 0;
@@ -519,3 +527,96 @@ footer li{
     height: auto;
     border: 0;
 }
+
+
+#croixFermetureDetailProd{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2vh 2vw;
+    cursor: pointer;
+}
+
+
+.infosProdGlob{
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    position: fixed;
+    left: 10vw;
+    right: 10vw;
+    top: 10vh;
+    bottom: 10vh;
+    z-index: 2;
+    border: solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: transform ease 1s;
+    transform: scale(0);
+}
+.infosProdGlob #partieGauche{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    border-right: solid 1px;
+    display: flex;
+    flex-direction: column;
+    margin-left:2vw ;
+}
+#imageDetailProd{
+    height: 45vh;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+#imageDetailProd:hover{
+    transform: scale(1.1);
+}
+.infosProdGlob #partieGauche #imagePartieGauche{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infosProdGlob #partieGauche #infosPrincipalesPartieGauche{
+    height: 20vh;
+    text-transform: uppercase;
+}
+.infosProdGlob #partieGauche #infosPrincipalesPartieGauche h2{
+    font-size: x-large;
+}
+.infosProdGlob #partieGauche #infosPrincipalesPartieGauche h3{
+    font-size: large;
+}
+.infosProdGlob #partieGauche #infosPrincipalesPartieGauche p{
+    font-size: medium;
+    font-style: italic;
+}
+
+
+
+.infosProdGlob #partieDroiteTexte{
+    height: 70vh;
+    width: 46vw;
+    padding: 1vw;
+    overflow-y: scroll;
+}
+.infosProdGlob #partieDroiteTexte h1{
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+.infosProdGlob #partieDroiteTexte button{
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    background-color: #aa7d00;
+    border-radius: 50vw;
+    padding: 1vh;
+    border: solid;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+

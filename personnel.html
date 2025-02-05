@@ -64,16 +64,23 @@
                         <h2 id="TitreSousMenu">Notre équipe</h2>
                         <li onclick="ouvertureFicheDePoste('#fichePostePierreMarmierGlob')">Pierre Marmier - Gérant</li>
                         <h3 id="sousTitreSousMenu">Nos responsables</h3>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteSophieGirardotGlob')">Sophie Girardot - Responsable des stocks</li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteAntoinePerrenotGlob')">Antoine Perrenot - Responsable des relations clients</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteSophieGirardotGlob')">Sophie Girardot -
+                            Responsable des stocks</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteAntoinePerrenotGlob')">Antoine Perrenot -
+                            Responsable des relations clients</li>
                         <h3 id="sousTitreSousMenu">Nos vendeurs(euses)</h3>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteLucieJeannerotGlob')">Lucie Jeannerot - Vendeuse</li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteThomasManzoniGlob')">Thomas Manzoni - Vendeur</li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteFrancoisGigotGlob')">François Gigot - Vendeur</li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteHeleneVouillotGlob')">Hélène Vouillot - Vendeuse</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteLucieJeannerotGlob')">Lucie Jeannerot - Vendeuse
+                        </li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteThomasManzoniGlob')">Thomas Manzoni - Vendeur
+                        </li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteFrancoisGigotrGlob')">François Gigot - Vendeur
+                        </li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteHeleneVouillotGlob')">Hélène Vouillot - Vendeuse
+                        </li>
                         <li onclick="ouvertureFicheDePoste('#fichePosteNicolasCartGlob')">Nicolas Cart - Vendeur</li>
                         <h3 id="sousTitreSousMenu">Nos Caissiers(es)</h3>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteElodieMillotGlob')">Elodie Millot - Caissière</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteElodieMillotGlob')">Elodie Millot - Caissière
+                        </li>
                         <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot - Caissière</li>
                     </ul>
                 </li><br>
@@ -98,6 +105,8 @@
                 <button id="buttonFicheDePoste" onclick="ouvertureFicheDePoste('#fichePostePierreMarmierGlob')">Afficher
                     la fiche de poste</button>
             </div>
+        </section>
+        <section id="sectionGlobFondEquipe">
             <div id="personne">
                 <img src="Images/SophieGirardot.jpg" alt="SophieGirardot">
                 <h2>Sophie Girardot</h2>
@@ -108,28 +117,30 @@
             <div id="personne">
                 <img src="Images/AntoinePerrenot.jpg" alt="AntoinePerrenot">
                 <h2>Antoine Perrenot</h2>
-                <h3>Responsable des relations clients</h3>
+                <h3>Responsable de vente</h3>
                 <button id="buttonFicheDePoste"
                     onclick="ouvertureFicheDePoste('#fichePosteAntoinePerrenotGlob')">Afficher la fiche de poste</button>
             </div>
             <div id="personne">
                 <img src="Images/LucieJeannerot.jpg" alt="LucieJeannerot">
                 <h2>Lucie Jeannerot</h2>
-                <h3>Vendeuse</h3>
+                <h3>Responsable de caisse</h3>
                 <button id="buttonFicheDePoste"
                 onclick="ouvertureFicheDePoste('#fichePosteLucieJeannerotGlob')">Afficher la fiche de poste</button>
             </div>
+        </section>
+        <section id="sectionGlobFondEquipe" class="simpleEmploye">
             <div id="personne">
                 <img src="Images/ThomasManzoni.jpg" alt="ThomasManzoni">
                 <h2>Thomas Manzoni</h2>
-                <h3>Vendeur</h3>
+                <h3>Employé logistique</h3>
                 <button id="buttonFicheDePoste"
                 onclick="ouvertureFicheDePoste('#fichePosteThomasManzoniGlob')">Afficher la fiche de poste</button>
             </div>
             <div id="personne">
                 <img src="Images/FrancoisGigot.jpg" alt="FrancoisGigot">
                 <h2>François Gigot</h2>
-                <h3>Vendeur</h3>
+                <h3>Employé logistique</h3>
                 <button id="buttonFicheDePoste"
                 onclick="ouvertureFicheDePoste('#fichePosteFrancoisGigotGlob')">Afficher la fiche de poste</button>
             </div>
@@ -161,6 +172,7 @@
                 <button id="buttonFicheDePoste"
                 onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Afficher la fiche de poste</button>
             </div>
+            <a id="telechargerOrganigramme" href="organigramme.pdf" download>Télécharger notre organigramme</a>
         </section>
         <div id="fichePostePierreMarmierGlob" class="ficheDePosteGlob">
             <div id="fichePoste">
@@ -333,214 +345,211 @@
         </div>
         <div id="fichePosteAntoinePerrenotGlob" class="ficheDePosteGlob">
             <div id="fichePoste">
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteAntoinePerrenotGlob')">✕
-                </div>
+                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteAntoinePerrenotGlob')">✕</div>
                 <header>
-                    <h1>Fiche de Poste : Responsable des Relations Clients</h1>
+                    <h1>Fiche de Poste : Responsable de vente</h1>
                     <h2>Antoine Perrenot</h2>
                 </header>
                 <article>
                     <h3>Informations Générales</h3>
                     <ul>
-                        <li><strong>Poste :</strong> Responsable des Relations Clients</li>
+                        <li><strong>Poste :</strong> Responsable de vente</li>
                         <li><strong>Nom :</strong> Antoine Perrenot</li>
                         <li><strong>Lieu :</strong> Boutique du Terroir Comtois, Larnod</li>
-                        <li><strong>Expérience :</strong> 8 ans dans la gestion des relations clients</li>
+                        <li><strong>Expérience :</strong> 8 ans dans la gestion des équipes commerciales</li>
                     </ul>
-        
+            
                     <h3>Rôle et Responsabilités</h3>
                     <section>
-                        <h4>1. Gestion des relations clients</h4>
-                        <p>Assurer un contact constant avec la clientèle pour répondre à leurs questions, leurs besoins et leurs préoccupations. Développer une expérience client positive et personnalisée.</p>
-                        <p>Mettre en place des stratégies pour fidéliser les clients et recueillir leurs retours d’expérience afin d'améliorer les services offerts.</p>
+                        <h4>1. Gestion des équipes commerciales</h4>
+                        <p>Superviser et coordonner les activités de l’équipe de vente pour atteindre les objectifs commerciaux. Assurer une répartition efficace des tâches et des responsabilités.</p>
+                        <p>Encadrer et motiver les vendeurs pour maximiser leur performance et leur productivité.</p>
                     </section>
-        
+            
                     <section>
-                        <h4>2. Analyse des besoins des clients</h4>
-                        <p>Analyser les tendances et les comportements des clients pour anticiper leurs attentes et adapter les produits ou services de la boutique.</p>
-                        <p>Élaborer des rapports réguliers sur les retours clients et collaborer avec l’équipe pour identifier les points d’amélioration.</p>
+                        <h4>2. Développement des ventes</h4>
+                        <p>Élaborer et mettre en œuvre des stratégies commerciales pour augmenter le chiffre d’affaires et développer de nouveaux marchés.</p>
+                        <p>Analyser les tendances du marché et les comportements d’achat pour adapter l’offre de produits et services.</p>
                     </section>
-        
+            
                     <section>
-                        <h4>3. Formation et supervision</h4>
-                        <p>Former les membres de l’équipe aux techniques de service client et leur apprendre à gérer les situations difficiles avec professionnalisme.</p>
-                        <p>Superviser les interactions entre l’équipe de vente et les clients afin d’assurer un haut niveau de satisfaction.</p>
+                        <h4>3. Formation et coaching</h4>
+                        <p>Former les membres de l’équipe aux techniques de vente, à la négociation et à la gestion des objections.</p>
+                        <p>Assurer un suivi régulier des performances individuelles et collectives, et proposer des plans d’amélioration.</p>
                     </section>
-        
+            
                     <section>
-                        <h4>4. Développement de la stratégie client</h4>
-                        <p>Créer des initiatives et des campagnes visant à renforcer la relation avec les clients, notamment via des offres personnalisées et des événements promotionnels.</p>
-                        <p>Collaborer avec les responsables de la boutique pour intégrer les besoins des clients dans les décisions stratégiques.</p>
+                        <h4>4. Suivi des indicateurs de performance</h4>
+                        <p>Définir et suivre les KPI (indicateurs clés de performance) pour évaluer l’efficacité des actions commerciales.</p>
+                        <p>Préparer des rapports détaillés sur les résultats des ventes et présenter des recommandations aux responsables de la boutique.</p>
                     </section>
-        
+            
                     <h3>Profil d’Antoine Perrenot</h3>
                     <p><strong>Qualités principales :</strong></p>
                     <ul>
-                        <li>Excellent communicant : Capable d’établir des relations positives et de gérer des situations complexes avec calme.</li>
-                        <li>Empathique : Comprend et prend en compte les besoins et préoccupations des clients.</li>
-                        <li>Stratégique : Vision à long terme pour améliorer la fidélité et la satisfaction client.</li>
-                        <li>Résilient : Gère efficacement les défis et les imprévus.</li>
+                        <li>Leader inspirant : Capable de motiver et de guider une équipe vers l’atteinte des objectifs.</li>
+                        <li>Stratège : Vision claire pour développer les ventes et optimiser les processus commerciaux.</li>
+                        <li>Analytique : Compétences en analyse des données pour prendre des décisions éclairées.</li>
+                        <li>Résultats-orienté : Concentré sur l’atteinte et le dépassement des objectifs commerciaux.</li>
                     </ul>
                     <p><strong>Expertise spécifique :</strong></p>
                     <ul>
-                        <li>Compétences en analyse des données liées à la clientèle.</li>
-                        <li>Maîtrise des outils CRM pour le suivi des interactions clients.</li>
-                        <li>Expérience dans l’organisation d’événements promotionnels et de campagnes marketing.</li>
+                        <li>Maîtrise des techniques de vente et de négociation.</li>
+                        <li>Expérience dans la gestion des équipes commerciales et des performances.</li>
+                        <li>Connaissance des outils de gestion de la relation client (CRM) et des logiciels de suivi des ventes.</li>
                     </ul>
-        
-                    <h3>Un Pilier dans l’Expérience Client</h3>
-                    <p>Antoine Perrenot joue un rôle essentiel dans la satisfaction et la fidélisation de la clientèle du Terroir Comtois. Avec son expertise et son écoute attentive, il s’assure que chaque client se sente valorisé et satisfait, contribuant ainsi à la réputation d’excellence de la boutique.</p>
+            
+                    <h3>Un Pilier dans la Performance Commerciale</h3>
+                    <p>Antoine Perrenot joue un rôle clé dans la réussite commerciale du Terroir Comtois. Grâce à son leadership, sa stratégie et son expertise, il contribue à la croissance des ventes et à la pérennité de la boutique, tout en assurant une expérience client de qualité.</p>
                 </article>
             </div>
         </div>
         <div id="fichePosteLucieJeannerotGlob" class="ficheDePosteGlob">
             <div id="fichePoste">
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteLucieJeannerotGlob')">✕
-                </div>
+                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteLucieJeannerotGlob')">✕</div>
                 <header>
-                    <h1>Fiche de Poste : Vendeuse</h1>
+                    <h1>Fiche de Poste : Responsable de caisse</h1>
                     <h2>Lucie Jeannerot</h2>
                 </header>
                 <article>
                     <h3>Informations Générales</h3>
                     <ul>
-                        <li><strong>Poste :</strong> Vendeuse</li>
+                        <li><strong>Poste :</strong> Responsable de caisse</li>
                         <li><strong>Nom :</strong> Lucie Jeannerot</li>
                         <li><strong>Lieu :</strong> Boutique du Terroir Comtois, Larnod</li>
                         <li><strong>Années d’expérience :</strong> 3 ans</li>
                     </ul>
-        
+            
                     <h3>Rôle et Responsabilités</h3>
                     <section>
-                        <h4>1. Accueil et conseil des clients</h4>
-                        <p>Assurer un accueil chaleureux et professionnel pour chaque client entrant dans la boutique. Comprendre leurs besoins et les guider dans le choix des produits locaux adaptés.</p>
-                        <p>Partager des informations détaillées sur les produits et mettre en avant leur origine ainsi que leurs spécificités.</p>
+                        <h4>1. Gestion des opérations de caisse</h4>
+                        <p>Superviser et exécuter les transactions de caisse de manière précise et efficace. S’assurer que les procédures d’encaissement et de remboursement sont respectées.</p>
+                        <p>Vérifier les soldes de caisse en début et fin de journée pour garantir l’exactitude des comptes.</p>
                     </section>
-        
+            
                     <section>
-                        <h4>2. Vente et encaissement</h4>
-                        <p>Gérer le processus de vente de manière fluide, de la sélection des produits à l’encaissement.</p>
-                        <p>Respecter les procédures de caisse et assurer un service rapide et précis pour éviter les erreurs.</p>
+                        <h4>2. Formation et supervision des caissiers</h4>
+                        <p>Former les nouveaux membres de l’équipe aux procédures de caisse et aux outils de gestion des transactions.</p>
+                        <p>Superviser les caissiers pour s’assurer qu’ils respectent les standards de qualité et de rapidité.</p>
                     </section>
-        
+            
                     <section>
-                        <h4>3. Mise en avant des produits</h4>
-                        <p>Participer à l’agencement de la boutique pour rendre les produits attrayants et accessibles.</p>
-                        <p>Mettre en place des promotions ou des offres spéciales tout en veillant à ce que les rayons restent bien fournis et ordonnés.</p>
+                        <h4>3. Résolution des problèmes de caisse</h4>
+                        <p>Intervenir en cas de litiges ou d’erreurs de transaction, et trouver des solutions rapides pour satisfaire les clients tout en respectant les règles de la boutique.</p>
+                        <p>Gérer les situations complexes, telles que les retours de produits ou les réclamations liées aux paiements.</p>
                     </section>
-        
+            
                     <section>
-                        <h4>4. Collaboration avec l’équipe</h4>
-                        <p>Travailler étroitement avec les autres membres de l'équipe pour garantir une expérience client homogène.</p>
-                        <p>Communiquer régulièrement avec le Responsable des Stocks (Sophie Girardot) pour s’assurer que les produits les plus populaires soient toujours disponibles.</p>
+                        <h4>4. Coordination avec l’équipe</h4>
+                        <p>Travailler en étroite collaboration avec les autres responsables (vente, stocks) pour assurer une gestion fluide des opérations en boutique.</p>
+                        <p>Communiquer régulièrement avec le Responsable des Stocks (Sophie Girardot) pour s’assurer que les produits sont correctement enregistrés et facturés.</p>
                     </section>
-        
+            
                     <h3>Profil de Lucie Jeannerot</h3>
                     <p><strong>Qualités principales :</strong></p>
                     <ul>
-                        <li>Souriante : Crée une atmosphère conviviale et accueillante pour tous les clients.</li>
-                        <li>Organisée : Maintient les rayons bien ordonnés et gère efficacement ses tâches.</li>
-                        <li>Patiente : Prend le temps d’écouter les besoins des clients, même en période d’affluence.</li>
-                        <li>Polyvalente : Capable de s’adapter à différentes situations en boutique.</li>
+                        <li>Rigoureuse : Veille à ce que chaque transaction soit précise et conforme aux procédures.</li>
+                        <li>Organisée : Gère efficacement les flux de caisse et les tâches administratives.</li>
+                        <li>Calme sous pression : Capable de gérer les périodes d’affluence et les situations stressantes avec professionnalisme.</li>
+                        <li>Polyvalente : Peut intervenir sur d’autres postes en cas de besoin.</li>
                     </ul>
                     <p><strong>Compétences spécifiques :</strong></p>
                     <ul>
-                        <li>Bonne connaissance des produits locaux et artisanaux de la région.</li>
-                        <li>Maîtrise des outils de caisse et des procédures d’encaissement.</li>
-                        <li>Capacité à convaincre les clients grâce à des conseils personnalisés.</li>
+                        <li>Maîtrise des outils de caisse et des logiciels de gestion des transactions.</li>
+                        <li>Connaissance des procédures de contrôle des stocks et des inventaires.</li>
+                        <li>Capacité à former et à encadrer une équipe de caissiers.</li>
                     </ul>
-        
-                    <h3>Un Engagement au Service du Client</h3>
-                    <p>Lucie Jeannerot est une ambassadrice des valeurs de la boutique Terroir Comtois. Grâce à son dévouement et à son enthousiasme, elle s’assure que chaque client reparte satisfait, avec le produit idéal et un souvenir chaleureux de son expérience en boutique. Lucie contribue activement à faire connaître et aimer les produits locaux de Franche-Comté.</p>
+            
+                    <h3>Un Pilier dans la Gestion des Opérations</h3>
+                    <p>Lucie Jeannerot joue un rôle essentiel dans le bon fonctionnement de la boutique Terroir Comtois. Grâce à son expertise et à son sens de l’organisation, elle garantit des opérations de caisse fluides et précises, tout en contribuant à une expérience client positive. Son professionnalisme et son dévouement en font une pièce maîtresse de l’équipe.</p>
                 </article>
             </div>
         </div>
         <div id="fichePosteThomasManzoniGlob" class="ficheDePosteGlob">
             <div id="fichePoste">
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteThomasManzoniGlob')">✕
-                </div>
+                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteThomasManzoniGlob')">✕</div>
                 <header>
-                    <h1>Fiche de Poste : Vendeur</h1>
+                    <h1>Fiche de Poste : Employé Logistique</h1>
                     <h2>Thomas Manzoni</h2>
                 </header>
                 <article>
                     <h3>Informations Générales</h3>
                     <ul>
-                        <li><strong>Poste :</strong> Vendeur</li>
+                        <li><strong>Poste :</strong> Employé Logistique</li>
                         <li><strong>Nom :</strong> Thomas Manzoni</li>
                         <li><strong>Lieu :</strong> Boutique du Terroir Comtois, Larnod</li>
                         <li><strong>Années d’expérience :</strong> 4 ans</li>
                     </ul>
-        
+            
                     <h3>Rôle et Responsabilités</h3>
                     <section>
-                        <h4>1. Accueil et conseil des clients</h4>
-                        <p>Assurer un accueil chaleureux et professionnel pour chaque client entrant dans la boutique. Comprendre leurs besoins et les guider dans le choix des produits locaux adaptés.</p>
-                        <p>Partager des informations détaillées sur les produits et mettre en avant leur origine ainsi que leurs spécificités.</p>
+                        <h4>1. Réception des livraisons</h4>
+                        <p>Assurer la réception des livraisons et vérifier la conformité des produits reçus.</p>
+                        <p>Enregistrer les produits dans le système de gestion des stocks.</p>
                     </section>
-        
+            
                     <section>
-                        <h4>2. Vente et encaissement</h4>
-                        <p>Gérer le processus de vente de manière fluide, de la sélection des produits à l’encaissement.</p>
-                        <p>Respecter les procédures de caisse et assurer un service rapide et précis pour éviter les erreurs.</p>
+                        <h4>2. Gestion des stocks</h4>
+                        <p>Organiser et ranger les produits dans l'entrepôt ou les zones de stockage.</p>
+                        <p>Effectuer des inventaires réguliers pour s'assurer de la disponibilité des produits.</p>
                     </section>
-        
+            
                     <section>
-                        <h4>3. Mise en avant des produits</h4>
-                        <p>Participer à l’agencement de la boutique pour rendre les produits attrayants et accessibles.</p>
-                        <p>Mettre en place des promotions ou des offres spéciales tout en veillant à ce que les rayons restent bien fournis et ordonnés.</p>
+                        <h4>3. Mise en rayon</h4>
+                        <p>Assurer la mise en rayon des produits en respectant les consignes de présentation.</p>
+                        <p>Veiller à ce que les rayons soient bien approvisionnés et ordonnés.</p>
                     </section>
-        
+            
                     <section>
                         <h4>4. Collaboration avec l’équipe</h4>
-                        <p>Travailler étroitement avec les autres membres de l'équipe pour garantir une expérience client homogène.</p>
+                        <p>Travailler en étroite collaboration avec les autres membres de l'équipe pour garantir une gestion efficace des stocks.</p>
                         <p>Communiquer régulièrement avec le Responsable des Stocks pour s’assurer que les produits les plus populaires soient toujours disponibles.</p>
                     </section>
                 </article>
-            </div>
+            </div>            
         </div>
         <div id="fichePosteFrancoisGigotGlob" class="ficheDePosteGlob">
             <div id="fichePoste">
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteFrancoisGigotGlob')">✕
-                </div>
+                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteFrancoisGigotGlob')">✕</div>
                 <header>
-                    <h1>Fiche de Poste : Vendeur</h1>
+                    <h1>Fiche de Poste : Employé Logistique</h1>
                     <h2>François Gigot</h2>
                 </header>
                 <article>
                     <h3>Informations Générales</h3>
                     <ul>
-                        <li><strong>Poste :</strong> Vendeur</li>
+                        <li><strong>Poste :</strong> Employé Logistique</li>
                         <li><strong>Nom :</strong> François Gigot</li>
                         <li><strong>Lieu :</strong> Boutique du Terroir Comtois, Larnod</li>
                         <li><strong>Années d’expérience :</strong> 2 ans</li>
                     </ul>
                     <h3>Rôle et Responsabilités</h3>
                     <section>
-                        <h4>1. Accueil et conseil des clients</h4>
-                        <p>Assurer un accueil chaleureux et professionnel pour chaque client entrant dans la boutique. Comprendre leurs besoins et les guider dans le choix des produits locaux adaptés.</p>
-                        <p>Partager des informations détaillées sur les produits et mettre en avant leur origine ainsi que leurs spécificités.</p>
+                        <h4>1. Réception des livraisons</h4>
+                        <p>Assurer la réception des livraisons et vérifier la conformité des produits reçus.</p>
+                        <p>Enregistrer les produits dans le système de gestion des stocks.</p>
                     </section>
-        
+            
                     <section>
-                        <h4>2. Vente et encaissement</h4>
-                        <p>Gérer le processus de vente de manière fluide, de la sélection des produits à l’encaissement.</p>
-                        <p>Respecter les procédures de caisse et assurer un service rapide et précis pour éviter les erreurs.</p>
+                        <h4>2. Gestion des stocks</h4>
+                        <p>Organiser et ranger les produits dans l'entrepôt ou les zones de stockage.</p>
+                        <p>Effectuer des inventaires réguliers pour s'assurer de la disponibilité des produits.</p>
                     </section>
-        
+            
                     <section>
-                        <h4>3. Mise en avant des produits</h4>
-                        <p>Participer à l’agencement de la boutique pour rendre les produits attrayants et accessibles.</p>
-                        <p>Mettre en place des promotions ou des offres spéciales tout en veillant à ce que les rayons restent bien fournis et ordonnés.</p>
+                        <h4>3. Mise en rayon</h4>
+                        <p>Assurer la mise en rayon des produits en respectant les consignes de présentation.</p>
+                        <p>Veiller à ce que les rayons soient bien approvisionnés et ordonnés.</p>
                     </section>
-        
+            
                     <section>
                         <h4>4. Collaboration avec l’équipe</h4>
-                        <p>Travailler étroitement avec les autres membres de l'équipe pour garantir une expérience client homogène.</p>
+                        <p>Travailler en étroite collaboration avec les autres membres de l'équipe pour garantir une gestion efficace des stocks.</p>
                         <p>Communiquer régulièrement avec le Responsable des Stocks pour s’assurer que les produits les plus populaires soient toujours disponibles.</p>
                     </section>
                 </article>
             </div>
+            
         </div>
         <div id="fichePosteHeleneVouillotGlob" class="ficheDePosteGlob">
             <div id="fichePoste">
@@ -714,16 +723,18 @@
                 </article>
             </div>
         </div>
+
         <footer>
+
             A propos <br>
             --- <br>
             Le Terroir Comtois <br>
-            Franche-Comté (25)<br>
-            <br>
-            Created by Mathéo GENSSE
-            <br>
-            © 2025 <br>
-            ---
+            Franche-Comté, Commune de Larnod (25)<br>
+            --- <br>
+            Tous droits réservés - Le Terroir Comtois © 2025 <br>
+            --- <br>
+            L'abus d'alcool est dangereux pour la santé, sachez consommer avec modération. Interdit aux moins de 18 ans. <br>
+            --- <br>
         </footer>
     </section>
 
