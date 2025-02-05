@@ -106,74 +106,74 @@
 
 
         <div id="barreFiltresProduits">
+            <p style="font-style: italic; color: red;margin: 1vw;border: solid black; padding: 1vw;">L'abus d'alcool est
+                dangereux pour la santé, sachez consommer avec modération. Interdit aux moins de 18 ans.</p>
             <p>Que recherchez-vous ?</p>
             <div id="barreFiltreProduitsCheckboxListesPartieSuperieur">
                 <div class="listeParTypeProdGlob" id="nosVins">
                     <h2>Nos Vins</h2>
                     <ul>
-                        <li><input type="checkbox">Vins Rouges</li>
-                        <li><input type="checkbox">Vins Blancs</li>
-                        <li><input type="checkbox">Vin Jaune</li>
-                        <li><input type="checkbox">Vin de Paille</li>
-                        <li><input type="checkbox">Macvin</li>
-                        <li><input type="checkbox">Rosé</li>
+                        <li><input type="checkbox" class="checkbox" value="vinrouge">Vins Rouges</li>
+                        <li><input type="checkbox" class="checkbox" value="vinblanc">Vins Blancs</li>
+                        <li><input type="checkbox" class="checkbox" value="cremant">Crémants</li>
+                        <li><input type="checkbox" class="checkbox" value="vinjaune">Vin Jaune</li>
+                        <li><input type="checkbox" class="checkbox" value="vinpaille">Vin de Paille</li>
+                        <li><input type="checkbox" class="checkbox" value="macvin">Macvin</li>
+                        <li><input type="checkbox" class="checkbox" value="rose">Rosé</li>
                     </ul>
                 </div>
                 <div class="listeParTypeProdGlob" id="nosFromages">
                     <h2>Nos Fromages</h2>
                     <ul>
-                        <li><input type="checkbox">Comté</li>
-                        <li><input type="checkbox">Morbier</li>
-                        <li><input type="checkbox">Mont d'Or</li>
-                        <li><input type="checkbox">Cancoillote</li>
+                        <li><input type="checkbox" class="checkbox" value="comte">Comté</li>
+                        <li><input type="checkbox" class="checkbox" value="morbier">Morbier</li>
+                        <li><input type="checkbox" class="checkbox" value="montdor">Mont d'Or</li>
+                        <li><input type="checkbox" class="checkbox" value="cancoillote">Cancoillote</li>
                     </ul>
                 </div>
                 <div class="listeParTypeProdGlob" id="nosCharcuteries">
                     <h2>Nos Charcuteries</h2>
                     <ul>
-                        <li><input type="checkbox">Saucisse de Morteau</li>
-                        <li><input type="checkbox">Saucisse de Montbéliard</li>
-                        <li><input type="checkbox">Jambon Fumé du Haut-Doubs</li>
+                        <li><input type="checkbox" class="checkbox" value="morteau">Saucisse de Morteau</li>
+                        <li><input type="checkbox" class="checkbox" value="montbeliard">Saucisse de Montbéliard</li>
+                        <li><input type="checkbox" class="checkbox" value="jambon">Jambon Fumé du Haut-Doubs</li>
                     </ul>
                 </div>
-                
             </div>
-            <div id="barreFiltreProduitsCheckboxListesPartieInferieur">
-                <input type="text" placeholder="Recherchez">
-                <button id="buttonAppliquerFiltres">Appliquer les filtres</button>
-            </div>
-
         </div>
         <section id="sectionProduitsGlob">
             <ul id="listesProduitsUl">
-                <li>
+                <li class="cremant">
                     <img class="imageProduitVins" src="Images/Produits/cremantDuJuraBlancBrutTissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>Crémant du Jura Blanc Brut</h2>
                     <p>Prix à l'unité</p>
                     <h3>15,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcremantDuJuraBlancBrutTissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="cremant">
                     <img class="imageProduitVins" src="Images/Produits/cremantDuJuraRoseBrutTissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>Crémant du Jura Rosé Brut</h2>
                     <p>Prix à l'unité</p>
                     <h3>16,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcremantDuJuraRoseBrutTissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="rose">
                     <img class="imageProduitVins" src="Images/Produits/arboisRoséDecouverte2023Tissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS ROSÉ "DÉCOUVERTE" 2023</h2>
                     <p>Prix à l'unité</p>
                     <h3>11,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisRoséDecouverte2023Tissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins"
                         src="Images/Produits/arboisChardonnayLesCorveeSousCuron2022Tissot.jpg">
                     <p>Domaine TISSOT</p>
@@ -181,158 +181,175 @@
                     <p>Prix à l'unité</p>
                     <h3>21,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisChardonnayLesCorveeSousCuron2022Tissot')">Découvrir
+                        le produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/arboisChardonnayLaMailloche2022Tissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS CHARDONNAY " LA MAILLOCHE " 2022</h2>
                     <p>Prix à l'unité</p>
                     <h3>23,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisChardonnayLaMailloche2022Tissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/arboisNatureSavagninFloral2022Tissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS NATURÉ "SAVAGNIN FLORAL" 2022</h2>
                     <p>Prix à l'unité</p>
                     <h3>18,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisNatureSavagninFloral2022Tissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/arboisChardonnay2020Tissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS CHARDONNAY 2020</h2>
                     <p>Prix à l'unité</p>
                     <h3>15,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisChardonnay2020Tissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/arboisBlancTypeTradition2020Tissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS BLANC TYPÉ "TRADITION" 2020</h2>
                     <p>Prix à l'unité</p>
                     <h3>17,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisBlancTypeTradition2020Tissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/arboisSavagnin2018Tissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS SAVAGNIN 2018</h2>
                     <p>Prix à l'unité</p>
                     <h3>22,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisSavagnin2018Tissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinrouge">
                     <img class="imageProduitVins" src="Images/Produits/arboisPoulsard2019GrandeReserveTissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS POULSARD 2019 "GRANDE RÉSERVE"</h2>
                     <p>Prix à l'unité</p>
                     <h3>15,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisPoulsard2019GrandeReserveTissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinrouge">
                     <img class="imageProduitVins" src="Images/Produits/arboisTrousseau2021Tissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS TROUSSEAU 2021</h2>
                     <p>Prix à l'unité</p>
                     <h3>17,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisTrousseau2021Tissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinrouge">
                     <img class="imageProduitVins" src="Images/Produits/arboisPinotNoirGrandeReserve2022Tissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS PINOT NOIR "GRANDE RÉSERVE" 2022</h2>
                     <p>Prix à l'unité</p>
                     <h3>17,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisPinotNoirGrandeReserve2022Tissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinjaune">
                     <img class="imageProduitVins" src="Images/Produits/arboisVinJaune2017Tissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS VIN JAUNE 2017</h2>
                     <p>Prix à l'unité</p>
                     <h3>40,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisVinJaune2017Tissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinpaille">
                     <img class="imageProduitVins" src="Images/Produits/arboisVinPaille2018Tissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>ARBOIS VIN DE PAILLE 2018</h2>
                     <p>Prix à l'unité</p>
                     <h3>30,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdarboisVinPaille2018Tissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="macvin">
                     <img class="imageProduitVins" src="Images/Produits/macvinDuJuraBlancTissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>MACVIN DU JURA BLANC</h2>
                     <p>Prix à l'unité</p>
                     <h3>22,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdmacvinDuJuraBlancTissot')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="macvin">
                     <img class="imageProduitVins" src="Images/Produits/macvinDuJuraRougeTissot.jpg">
                     <p>Domaine TISSOT</p>
                     <h2>MACVIN DU JURA ROUGE</h2>
                     <p>Prix à l'unité</p>
                     <h3>29,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdmacvinDuJuraRougeTissot')">Découvrir le
+                        produit</button>
                 </li>
 
 
 
 
 
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/chardonnay2023TerroirDuRevermontBadoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Chardonnay 2022 "Terroir du Revermont"</h2>
                     <p>Prix à l'unité</p>
                     <h3>15,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdchardonnay2023TerroirDuRevermontBadoz')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/chardonnay2023BiosLesRoussotsBadoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Chardonnay 2023 BIO "les Roussots"</h2>
                     <p>Prix à l'unité</p>
                     <h3>18,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdchardonnay2023BiosLesRoussotsBadoz')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/cuvéeArrogance2023BioBadoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Cuvée Arrogance 2023 BIO</h2>
                     <p>Prix à l'unité</p>
                     <h3>22,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcuvéeArrogance2023BioBadoz')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/cuvéeEdouard2023BioBadoz.jpg">
                     <p>Domaine BADOZ</p>
-                    <h2>cuvée Edouard 2023 BIO</h2>
+                    <h2>Cuvée Edouard 2023 BIO</h2>
                     <p>Prix à l'unité</p>
                     <h3>31,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcuvéeEdouard2023BioBadoz')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins"
                         src="Images/Produits/cuvéeVictoriaBadoz2020BioSavagninOuilléBadoz.jpg">
                     <p>Domaine BADOZ</p>
@@ -340,201 +357,219 @@
                     <p>Prix à l'unité</p>
                     <h3>20,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcuvéeVictoriaBadoz2020BioSavagninOuilléBadoz')">Découvrir
+                        le produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/savagninType2020Badoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Savagnin "Typé" 2020</h2>
                     <p>Prix à l'unité</p>
                     <h3>27,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdsavagninType2020Badoz')">Découvrir le produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/traditionBio2022ChardonnaySavagninBadoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>TRADITION 2022 BIO Chardonnay/Savagnin</h2>
                     <p>Prix à l'unité</p>
                     <h3>21,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdtraditionBio2022ChardonnaySavagninBadoz')">Découvrir
+                        le produit</button>
                 </li>
-                <li>
+                <li class="rose">
                     <img class="imageProduitVins" src="Images/Produits/roseEte2023BiosCuveeGustaveCourbetBadoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Rosé d'été 2023 BIO Cuvée "Gustave Courbet"</h2>
                     <p>Prix à l'unité</p>
                     <h3>11,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdroseEte2023BiosCuveeGustaveCourbetBadoz')">Découvrir
+                        le produit</button>
                 </li>
-                <li>
+                <li class="vinrouge">
                     <img class="imageProduitVins" src="Images/Produits/pinotNoir2022ArboisPupillinBadoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Pinot Noir 2022 Arbois Pupillin</h2>
                     <p>Prix à l'unité</p>
                     <h3>16,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdpinotNoir2022ArboisPupillinBadoz')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinrouge">
                     <img class="imageProduitVins" src="Images/Produits/trousseau2022Badoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Trousseau 2022</h2>
                     <p>Prix à l'unité</p>
                     <h3>19,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdtrousseau2022Badoz')">Découvrir le produit</button>
                 </li>
-                <li>
+                <li class="vinjaune">
                     <img class="imageProduitVins" src="Images/Produits/chateauChalon2017Badoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Château-Chalon 2017</h2>
                     <p>Prix à l'unité</p>
                     <h3>41,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdchateauChalon2017Badoz')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinjaune">
                     <img class="imageProduitVins" src="Images/Produits/vinJaune2016LesRoussotBadoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Vin Jaune 2016 les Roussots</h2>
                     <p>Prix à l'unité</p>
                     <h3>40,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdvinJaune2016LesRoussotBadoz')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinpaille">
                     <img class="imageProduitVins" src="Images/Produits/vinDePaille2018Badoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Vin de Paille 2018</h2>
                     <p>Prix à l'unité</p>
                     <h3>31,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdvinDePaille2018Badoz')">Découvrir le produit</button>
                 </li>
-                <li>
+                <li class="vinpaille">
                     <img class="imageProduitVins" src="Images/Produits/vinDePaille2020BioBadoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Vin de Paille 2020 BIO</h2>
                     <p>Prix à l'unité</p>
                     <h3>35,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdvinDePaille2020BioBadoz')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="cremant" class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/blancDeBlancBrutBadoz.png">
                     <p>Domaine BADOZ</p>
                     <h2>Blanc de blancs - Brut</h2>
                     <p>Prix à l'unité</p>
                     <h3>14,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdblancDeBlancBrutBadoz')">Découvrir le produit</button>
                 </li>
-                <li>
+                <li class="macvin">
                     <img class="imageProduitVins" src="Images/Produits/macvinDuJuraBlancBioBadoz.jpg">
                     <p>Domaine BADOZ</p>
                     <h2>Macvin du Jura Blanc BIO</h2>
                     <p>Prix à l'unité</p>
                     <h3>23,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdmacvinDuJuraBlancBioBadoz')">Découvrir le
+                        produit</button>
                 </li>
 
 
 
 
 
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/tradition2020Berthet-Bondet.jpg">
                     <p>Domaine BERTHET-BONDET</p>
                     <h2>Tradition 2020</h2>
                     <p>Prix à l'unité</p>
                     <h3>22,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdtradition2020Berthet-Bondet')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/savagnin2019Berthet-Bondet.jpg">
                     <p>Domaine BERTHET-BONDET</p>
                     <h2>Savagnin 2019</h2>
                     <p>Prix à l'unité</p>
                     <h3>29,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdsavagnin2019Berthet-Bondet')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinjaune">
                     <img class="imageProduitVins" src="Images/Produits/chateauChalon2017Berthet-Bondet.jpg">
                     <p>Domaine BERTHET-BONDET</p>
                     <h2>Château-Chalon 2017</h2>
                     <p>Prix à l'unité</p>
                     <h3>52,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdchateauChalon2017Berthet-Bondet')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/laSource2023Berthet-Bondet.jpg">
                     <p>Domaine BERTHET-BONDET</p>
                     <h2>La source 2023</h2>
                     <p>Prix à l'unité</p>
                     <h3>17,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdlaSource2023Berthet-Bondet')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/savagnier2022Berthet-Bondet.jpg">
                     <p>Domaine BERTHET-BONDET</p>
                     <h2>Savagnier 2022</h2>
                     <p>Prix à l'unité</p>
                     <h3>21,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdsavagnier2022Berthet-Bondet')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/laPoirière2023Berthet-Bondet.jpg">
                     <p>Domaine BERTHET-BONDET</p>
                     <h2>La Poirière 2023</h2>
                     <p>Prix à l'unité</p>
                     <h3>22,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdlaPoirière2023Berthet-Bondet')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinblanc">
                     <img class="imageProduitVins" src="Images/Produits/lAcasia2022Berthet-Bondet.jpg">
                     <p>Domaine BERTHET-BONDET</p>
                     <h2>L'Acasia 2022</h2>
                     <p>Prix à l'unité</p>
                     <h3>25,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdlAcasia2022Berthet-Bondet')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinrouge">
                     <img class="imageProduitVins" src="Images/Produits/trio2023Berthet-Bondet.jpg">
                     <p>Domaine BERTHET-BONDET</p>
                     <h2>Trio 2023</h2>
                     <p>Prix à l'unité</p>
                     <h3>23,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdtrio2023Berthet-Bondet')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="vinrouge">
                     <img class="imageProduitVins" src="Images/Produits/laQueueDuRenard2022Berthet-Bondet.jpg">
                     <p>Domaine BERTHET-BONDET</p>
                     <h2>La Queue du Renard 2022</h2>
                     <p>Prix à l'unité</p>
                     <h3>27,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdlaQueueDuRenard2022Berthet-Bondet')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="cremant">
                     <img class="imageProduitVins" src="Images/Produits/cremantBrutNatureBerthet-Bondet.jpg">
                     <p>Domaine BERTHET-BONDET</p>
                     <h2>Crémant Brut Nature</h2>
                     <p>Prix à l'unité</p>
                     <h3>21,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcremantBrutNatureBerthet-Bondet')">Découvrir le
+                        produit</button>
                 </li>
 
 
@@ -542,7 +577,7 @@
 
 
 
-                <li>
+                <li class="comte">
                     <img class="imageProduitFromage" src="Images/Produits/comteDouxFruitierePlateauArboisien.jpg">
                     <p>Fruitière du plateau arboisien</p>
                     <h2>Comté Doux</h2>
@@ -550,9 +585,10 @@
                     <p>Prix au kg</p>
                     <h3>15,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcomteDouxFruitierePlateauArboisien')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="comte">
                     <img class="imageProduitFromage" src="Images/Produits/comteFruiteFruitierePlateauArboisien.jpg">
                     <p>Fruitière du plateau arboisien</p>
                     <h2>Comté Fruité</h2>
@@ -560,19 +596,21 @@
                     <p>Prix au kg</p>
                     <h3>18,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcomteFruiteFruitierePlateauArboisien')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="comte">
                     <img class="imageProduitFromage" src="Images/Produits/comte18moisFruitierePlateauArboisien.jpg">
                     <p>Fruitière du plateau arboisien</p>
-                    <h2>Comté Fruité</h2>
+                    <h2>Comté 18 mois</h2>
                     <h3>Affinage : 18 mois maximum</h3>
                     <p>Prix au kg</p>
                     <h3>22,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcomte18moisFruitierePlateauArboisien')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="comte">
                     <img class="imageProduitFromage" src="Images/Produits/comtePrestigeFruitierePlateauArboisien.jpg">
                     <p>Fruitière du plateau arboisien</p>
                     <h2>Comté Prestige</h2>
@@ -580,9 +618,10 @@
                     <p>Prix au kg</p>
                     <h3>31,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcomtePrestigeFruitierePlateauArboisien')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="morbier">
                     <img class="imageProduitFromage" src="Images/Produits/morbierJeuneFruitierePlateauArboisien.jpg">
                     <p>Fruitière du plateau arboisien</p>
                     <h2>Morbier Jeune</h2>
@@ -590,9 +629,10 @@
                     <p>Prix au kg</p>
                     <h3>16,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdmorbierJeuneFruitierePlateauArboisien')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="morbier">
                     <img class="imageProduitFromage" src="Images/Produits/morbierVieuxFruitierePlateauArboisien.jpg">
                     <p>Fruitière du plateau arboisien</p>
                     <h2>Morbier Vieux</h2>
@@ -600,105 +640,116 @@
                     <p>Prix au kg</p>
                     <h3>17,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdmorbierVieuxFruitierePlateauArboisien')">Découvrir le
+                        produit</button>
                 </li>
 
 
 
 
-                <li>
+                <li class="montdor">
                     <img class="imageProduitFromage" src="Images/Produits/montDOrFromagerieSanceyRichard.jpg">
                     <p>Fromagerie Sancey-Richard</p>
                     <h2>Mont d'Or</h2>
                     <p>Prix au kg</p>
                     <h3>14,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdmontDOrFromagerieSanceyRichard')">Découvrir le
+                        produit</button>
                 </li>
 
 
 
 
-                <li>
+                <li class="cancoillote">
                     <img class="imageProduitFromage" src="Images/Produits/cancoilloteAbsintheJuraFlore.png">
                     <p>Crèmerie Jura Flore</p>
                     <h2>Cancoillote à l'Absinthe</h2>
-                    <p>Prix au kg</p>
-                    <h3>6,00 €</h3>
+                    <p>Prix</p>
+                    <h3>6,00 € les 240 g</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcancoilloteAbsintheJuraFlore')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="cancoillote">
                     <img class="imageProduitFromage" src="Images/Produits/cancoilloteAilDesOursJuraFlore.png">
                     <p>Crèmerie Jura Flore</p>
                     <h2>Cancoillote à l'Ail des ours</h2>
-                    <p>Prix au kg</p>
-                    <h3>6,00 €</h3>
+                    <p>Prix</p>
+                    <h3>6,00 € les 240 g</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcancoilloteAilDesOursJuraFlore')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="cancoillote">
                     <img class="imageProduitFromage" src="Images/Produits/cancoilloteAilJuraFlore.png">
                     <p>Crèmerie Jura Flore</p>
                     <h2>Cancoillote à l'Ail</h2>
-                    <p>Prix au kg</p>
-                    <h3>6,00 €</h3>
+                    <p>Prix</p>
+                    <h3>6,00 € les 240 g</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcancoilloteAilJuraFlore')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="cancoillote">
                     <img class="imageProduitFromage" src="Images/Produits/cancoilloteBasilicJuraFlore.png">
                     <p>Crèmerie Jura Flore</p>
                     <h2>Cancoillote au Basilic</h2>
-                    <p>Prix au kg</p>
-                    <h3>6,00 €</h3>
+                    <p>Prix</p>
+                    <h3>6,00 € les 240 g</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcancoilloteBasilicJuraFlore')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="cancoillote">
                     <img class="imageProduitFromage" src="Images/Produits/cancoilloteCuminJuraFlore.png">
                     <p>Crèmerie Jura Flore</p>
                     <h2>Cancoillote au Cumin</h2>
-                    <p>Prix au kg</p>
-                    <h3>6,00 €</h3>
+                    <p>Prix</p>
+                    <h3>6,00 € les 240 g</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcancoilloteCuminJuraFlore')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="cancoillote">
                     <img class="imageProduitFromage" src="Images/Produits/cancoilloteEchalotteJuraFlore.png">
                     <p>Crèmerie Jura Flore</p>
                     <h2>Cancoillote à l'échalotte</h2>
-                    <p>Prix au kg</p>
-                    <h3>6,00 €</h3>
+                    <p>Prix</p>
+                    <h3>6,00 € les 240 g</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcancoilloteEchalotteJuraFlore')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="cancoillote">
                     <img class="imageProduitFromage" src="Images/Produits/cancoilloteMorilleJuraFlore.png">
                     <p>Crèmerie Jura Flore</p>
                     <h2>Cancoillote aux Morilles</h2>
-                    <p>Prix au kg</p>
-                    <h3>6,00 €</h3>
+                    <p>Prix</p>
+                    <h3>6,00 € les 240 g</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcancoilloteMorilleJuraFlore')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="cancoillote">
                     <img class="imageProduitFromage" src="Images/Produits/cancoilloteNatureJuraFlore.png">
                     <p>Crèmerie Jura Flore</p>
                     <h2>Cancoillote Nature</h2>
-                    <p>Prix au kg</p>
-                    <h3>6,00 €</h3>
+                    <p>Prix</p>
+                    <h3>6,00 € les 240 g</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcancoilloteNatureJuraFlore')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="cancoillote  ">
                     <img class="imageProduitFromage" src="Images/Produits/cancoilloteSavagninJuraFlore.png">
                     <p>Crèmerie Jura Flore</p>
                     <h2>Cancoillote au Savagnin</h2>
-                    <p>Prix au kg</p>
-                    <h3>6,00 €</h3>
+                    <p>Prix</p>
+                    <h3>6,00 € les 240 g</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdcancoilloteSavagninJuraFlore')">Découvrir le
+                        produit</button>
                 </li>
 
 
@@ -706,35 +757,38 @@
 
 
 
-                <li>
+                <li class="morteau">
                     <img class="imageProduitCharcuterie"
                         src="Images/Produits/ptioteMorteauIGPCuitesMorteauSaucisses.jpg">
                     <p>Morteau Saucisse</p>
                     <h2>P'tiote Morteau IGP cuites</h2>
-                    <p>Prix au kg</p>
+                    <p>Prix à l'unité</p>
                     <h3>10,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdptioteMorteauIGPCuitesMorteauSaucisses')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="morteau">
                     <img class="imageProduitCharcuterie"
                         src="Images/Produits/saucissesDeMorteauIGPCuitesMorteauSaucisses.jpg">
                     <p>Morteau Saucisse</p>
                     <h2>Saucisse de Morteau IGP cuite</h2>
-                    <p>Prix au kg</p>
+                    <p>Prix à l'unité</p>
                     <h3>12,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdsaucissesDeMorteauIGPCuitesMorteauSaucisses')">Découvrir
+                        le produit</button>
                 </li>
-                <li>
+                <li class="morteau">
                     <img class="imageProduitCharcuterie"
                         src="Images/Produits/saucisseDeMorteauACuireMorteauSaucisse.png">
                     <p>Morteau Saucisse</p>
                     <h2>Saucisses de Morteau à cuire</h2>
-                    <p>Prix au kg</p>
+                    <p>Prix à l'unité</p>
                     <h3>12,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdsaucisseDeMorteauACuireMorteauSaucisse')">Découvrir le
+                        produit</button>
                 </li>
 
 
@@ -742,7 +796,7 @@
 
 
 
-                <li>
+                <li class="montbeliard">
                     <img class="imageProduitCharcuterie"
                         src="Images/Produits/saucisseMontbéliardSalaisonsComtoises.png">
                     <p>Les Salaisons Comtoises</p>
@@ -750,18 +804,20 @@
                     <p>Prix à l'unité</p>
                     <h3>8,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdsaucisseMontbéliardSalaisonsComtoises')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="jambon">
                     <img class="imageProduitCharcuterie" src="Images/Produits/jambonFumeEntierSalaisonsComtoises.jpg">
                     <p>Les Salaisons Comtoises</p>
                     <h2>Jambon Fumé entier</h2>
                     <p>Prix à l'unité</p>
                     <h3>102,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdjambonFumeEntierSalaisonsComtoises')">Découvrir le
+                        produit</button>
                 </li>
-                <li>
+                <li class="jambon">
                     <img class="imageProduitCharcuterie"
                         src="Images/Produits/jambonFume4TranchesSalaisonsComtoises.jpg">
                     <p>Les Salaisons Comtoises</p>
@@ -769,22 +825,2482 @@
                     <p>Prix</p>
                     <h3>13,00 €</h3>
                     <button id="buttonEnSavoirPlusSurProduitsOuFournisseur"
-                        onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Découvrir le produit</button>
+                        onclick="ouvertureInfosProduit('#infosProdjambonFume4TranchesSalaisonsComtoises')">Découvrir le
+                        produit</button>
                 </li>
 
             </ul>
         </section>
+        <section id="infosProd">
+            <div id="infosProdcremantDuJuraBlancBrutTissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcremantDuJuraBlancBrutTissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cremantDuJuraBlancBrutTissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Crémant du Jura Blanc Brut</h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 15,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Assemblage de Pinot noir et de Chardonnay sur des marnes grises. Exposition dominante : sud-est
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle, pressurage direct et fermentation en cuve inox thermo régulée. Après la
+                        fermentation malolactique, mise en bouteille pour la prise de mousse. Vieillissement sur lattes
+                        de 24 mois après dégorgeage et dosage à 10 g de sucre/litre.</p>
+                    <h2>Olfactif</h2>
+                    <p>Robe jaune claire parée de reflets or, bulles fines et délicates. Le nez surprend par sa
+                        fraîcheur arômatique : Fruits blancs, pain, brioche et pomme</p>
+                    <h2>Gustatif</h2>
+                    <p>Attaque en bouche fraîche, souple, plaisante et equilibrée dévoilant une belle couverture de
+                        bulles au palais. Du gras, de la rondeur, de la puissance, le tout au service d'arômes très
+                        typés de chardonnay. Finale soutenue par une fine acidité</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 0 à 2 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Apéritifs entrées et desserts / Moments de fêtes / À servir entre 7 et 9° maximum</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcremantDuJuraRoseBrutTissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcremantDuJuraRoseBrutTissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cremantDuJuraRoseBrutTissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Crémant du Jura Rosé Brut</h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 16,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Assemblage de pinot noir des différents terroirs du Domaine sur un sol d'argiles à Chailles.
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle de pinot noir, pressurage direct et fermentation en cuve inox thermo régulée.
+                        Après la fermentation malolactique, mise en bouteille pour la prise de mousse.
 
+                        Vieillissement sur lattes de 18 mois après dégorgeage et dosage à 10 gr de sucre/litre.</p>
+                    <h2>Olfactif</h2>
+                    <p>Robe limpide et brillante, rose pâle et pêche blanche avec des bulles persistantes et présentes.
+                        Nez de fruits des bois : groseille, framboise et mûres.</p>
+                    <h2>Gustatif</h2>
+                    <p>Bouche explosive, élégante et légère. Très aérien. Une belle sucrosité, vive et pure.
+
+                        À boire avec plaisir et gourmandise</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 0 à 2 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Apéritifs et desserts /
+                        Moments de fêtes /
+                        À servir entre 7 et 9° maximum</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisRoséDecouverte2023Tissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisRoséDecouverte2023Tissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/arboisRoséDecouverte2023Tissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS ROSÉ "DÉCOUVERTE" 2023</h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 11,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Cépage trousseau des différents terroirs du Domaine.
+
+                        Sols de marnes irisées du trias.
+
+                        Exposition dominante : sud-est
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle et mécanique.
+
+                        Pressurage pneumatique direct. Fermentation en cuve thermo régulée à basse température sans
+                        fermentation malolactique.
+
+                        Elevage en cuve durant 6 mois avant la mise en bouteille.</p>
+                    <h2>Olfactif</h2>
+                    <p>Nez intense, aromatique et friand aux notes de bonbons acidulés de framboises et d'ananas.</p>
+                    <h2>Gustatif</h2>
+                    <p>Bouche fruitée, très aromatique avec un bel équilibre entre rondeur et fraîcheur.
+
+                        On retrouve des saveurs de fruits exotiques avec une note mentholée en fin de bouche.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 1 à 2 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>L'apéritif lui est naturel mais il fera sensation pour le pique nique, les salades et les
+                        grillades au barbecue, les volailles et les poissons.
+                        à servir entre 8 et 12°
+                        Garde : vin à boire jeune sur le fruit et la fraîcheur 1 à 2 ans</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisChardonnayLesCorveeSousCuron2022Tissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisChardonnayLesCorveeSousCuron2022Tissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd"
+                            src="Images/Produits/arboisChardonnayLesCorveeSousCuron2022Tissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS CHARDONNAY "LES CORVÉES SOUS CURON" 2022</h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 21,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Parcelle de chardonnay plantée en 1944 sur des éboulis calcaires et sur des marnes grises du
+                        lias.
+
+                        Exposition dominante sud-est
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle, pressurage pneumatique avec fermentation et élevage de 12 mois en pièce de 228
+                        litres, 30 % de bois neuf et le reste avec des barriques de 1 à 5 vins.</p>
+                    <h2>Olfactif</h2>
+                    <p>Nez intense et élégant qui associe les fruits blancs, la poire aux notes grillées, l'amande, la
+                        vanille et le fumé.</p>
+                    <h2>Gustatif</h2>
+                    <p>Bouche ample, ronde et puissante avec une belle minéralité qui reflète le terroir de cette
+                        parcelle. On retrouve ces arômes délicats d'amandes grillées, vanillées et de poires.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 6 à 10 ans, à carafer dans sa jeunesse</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Se sert en apéritif, avec les poissons fins, volailles à la crème.
+
+                        Servir entre 10 et 13°</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisChardonnayLaMailloche2022Tissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisChardonnayLaMailloche2022Tissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/arboisChardonnayLaMailloche2022Tissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS CHARDONNAY " LA MAILLOCHE " 2022</h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 23,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Parcelle de chardonnay plantée entre 1976 et 1977 sur des terres argileuses du lias.
+
+                        Exposition dominante Est
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle, pressurage pneumatique avec un élevage sur des lies fines de 12 mois en pièces
+                        neuves de 228 litres. (chauffe moyenne)</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisNatureSavagninFloral2022Tissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisNatureSavagninFloral2022Tissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/arboisNatureSavagninFloral2022Tissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS NATURÉ "SAVAGNIN FLORAL" 2022</h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 18,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Assemblage des différents terroirs de la propriété avec une dominante lieu-dit en Sauvagny
+
+                        Sol de marnes grisées du lias.
+
+                        Exposition dominante : sud-ouest
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle et mécanique.
+
+                        Pressurage pneumatique avec fermentation
+
+                        de savagnin en cuve thermo régulée.
+
+                        Cette cuvée est vinifiée sans souffre.
+
+                        Elevage en cuve de 6 mois avant la mise en bouteille.</p>
+                    <h2>Olfactif</h2>
+                    <p>La robe est jaune aux reflets argentés.
+
+                        Le nez est élégant et fruité aux notes d'amandes grillées, de brioche et de pain d'épices.</p>
+                    <h2>Gustatif</h2>
+                    <p>La bouche est fraîche, élégante et grasse apportant un très bel équilibre.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 2 à 4 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Accompagne l'apéritif, le bar grillé, le poisson au beurre blanc ainsi que les viandes blanches.
+                        À servir entre 10 et 13°</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisChardonnay2020Tissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisChardonnay2020Tissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/arboisChardonnay2020Tissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS CHARDONNAY 2020</h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 15,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Assemblage des différents terroirs de chardonnay, en particuliers lieu-dit La Mailloche, Les
+                        bruyères, en Sauvagny.
+
+                        Sol argilo-calcaire "éboulis"
+
+                        Exposition dominante : sud-est
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle et mécanique, pressurage pneumatique avec une fermentation à 80 % en cuve inox
+                        thermo régulée et 20 % en fût de chêne de 1 à 5 vins.
+
+                        Elevé durant 12 mois en pièces</p>
+                    <h2>Olfactif</h2>
+                    <p>Robe jaune paille. Nez de pomme, d'ananas et d'abricot</p>
+                    <h2>Gustatif</h2>
+                    <p>Bouche subtilement corsée et racée avec une acidité bien équilibrée dans laquelle on retrouve la
+                        pomme et un soupcon de vanille.
+                        Vin riche et harmonieux équilibré au caractère traditionnel.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 6 à 8 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Idéal avec les entrées, poissons, fruits de mer, huîtres et coquillages, la charcuterie fumée.
+                        Service entre 10 et 13°</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisBlancTypeTradition2020Tissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisBlancTypeTradition2020Tissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/arboisBlancTypeTradition2020Tissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS BLANC TYPÉ "TRADITION" 2020
+                        </h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 17,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Assemblage de différents terroirs du Domaine en particulier lieu-dit Les Bruyères et en Sauvagny
+                        sur un sol de marnes grises du lias et éboulis.
+
+                        Exposition dominante : sud-est
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Mariage subtil du Chardonnay (70%) et du Savagnin (30%)
+
+                        36 mois d'élevage sont nécessaires pour obtenir le savagnin sous voile.
+                        Le chardonnay, lui, est élevé en foudre avant l'assemblage</p>
+                    <h2>Olfactif</h2>
+                    <p>Robe jaune doré aux reflets or, brillant et limpide.
+
+                        Nez parfumé et intense aux arômes de pomme jaune, mirabelle, amande et noix.</p>
+                    <h2>Gustatif</h2>
+                    <p>Bouche ronde et ample. Belle fraicheur marqué en final avec une persistance aromatique bien
+                        présente sur l'amande, la noix et les fruits jaunes.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 6 à 10 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Fruits secs et le Comté, Mont d'or au four, la cuisine au fromage, la cuisine asiatique et les
+                        plats traditionnels à base de crème
+                        À servir entre 10 et 13°</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisSavagnin2018Tissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisSavagnin2018Tissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/arboisSavagnin2018Tissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS SAVAGNIN 2018
+                        </h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 22,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Assemblage des différents terroirs de la propriété en particulier : les Bruyères, la
+                        Mailloche, en Sauvagny, sur un sol de marnes grises du lias.
+
+                        Exposition dominante : sud-ouest
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle en majorité. Fermentation en cuve thermo régulée.
+
+                        Elevage en pièces à vin jaune de 228 l dans les greniers pendant 36 mois environ.</p>
+                    <h2>Olfactif</h2>
+                    <p>Robe jaune or, brillante et limpide
+                        Nez de fruits secs, amande et pâte de coing avec des notes de rubarbe en marmelade</p>
+                    <h2>Gustatif</h2>
+                    <p>Belle attaque en bouche avec un bel équilibre et beaucoup de finesse et d'onctuosité.
+
+                        Notes chaleureuses en final typique du savagnin.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 10 à 15 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Idéal à l'apéritif accompagné de comté et de fruits secs
+                        Sublime la cuisine asiatique et les plats traditionnels à base de crème fraîche
+                        Servir entre 10 et 13°</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisPoulsard2019GrandeReserveTissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisPoulsard2019GrandeReserveTissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/arboisPoulsard2019GrandeReserveTissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS POULSARD 2019 "GRANDE RÉSERVE"
+                        </h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 15,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Sélection de vieilles vignes dans nos différents terroirs du Domaine, en particulier : En
+                        Sauvagny et Les Bruyères. Sol de marnes irisées du trias
+                        Exposition dominante : sud
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle.
+
+                        Fermentation de poulsard en cuve thermo régulée avec une macération de 10 jours.
+                        Elevage en foudre de gros volume dans nos caves fraiches du XIIIe siècle.</p>
+                    <h2>Olfactif</h2>
+                    <p>Robe rouge cuivrée brillante et limpide d'une belle profondeur.
+                        Nez de fruits murs (figues), de fruits secs et de prunes noires avec des notes légèrement
+                        mentholées, d'eucalyptus. </p>
+                    <h2>Gustatif</h2>
+                    <p>Joli volume en bouche, croquant et légèrement acidulé. Belle attaque toute en profondeur avec une
+                        légère sucrosité, un grain chocolaté et une belle structure en final.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 8 à 10 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Idéal avec les entrées la charcuterie, les grillades, les viandes grillées, les volailles, la
+                        raclette et les fromages
+                        Service entre 12 et 14°</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisTrousseau2021Tissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisTrousseau2021Tissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/arboisTrousseau2021Tissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS TROUSSEAU 2021
+                        </h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 17,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Assemblage des différents terroirs du Domaine en particulier lieu-dit les Graviers et En
+                        Poussots.
+
+                        Sol argiles à chailles.
+
+                        Exposition dominante : sud ouest
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Eraflage 100%.
+
+                        Cuvaison de 10 jours après une macération pré fermentaire à froid de quelques jours. Après les
+                        fermentations, l'élevage se fait en foudre durant 18 mois.</p>
+                    <h2>Olfactif</h2>
+                    <p>Robe grenat aux reflets rubis, limpide et brillante.
+                        Nez très intense de fruits rouges à de légères notes d'humus et d'épices poivrées.</p>
+                    <h2>Gustatif</h2>
+                    <p>Bouche franche et ample avec des tannins soyeux et bien présents agréablement typés.
+                        Toujours dans des tons de fruits rouges et de poivre.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 8 à 12 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Parfait avec une pièce de bœuf, petit gibier en sauce et un plateau de fromages
+                        Service entre 12 et 14°</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisPinotNoirGrandeReserve2022Tissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisPinotNoirGrandeReserve2022Tissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/arboisPinotNoirGrandeReserve2022Tissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS PINOT NOIR "GRANDE RÉSERVE" 2022
+                        </h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 17,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Parcelle situé en bruyère . Exposition Sud .Ce cépage se développe dans les sols graveleux et
+                        représente 8 à 10% du vignoble jurassien.
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Sélection de nos meilleurs pinot noir par triage à la vigne. Cuvaison 10 jours en cuve inox
+                        thermo régulée, puis passage de 12 mois dans des pièces de 228 l : 50 % de pièces neuves et le
+                        reste avec des barriques de 1 à 5 ans.</p>
+                    <h2>Olfactif</h2>
+                    <p>Robe grenat, brillante et limpide aux reflets passant de la cerise au rubis.
+
+                        Nez typé, ouvert, belle intensite mêlant fruits mûrs et cassis et une touche de sous-bois.</p>
+                    <h2>Gustatif</h2>
+                    <p>Bouche ample et harmonieuse sur le fruité. La maturité du fruit est nette et plaisante.
+                        Dominante de cassis, de mûre, des tannins boisés fondus et une finale sur la fraîcheur.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 8 à 12 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Viande rouge, magret de canard grillé
+
+                        pavé de boeuf
+                        Service entre 12 et 14°
+                        l'été à servir légèrement frais à 12°</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisVinJaune2017Tissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisVinJaune2017Tissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/arboisVinJaune2017Tissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS VIN JAUNE 2017
+                        </h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 40,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Assemblage de différents terroirs du Domaine : En Sauvagny, En Mailloche et Les Bruyères.
+
+                        Sol de marnes grises du lias.
+
+                        Exposition dominante : sud-est
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle en majorité, pressurage pneumatique, fermentation alcoolique et malolactique en
+                        cuve.
+
+                        Élevage de 6 ans et 3 mois en barrique dans des greniers aérés, provoquant une évaporation
+                        d'environ 38 % du savagnin. Durant le vieillissement, le voile de levure transforme le Savagnin
+                        en Vin Jaune.</p>
+                    <h2>Olfactif</h2>
+                    <p>Robe jaune or soutenu
+
+                        Nez très intense et aromatique sur la noix, l'amande, la muscade et le caramel.</p>
+                    <h2>Gustatif</h2>
+                    <p>Bouche ample et puissante très parfumé sur la noix fraiche, le curry, la muscade avec une très
+                        grande persistance aromatique.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>30 ans et plus</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Noix et Comté, coq au vin jaune, cuisine orientale au curry ou au safran.
+
+                        Servir entre 14 et 16 °</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdarboisVinPaille2018Tissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdarboisVinPaille2018Tissot')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/arboisVinPaille2018Tissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>ARBOIS VIN DE PAILLE 2018
+
+                        </h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 30,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Sélection de plusieurs parcelles dans nos vignes les plus agées.
+
+                        Assemblage de chardonnay, poulsard et savagnin.
+
+                        Exposition dominante : sud-est
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Le Vin de Paille est le fruit d'une sélection rigoureuse des plus belles grappes. Etendues dans
+                        des cagettes sur un lit de paille, le séchage des raisins dure 3 à 4 mois dans des greniers
+                        aérés.
+
+                        Le moût de raisin pressé est naturellement très riche en sucre, souvent plus de 320 g/litre.
+
+                        100 kg de raisins donnent 20 litres de jus contre 77 litres pour une vendange normale (environ
+                        70% de déshydratation).
+
+                        Après une longue fermentation en cave fraiche, le vin est vieilli en foudre de 600 litres pour
+                        une durée de 3 ans minimum.</p>
+                    <h2>Olfactif</h2>
+                    <p>Nez intense et voluptueux, avec une belle complexité aromatique commençant sur la truffe, allant
+                        vers les fruits secs : abricot, figue et pruneau avecdes notes miellées et de caramel.</p>
+                    <h2>Gustatif</h2>
+                    <p>Bouche veloutée avec une pointe de fraicheur qui donne un bel équilibre avec le sucre.
+
+                        On retrouve la complexité aromatique du nez avec en plus une pointe de pâte de coing.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 15 à 30 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>À servir à l'aperitif avec un foie gras, un roquefort ou les desserts
+                        À servir entre 7 et 8°</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdmacvinDuJuraBlancTissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd" onclick="fermetureInfosProduit('#infosProdmacvinDuJuraBlancTissot')">
+                    ✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/macvinDuJuraBlancTissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>MACVIN DU JURA BLANC
+
+                        </h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 22,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Ce vin de liqueur (Mistelle) est présent dans le Jura depuis le XIVe siècle. Issu du mariage d'un
+                        jus de raisin frais pour 2/3 et d'une eau de vie de Marc égrappé de plus de 4 ans d'âge pour
+                        1/3.
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle et pressurage pneumatique.
+
+                        Après un débourbage de 18 h, les jus sont mutés avec une eau de vie de marc du Jura de plusieurs
+                        années.
+
+                        L'élevage se fait en barrique de 600 l pendant 36 mois minimum.</p>
+                    <h2>Olfactif</h2>
+                    <p>Robe jaune or, intense et brillante.
+                        Nez puissant sur des arômes de mirabelle, pruneaux, caramel et raisin de corinthe.</p>
+                    <h2>Gustatif</h2>
+                    <p>Bouche riche et puissante. Final sur la douceur avec une grande diversité.
+                        Arômatique fruits confits et fruits secs.</p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 10 à 25 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Accompagne le melon,parfait avec les accords sucrés salés, le foie gras, les glaces à la vanille
+                        et raisins de corinthe, pain d'épices, desserts aux fruits caramelisés.
+
+                        Service entre 5 et 8°</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdmacvinDuJuraRougeTissot" class="infosProdGlob">
+                <div id="croixFermetureDetailProd" onclick="fermetureInfosProduit('#infosProdmacvinDuJuraRougeTissot')">
+                    ✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/macvinDuJuraRougeTissot.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>MACVIN DU JURA ROUGE
+
+                        </h2>
+                        <h3>Domaine TISSOT</h3>
+                        <p>Prix : 29,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Ce vin de liqueur (Mistelle) est présent dans le Jura depuis le XIVe siècle. Issu du mariage d'un
+                        jus de raisin frais pour 2/3 et d'une eau de vie de Marc égrappé de plus de 4 ans d'âge pour
+                        1/3.
+                    </p>
+                    <h2>Vinification et élevage</h2>
+                    <p>Vendange manuelle et pressurage pneumatique.
+
+                        Après un débourbage de 18 h, les jus sont mutés avec une eau de vie de marc du Jura de plusieurs
+                        années.
+
+                        L'élevage se fait en barrique de 600 l pendant 18 mois minimum.</p>
+                    <h2>Olfactif</h2>
+                    <p>Robe rouge profond et intense.
+
+                        Nez de framboise,de griottes et de fruits à noyaux.</p>
+                    <h2>Gustatif</h2>
+                    <p>Bouche gourmande, ample et puissante aux notes légèrement griottées
+                    </p>
+                    <h2>Potentiel de Garde</h2>
+                    <p>De 10 à 25 ans</p>
+                    <h2>Accord mets et vins</h2>
+                    <p>Accompagne le foie gras, le canard au miel et aux épices, le roquefort, les desserts au chocolat
+                        ou la tarte aux noix
+
+                        Service entre 5 et 8°</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdchardonnay2023TerroirDuRevermontBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdchardonnay2023TerroirDuRevermontBadoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/chardonnay2023TerroirDuRevermontBadoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Chardonnay 2022 "Terroir du Revermont"
+
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 15,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Cette cuvée élevée en cuve inox, permet au cépage Chardonnay de conserver toute sa fraicheur
+                        aromatique.
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>Un nez de fleurs blanches délicatement citronnées, agréable à déguster dans sa belle jeunesse.
+                    </p>
+                    <h2>Accord mets et vin</h2>
+                    <p>Parfait à l'apéritif, salades, terrines, charcuteries fines, feuilletés de saumon, cuisine
+                        exotique, chinoise... volailles, poissons, coquilles saint jacques. Idéal avec une bonne truite
+                        de nos rivières.
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Servir frais vers 10 - 12 °C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Pour une bonne fraîcheur déguster dans les 2 ans, garde 5 ans.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdchardonnay2023BiosLesRoussotsBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdchardonnay2023BiosLesRoussotsBadoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/chardonnay2023BiosLesRoussotsBadoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Chardonnay 2023 BIO "les Roussots"
+
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 18,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Chardonnay provenant de nos parcelles "les Roussots" (terroir de marnes du Lias "grises
+                        feuilletées"), vinifié en cuve inox, avec ses levure indigènes, afin d'exprimer au mieux la
+                        minéralité et la persistance aromatique qui caractérise ce terroir.
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>Un chardonnay minéral, bouche fraîche, pointe citronnée, longue finale relevée
+                    </p>
+                    <h2>Accord mets et vin</h2>
+                    <p>Accompagne parfaitement les salaisons fines à l'apéritif, les salades, les poissons, la viande
+                        blanche et la fondue Franc-comtoise
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Servir entre 12 et 14°C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Potentiel de garde de 10 ans</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcuvéeArrogance2023BioBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcuvéeArrogance2023BioBadoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cuvéeArrogance2023BioBadoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cuvée Arrogance 2023 BIO
+
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 22,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>La cuvée emblématique du Domaine.</h2>
+                    <p>Cette cuvée est élaborée à partir du Chardonnay du lieu dit "Les Roussots" sur un terroir de
+                        marnes grises feuilletées du Lias. Les raisins utilisés proviennent des plus anciennes
+                        parcelles. La vinification est réalisée avec les levures indigènes, puis bâtonnée sur lies dans
+                        des fûts de chêne provenant des plus nobles forêts françaises (Tronçais, Allier, Nivernais...),
+                        ces fûts sont fabriqués par les meilleures tonnelleries de Bourgogne.
+                        L'esprit Bourguignon et le caractère Jurassien !
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>Nez ouvert sur des fruits blancs, bouche opulente. Vin minéral, gras et nerveux à la fois
+                        laissant s'exprimer le millésime sur une belle longueur.
+                    </p>
+                    <h2>Accord mets et vin</h2>
+                    <p>Apéritif, accompagne parfaitement les poissons et crustacés tels que le St Pierre, le Filet de
+                        Sandre sauce au beurre vanille, la Truite, le Homard, le saumon fumé, mais encore le Foie Gras
+                        et la cuisine "découverte", les desserts de fruits (soupe de fraises et feuilles de menthe).
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Servir frais, vers 11 °C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Garde jusqu'à 5 ans pour sa fraicheur et au delà de 10 ans avec évolution.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcuvéeEdouard2023BioBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcuvéeEdouard2023BioBadoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cuvéeEdouard2023BioBadoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cuvée Edouard 2023 BIO
+
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 31,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La Cuvée Edouard est le fleuron de la maison. Cette cuvée est élaborée à partir du cépage
+                        Savagnin "vieilles vignes", sur notre notre terroir "Les Grands Roussots". Les raisins utilisés
+                        proviennent de nos plus anciennes parcelles. L'élevage "avec ouillage" est réalisé en barriques
+                        de chêne du massif Jurassien, spécialement fabriquées pour notre Domaine.
+                        Cette cuvée exceptionnelle est une production confidentielle.
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>Nez:</p>
+                    <p>
+                        Subtil, de bonne intensité aromatique, aux notes grillées, de fruits à chair blanche, d’épices
+                        et d’agrumes. La persistance aromatique est durable. L’évolution du bouquet est solide et
+                        juteuse en même temps. Les arômes de fruits sont généreux, ils se signent d’une vendange à
+                        pleine maturité. Enveloppé d’un costume bien habillé où l’élevage de la barrique est de la haute
+                        couture. Avec un peu d’agitation, le vin s’ouvre sur une pureté et reste fidèle.</p>
+                    <p>Bouche :</p>
+                    <p>
+                        Une attaque impressionnante, nerveuse et fraîche. Un léger tanin de minéralité, feutré d’un
+                        grain de bois subtil. Un milieu de bouche structuré, où les notes de fleurs jaunes, laissent
+                        apparaître une empreinte toastée grillée de l’élevage avec amplitude et puissance. Un équilibre
+                        où l’acidité donne de la droiture qui soutient la charpente. Une finale solide, fraîche, sur une
+                        puissance de grande noblesse.</p>
+                    <p>Accord mets et vin:</p>
+                    <p>A l'apéritif avec des charcuteries fines. C’est surtout un grand blanc de gastronomie, prompt à
+                        accompagner une poularde aux morilles, ou bien une blanquette de veau. Egalement des St Jacques
+                        poêlées, Langoustines en raviolis au beurre de vin jaune, fenouil, pomme verte. Filets de
+                        perches.
+                    </p>
+                    <h2>Accord mets et vin</h2>
+                    <p>Apéritif, accompagne parfaitement les poissons et crustacés tels que le St Pierre, le Filet de
+                        Sandre sauce au beurre vanille, la Truite, le Homard, le saumon fumé, mais encore le Foie Gras
+                        et la cuisine "découverte", les desserts de fruits (soupe de fraises et feuilles de menthe).
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Servir frais, vers 11 °C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Une bouteille à savourer aujourd’hui ou à garder encore 10 ans de plus.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcuvéeVictoriaBadoz2020BioSavagninOuilléBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcuvéeVictoriaBadoz2020BioSavagninOuilléBadoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd"
+                            src="Images/Produits/cuvéeVictoriaBadoz2020BioSavagninOuilléBadoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cuvée Victoria Badoz 2020 BIO Savagnin "ouillé"
+
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 20,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Cuvée élaborée à partir du cépage Savagnin planté sur le terroir des "Grands Roussots". Élevage
+                        en cuves inox à basse température et à l'abri de l'oxygène afin d'extraire et ainsi encapsuler
+                        toute la fraicheur et la minéralité du Savagnin
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>
+                        Une robe Or pâle aux reflets verts offrant un vin plein de fraîcheur.
+                        Beaucoup de légèreté et d'équilibre pour ce vin hors du commun.</p>
+                    <h2>Accord mets et vin</h2>
+                    <p>Surprenant à l'apéritif, accompagne parfaitement les poissons et crustacés, le saumon fumé, mais
+                        encore la cuisine "découverte", les desserts de fruits (ex: carpaccio d'ananas) .
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Servir frais, vers 10 °C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Se déguste jeune, mais possède un potentiel de garde de 8 ans</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdsavagninType2020Badoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd" onclick="fermetureInfosProduit('#infosProdsavagninType2020Badoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/savagninType2020Badoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Savagnin "Typé" 2020
+
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 27,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Un grand classique. Des notes de noix et noisettes associées à la morille fraîche, relevé par les
+                        épices. La bouche est d'une superbe longueur.
+
+                        Idéal pour remplacer le Vin Jaune dans les recettes.
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Servir vers 16 °C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Potentiel de garde de 25 ans</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdtraditionBio2022ChardonnaySavagninBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdtraditionBio2022ChardonnaySavagninBadoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/traditionBio2022ChardonnaySavagninBadoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>TRADITION 2022 BIO Chardonnay/Savagnin
+
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 21,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Cuvée élaborée à partir de l'assemblage de Chardonnay (60%)/Savagnin (40%). 3 années de
+                        vieillissement en fûts de chêne dans nos caves séculaires seront nécessaires au cépage Savagnin
+                        pour obtenir ce goût très typé. Le Chardonnay est vieilli en vieux foudres avant assemblage.
+
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>Le nez est submergé par les saveurs typiques du savagnin. Puis le chardonnay fait sa place
+                        doucement.
+                        Il y a de la noix et de l’amande, des fruits et des fleurs. Quant à la bouche, avec sa longue
+                        finale sur la noix, elle se révèle fraîche et épicée.
+                        Pour résumer: un vin d'équilibre grâce à la fraîcheur du chardonnay et l'opulence du savagnin
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Servir, vers 14 °C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Potentiel de garde de 25 ans</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdroseEte2023BiosCuveeGustaveCourbetBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdroseEte2023BiosCuveeGustaveCourbetBadoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/roseEte2023BiosCuveeGustaveCourbetBadoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Rosé d'été 2023 BIO Cuvée "Gustave Courbet"
+
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 11,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Cette cuvée dédiée à l'illustre Peintre "Gustave Courbet" est un vin d'aujourd'hui associant les
+                        traditions et l'évolution, la technicité nécessaire aux attentes de notre époque.
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>Nez intense de petits fruits mûrs. En bouche une attaque souple,très équilibrée et ronde. Cette
+                        cuvée présente un caractère aromatique très complexe à base de fruits rouges frais et d'agrumes.
+
+                    </p>
+                    <h2>Accord mets et vin</h2>
+                    <p>Parfait à l'apéritif, mais aussi avec les entrées légèrement épicées, salades, terrines,
+                        charcuteries fines, feuilletés de saumon, cuisine exotique, volailles, poissons. Idéal avec une
+                        bonne truite de nos rivières.</p>
+                    <h2>Température de service</h2>
+                    <p>Servir très frais vers 10 - 12 °C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Pour une bonne fraîcheur déguster dans les 2 ans, garde 5 ans.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdpinotNoir2022ArboisPupillinBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdpinotNoir2022ArboisPupillinBadoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/pinotNoir2022ArboisPupillinBadoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Pinot Noir 2022 Arbois Pupillin
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 16,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Issue du cépage Pinot Noir, cette cuvée élevée en cuve inox peut accompagner votre repas de
+                        l'apéritif au fromage.
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>Sa belle robe rubis vous séduira, son nez fin et séduisant aux arômes de fruits rouges vous
+                        charmera.
+                        Vin rouge rond légèrement charpenté, bien friand comme il se doit !
+
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Servir à température de cave vers 16 °C
+
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Environ 10 ans.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdtrousseau2022Badoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd" onclick="fermetureInfosProduit('#infosProdtrousseau2022Badoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/trousseau2022Badoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Trousseau 2022
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 19,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Découvrez la souplesse des tanins et la suavité de son fruit rouge légèrement poivré.
+                    </p>
+                    <h2>Accord mets et vin</h2>
+                    <p>Une viande blanche (volaille, veau, ris de veau), le magret de canard, les viandes rouges et les
+                        fromages de caractère, affinés et aux arômes puissants
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Servir à température de cave vers 16 °C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Le cépage Trousseau permet une conservation d'environ 10 ans.
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdchateauChalon2017Badoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd" onclick="fermetureInfosProduit('#infosProdchateauChalon2017Badoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/chateauChalon2017Badoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Château-Chalon 2017
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 41,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Classé parmi les plus grands vins de France, le Vin Jaune de Château-Chalon est issu
+                        exclusivement du cépage Savagnin. Planté sur les argiles bleues Jurassiennes, son élevage en fût
+                        de chêne est de 6 ans et 3 mois, sans compenser la part d’évaporation d’environ un tiers du
+                        volume.
+                        Un voile de levures se forme à la surface du vin, et le protége de toute oxydation. C’est durant
+                        ce long vieillissement qu’il acquiert ses arômes épicés de noix, d’amandes ou de curry.
+
+                    </p>
+                    <p>Vin suave et onctueux, d’une grande complexité aromatique dominé par la noix, la pomme verte et
+                        relevés par les épices.
+                        Bel équilibre pour ce vin ample et harmonieux.</p>
+                    <h2>Accord mets et vin</h2>
+                    <p>Apéritif avec Comté et noix, Escargots, Croûte aux morilles, plats à la crème, Coq aux Morilles,
+                        Truite, Écrevisses, Grenouilles, Noix de St Jacques, Langoustes, Homard, fromages forts...
+                        chocolats amer
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Le Vin Jaune de Château-Chalon se sert chambré vers 16°C après 2 heures d’ouverture.
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Potentiel de garde de 30 à 100 ans
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdvinJaune2016LesRoussotBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdvinJaune2016LesRoussotBadoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/vinJaune2016LesRoussotBadoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Vin Jaune 2016 les Roussots
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 40,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <ul>
+                        <li>Médaille d'Or Concours International des Vins Biologiques 2024</li>
+                        <li>93/100 Guide Bettane & Desseauve 2025</li>
+                        <li>90/100 Decanter World Wine Awards 2024</li>
+                        <li>2 ** étoiles Guide Hachette 2025</li>
+                        <li>17/20 Bourgogne aujourd'hui spécial jura</li>
+                    </ul>
+                    <p>En 2017 le Jura a subi un gel printanier particulièrement violent, limitant ainsi la quantité de
+                        Vin Jaune en production sur ce millésime.
+                    </p>
+                    <p>Classé parmi les plus grands vins de France, le Vin Jaune est issu exclusivement du cépage
+                        Savagnin. Planté sur les argiles bleues Jurassiennes, son élevage en fût de chêne est de 6 ans
+                        et 3 mois, sans compenser la part d’évaporation d’environ un tiers du volume.
+                        Un voile de levures se forme à la surface du vin, et le protège de toute oxydation. C’est durant
+                        ce long vieillissement qu’il acquiert ses arômes épicés de noix, d’amandes ou de curry.</p>
+                    <h2>Dégustation</h2>
+                    <p>Robe or, brillante. Arômes précis de curry, de noix, de fruits secs et de thé noir. Beaucoup de
+                        gras, de matière en bouche où l'on retrouve les épices, le tout avec une belle longueur.</p>
+                    <h2>Accord mets et vin</h2>
+                    <p>Apéritif avec Comté et noix, Escargots, Croûte aux morilles, plats à la crème, Coq aux Morilles,
+                        Truite, Écrevisses, Grenouilles, Noix de St Jacques, Langoustes, Homard, fromages forts...
+                        chocolats amer</p>
+                    <h2>Température de service</h2>
+                    <p>Le Vin Jaune se sert chambré vers 16°C après 2 heures d’ouverture.
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Superbe potentiel de garde pour ce vin jaune de 30 à 100 ans
+                        Le cadeau idéal pour les années de naissance
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdvinDePaille2018Badoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd" onclick="fermetureInfosProduit('#infosProdvinDePaille2018Badoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/vinDePaille2018Badoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Vin de Paille 2018
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 31,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Ce vin rare, naturellement doux, fait partie des grands vins liquoreux français. Les plus beaux
+                        raisins sont récoltés grappe par grappe en début de vendanges à partir d'un savant assemblage de
+                        Savagnin, Chardonnay et Poulsard.
+                        Déposées dans des clayettes sur un lit de paille, pendant environ 4 mois, les grappes flétries
+                        et déshydratées regorgeant de sucre sont pressées, 100 kg de raisins, produiront 15 à 18 litres
+                        de moût.
+                        La fermentation est très lente et le Vin de Paille doit vieillir trois ans en fûts de chêne. Il
+                        ne subit aucun mutage.
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>Un nectar de fruits confits, de caramel blond, de miel et de cannelle, équilibré par une délicate
+                        et belle acidité, la finale est explosive.
+
+                        En bouche, attaque vive avec une sucrosité agréable et élégante, sensation de pomme fraiche
+                        évoluant généreusement sur une complexité d'arômes. Finale équilibré ou l'acidité donne de la
+                        fraicheur.</p>
+                    <h2>Accord mets et vin</h2>
+                    <p>Il sera la star de vos apéritifs, Pigeon farci aux raisins et aux épices douces, sublime avec le
+                        Foie Gras et les desserts au chocolat (Fondant aux trois chocolats et marmelade d'orange). Idéal
+                        avec des fromages forts: Roquefort, Bleu...</p>
+                    <h2>Température de service</h2>
+                    <p>Le Vin de Paille doit être servi très frais 8 °C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Potentiel de garde de 15 à 50 ans
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdvinDePaille2020BioBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd" onclick="fermetureInfosProduit('#infosProdvinDePaille2020BioBadoz')">
+                    ✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/vinDePaille2020BioBadoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Vin de Paille 2020 BIO
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 35,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <ul>
+                        <li>Bouteille Prestige</li>
+                        <li>Médaille d'Argent Concours Général Agricole de Paris 2024</li>
+                    </ul>
+                    <p>Ce vin rare, naturellement doux, fait partie des grands vins liquoreux français. Les plus beaux
+                        raisins sont récoltés grappe par grappe en début de vendanges à partir d'un savant assemblage de
+                        Savagnin, Chardonnay et Poulsard.
+                        Déposées dans des clayettes sur un lit de paille, pendant environ 4 mois, les grappes flétries
+                        et déshydratées regorgeant de sucre sont pressées, 100 kg de raisins, produiront 15 à 18 litres
+                        de moût.
+                        La fermentation est très lente et le Vin de Paille doit vieillir trois ans en fûts de chêne. Il
+                        ne subit aucun mutage.
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>Arômes précis frais de fruits confits, agrumes, oranges, curry. Belle liqueur en bouche,
+                        puissante, tonique et juteuse.</p>
+                    <h2>Accord mets et vin</h2>
+                    <p>Il sera la star de vos apéritifs, Pigeon farci aux raisins et aux épices douces, sublime avec le
+                        Foie Gras et les desserts au chocolat (Fondant aux trois chocolats et marmelade d'orange). Idéal
+                        avec des fromages forts: Roquefort, Bleu...
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Le Vin de Paille doit être servi très frais 8 °C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Un vin encore jeune qui doit se fondre pendant quelques années.
+                        Potentiel de garde de 15 à 50 ans
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdblancDeBlancBrutBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd" onclick="fermetureInfosProduit('#infosProdblancDeBlancBrutBadoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/blancDeBlancBrutBadoz.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Blanc de blancs - Brut
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 14,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Un vin de cépage Chardonnay d'une belle minéralité, élégant et féminin. Une bulle légère qui
+                        souligne des notes toastées et citronnées, la bouche est parfaitement équilibrée.
+                    </p>
+                    <h2>Température de service</h2>
+                    <p>Le Crémant du Jura se sert très frais vers 8°C.
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Se boit très jeune afin de profiter de sa fraîcheur aromatique.
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdmacvinDuJuraBlancBioBadoz" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdmacvinDuJuraBlancBioBadoz')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/macvinDuJuraBlancBioBadoz.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Macvin du Jura Blanc BIO
+                        </h2>
+                        <h3>Domaine BADOZ</h3>
+                        <p>Prix : 23,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Vin Biologique certifié par Ecocert France FR-BIO-01
+                    </p>
+                    <p>
+                        400ème AOC de France d'après le decret du 14-11-1991
+                    </p>
+                    <p>Le Macvin du Jura appartient au club français très fermé des mistelles (ou vins de liqueur)
+                        d’AOC, le seul à être issu d’une eau de vie de marc de raisins et non de vin. Connu depuis le
+                        XIVe siècle, le Macvin du Jura est obtenu à partir de jus de raisin non fermenté du cépage
+                        Savagnin, auquel on ajoute un tiers de marc du Jura. Il est élevé au minimum pendant 12 mois en
+                        fûts de chêne</p>
+                    <p>L’eau de vie de marc utilisée pour la fabrication du Macvin du Jura est obtenue par la
+                        distillation du marc du Jura. Elle doit rester au moins 18 mois en fûts de chêne avant
+                        l’élaboration du Macvin du Jura.
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>La Force mesurée du marc du Jura conjuguée à la douceur du moût de cépage Savagnin.
+                        Des notes de mirabelles subliment ce mariage d'équilibre.</p>
+                    <h2>Accord mets et vin</h2>
+                    <p>L'apéritif Jurassien par excellence, en entrée avec du melon rehaussé par une fine tranche de
+                        jambon fumé, réduit en caramel avec foie gras ou en accompagnement de glaces spéciales: à la
+                        vanille, pain d'épice, rhum raisin, caramel.</p>
+                    <h2>Température de service</h2>
+                    <p>Servir très frais, vers 8 °C
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>Potentiel de garde de 25 ans
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdtradition2020Berthet-Bondet" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdtradition2020Berthet-Bondet')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/tradition2020Berthet-Bondet.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Tradition 2020
+                        </h2>
+                        <h3>Domaine BERTHET-BONDET</h3>
+                        <p>Prix : 22,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Graviers marnes
+                    </p>
+                    <h2>Âge moyen des vignes</h2>
+                    <p>
+                        30 ans
+                    </p>
+                    <h2>Mode de culture</h2>
+                    <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
+                    <h2>Vignification et élevage</h2>
+                    <p>Vendanges manuelles, pressurage de la vendange entière, fermentation en cuve inox puis élevage de
+                        2 ans en fûts de chêne (228 L) sous voile de levures (élevage oxydatif, fûts non ouillés).</p>
+                    <h2>Dégustation</h2>
+                    <p>Servir à 14° sur des poissons fumés (haddock), plats persillés (escargots), grenouilles, viandes
+                        blanches avec crême et champignons (morilles), plats épicés (curry), plats au fromage (Comté).
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>30 ans
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdsavagnin2019Berthet-Bondet" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdsavagnin2019Berthet-Bondet')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/savagnin2019Berthet-Bondet.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Savagnin 2019
+                        </h2>
+                        <h3>Domaine BERTHET-BONDET</h3>
+                        <p>Prix : 29,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Marnes du Jurassique
+                    </p>
+                    <h2>Âge moyen des vignes</h2>
+                    <p>
+                        30 ans
+                    </p>
+                    <h2>Mode de culture</h2>
+                    <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
+                    <h2>Vignification et élevage</h2>
+                    <p>Vendanges manuelles, pressurage de la vendange entière, fermentation en cuve inox puis élevage de
+                        3 ans en fûts de chêne (228 L) sous voile de levures (élevage oxydatif, fûts non ouillés).</p>
+                    <h2>Dégustation</h2>
+                    <p>Servir à 13° sur des poissons fumés (haddock), plats persillés (escargots), grenouilles, viandes
+                        blanches avec crême et champignons (morilles), plats épicés (curry), plats au fromage (Comté).
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>30 ans
+                    </p>
+                    <h2>Apogée</h2>
+                    <p>5 ans</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdchateauChalon2017Berthet-Bondet" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdchateauChalon2017Berthet-Bondet')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/chateauChalon2017Berthet-Bondet.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Château-Chalon 2017
+                        </h2>
+                        <h3>Domaine BERTHET-BONDET</h3>
+                        <p>Prix : 52,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Marnes du Lias
+                    </p>
+                    <h2>Âge moyen des vignes</h2>
+                    <p>
+                        30 ans
+                    </p>
+                    <h2>Mode de culture</h2>
+                    <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
+                    <h2>Vignification et élevage</h2>
+                    <p>Vendanges manuelles, pressurage de la vendange entière, fermentation en cuve inox puis élevage de
+                        3 ans en fûts de chêne (228 L) sous voile de levures (élevage oxydatif, fûts non ouillés).</p>
+                    <h2>Dégustation</h2>
+                    <p>Servir à 14° sur des poissons fumés (haddock), plats persillés (escargots), grenouilles, viandes
+                        blanches avec crême et champignons (morilles), plats épicés (curry), plats au fromage (Comté).
+                    </p>
+                    <h2>Conservation</h2>
+                    <p>50 ans
+                    </p>
+                    <h2>Apogée</h2>
+                    <p>10 ans</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdlaSource2023Berthet-Bondet" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdlaSource2023Berthet-Bondet')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/laSource2023Berthet-Bondet.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>La source 2023
+                        </h2>
+                        <h3>Domaine BERTHET-BONDET</h3>
+                        <p>Prix : 17,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Argilo-calcaire
+                    </p>
+                    <h2>Âge moyen des vignes</h2>
+                    <p>
+                        30 ans
+                    </p>
+                    <h2>Mode de culture</h2>
+                    <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
+                    <h2>Vignification et élevage</h2>
+                    <p>Vendanges manuelles, pressurage des grappes entières, fermentation et élevage pendant 8 mois en
+                        cuve inox.</p>
+                    <h2>Dégustation</h2>
+                    <p>Boire frais 10-12 °C, apéritif et produits de la mer.</p>
+                    <h2>Conservation</h2>
+                    <p>5 ans
+                    </p>
+                    <h2>Apogée</h2>
+                    <p>2 ans</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdsavagnier2022Berthet-Bondet" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdsavagnier2022Berthet-Bondet')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/savagnier2022Berthet-Bondet.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Savagnier 2022
+                        </h2>
+                        <h3>Domaine BERTHET-BONDET</h3>
+                        <p>Prix : 21,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Marnes du Trias
+                    </p>
+                    <h2>Âge moyen des vignes</h2>
+                    <p>
+                        20 ans
+                    </p>
+                    <h2>Mode de culture</h2>
+                    <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
+                    <h2>Vignification et élevage</h2>
+                    <p>Cuvée parcellaire, vendanges manuelles, pressurage de la vendange entière, élevage de 10 mois en
+                        cuve inox.</p>
+                    <h2>Dégustation</h2>
+                    <p>Servir à 12° avec des poissons, fruits de mer, apéritif.</p>
+                    <h2>Conservation</h2>
+                    <p>5 ans
+                    </p>
+                    <h2>Apogée</h2>
+                    <p>3 ans</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdlaPoirière2023Berthet-Bondet" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdlaPoirière2023Berthet-Bondet')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/laPoirière2023Berthet-Bondet.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>La Poirière 2023
+                        </h2>
+                        <h3>Domaine BERTHET-BONDET</h3>
+                        <p>Prix : 22,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Marnes irisées du Trias
+                    </p>
+                    <h2>Âge moyen des vignes</h2>
+                    <p>
+                        30 ans
+                    </p>
+                    <h2>Mode de culture</h2>
+                    <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
+                    <h2>Vignification et élevage</h2>
+                    <p>Cuvée parcellaire, élevage de 18 mois en fût de chêne ouillé.</p>
+                    <h2>Dégustation</h2>
+                    <p>Servir à 12° avec des poissons ou viande blanches.</p>
+                    <h2>Conservation</h2>
+                    <p>10 ans
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdlAcasia2022Berthet-Bondet" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdlAcasia2022Berthet-Bondet')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/lAcasia2022Berthet-Bondet.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>L'Acasia 2022
+                        </h2>
+                        <h3>Domaine BERTHET-BONDET</h3>
+                        <p>Prix : 25,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Marnes du Trias
+                    </p>
+                    <h2>Mode de culture</h2>
+                    <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
+                    <h2>Vignification et élevage</h2>
+                    <p>Savagnin ouillé élevé 18 mois en fûts d'acacia (80%) et de chêne (20%).</p>
+                    <h2>Dégustation</h2>
+                    <p>Servir à 12° avec des produits de la mer ou viandes blanches.</p>
+                    <h2>Conservation</h2>
+                    <p>10 ans
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdtrio2023Berthet-Bondet" class="infosProdGlob">
+                <div id="croixFermetureDetailProd" onclick="fermetureInfosProduit('#infosProdtrio2023Berthet-Bondet')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/trio2023Berthet-Bondet.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Trio 2023
+                        </h2>
+                        <h3>Domaine BERTHET-BONDET</h3>
+                        <p>Prix : 23,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Eboulis calcaires et marnes rouge
+                    </p>
+                    <h2>Âge moyen des vignes</h2>
+                    <p>15 ans</p>
+                    <h2>Mode de culture</h2>
+                    <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
+                    <h2>Vignification et élevage</h2>
+                    <p>Vendanges manuelles, table de tri, macération courte (environ une semaine) des baies entières
+                        égrappées, élevage en cuve inox pendant 12 mois.</p>
+                    <h2>Dégustation</h2>
+                    <p>Servir à 14° avec des charcuteries, viandes fumées, grillées.</p>
+                    <h2>Conservation</h2>
+                    <p>7 ans
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdlaQueueDuRenard2022Berthet-Bondet" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdlaQueueDuRenard2022Berthet-Bondet')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/laQueueDuRenard2022Berthet-Bondet.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>La Queue du Renard 2022
+                        </h2>
+                        <h3>Domaine BERTHET-BONDET</h3>
+                        <p>Prix : 27,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Terroir</h2>
+                    <p>Marnes du Trias
+                    </p>
+                    <h2>Âge moyen des vignes</h2>
+                    <p>40 ans</p>
+                    <h2>Mode de culture</h2>
+                    <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
+                    <h2>Vignification et élevage</h2>
+                    <p>Cuvée parcellaire, vendanges manuelles, table de tri, macération courte (environ une semaine) des
+                        baies entières égrappées, élevage en fûts de chêne pendant 12 mois.
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>Servir à 14° avec des charcuteries, viandes rouges, grillades.</p>
+                    <h2>Conservation</h2>
+                    <p>10 ans
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcremantBrutNatureBerthet-Bondet" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcremantBrutNatureBerthet-Bondet')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cremantBrutNatureBerthet-Bondet.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Crémant Brut Nature
+                        </h2>
+                        <h3>Domaine BERTHET-BONDET</h3>
+                        <p>Prix : 21,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Mode de culture</h2>
+                    <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
+                    <h2>Vignification et élevage</h2>
+                    <p>Blanc de blanc extra brut. Vendanges manuelles, table de tri, pressurage direct de la vendange
+                        entière, méthode champenoise.
+                    </p>
+                    <h2>Dégustation</h2>
+                    <p>Servir à 8° en apéritif ou dessert.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcomteDouxFruitierePlateauArboisien" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcomteDouxFruitierePlateauArboisien')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/comteDouxFruitierePlateauArboisien.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Comté Doux
+                        </h2>
+                        <h3>Fruitière du plateau arboisien</h3>
+                        <p>Prix au kg : 15,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Le Comté est un fromage au lait cru à pâte pressé cuite.</p>
+                    <p>Il est fabriqué dans nos ateliers grâce au lait de Vache Montbéliarde et Simmental (les seuls
+                        autorisés pour l'AOP Comté)
+                    </p>
+                    <p>De la fabrication à l'affinage, chaqun de nos Comtés sont contrôlés régulièrement afin de
+                        s'assurer qu'ils répondent aux normes de qualité de l'AOP Comté.</p>
+                    <p>C'est un fromage riche en saveurs et en goût, sans aucun additif ni colorant.</p>
+                    <p>Vous pouvez le déguster sur un plateau de fromage et pour faire gratiner vos plats.</p>
+                    <p>Conserver votre Comté au frais et consommer le rapidement.</p>
+                    <h2>Affinage</h2>
+                    <p>6 à 8 mois</p>
+                    <h2>Accompagnement</h2>
+                    <p>Une fondue au Comté s’accompagne de vins du Jura, idéalement le même que celui utilisé pour
+                        préparer la fondue.
+                    </p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcomteFruiteFruitierePlateauArboisien" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcomteFruiteFruitierePlateauArboisien')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/comteFruiteFruitierePlateauArboisien.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Comté Fruité
+                        </h2>
+                        <h3>Fruitière du plateau arboisien</h3>
+                        <p>Prix au kg : 18,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Le Comté est un fromage au lait cru à pâte pressé cuite.</p>
+                    <p>Il est fabriqué dans nos ateliers grâce au lait de Vache Montbéliarde et Simmental (les seuls
+                        autorisés pour l'AOP Comté)
+                    </p>
+                    <p>De la fabrication à l'affinage, chaqun de nos Comtés sont contrôlés régulièrement afin de
+                        s'assurer qu'ils répondent aux normes de qualité de l'AOP Comté.</p>
+                    <p>C'est un fromage riche en saveurs et en goût, sans aucun additif ni colorant.</p>
+                    <p>Vous pouvez le déguster sur un plateau de fromage et pour faire gratiner vos plats.</p>
+                    <p>Conserver votre Comté au frais et consommer le rapidement.</p>
+                    <h2>Affinage</h2>
+                    <p>12 à 14 mois</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcomte18moisFruitierePlateauArboisien" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcomte18moisFruitierePlateauArboisien')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/comte18moisFruitierePlateauArboisien.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Comté 18 mois
+                        </h2>
+                        <h3>Fruitière du plateau arboisien</h3>
+                        <p>Prix au kg : 22,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Le Comté Vieux a séjourné 18 mois en cave d'affinage. Celui-ci aura développer des petits
+                        cristaux (tyrosine) qui donneront une puissance en goût à votre fromage.</p>
+                    <p>Le Comté 18 mois est idéal en apéritif accompagné par un vin blanc.</p>
+                    <p>Le Comté est un fromage au lait cru à pâte pressé non-cuite.</p>
+                    <p>Il est fabriqué dans nos ateliers grâce au lait de Vache Montbéliarde et Simmental (les seuls
+                        autorisés pour l'AOP Comté)</p>
+                    <p>De la fabrication à l'affinage, chaqun de nos Comtés sont contrôlés régulièrement afin de
+                        s'assurer qu'ils répondent aux normes de qualité de l'AOP Comté.</p>
+                    <p>C'est un fromage riche en saveurs et en goût, sans aucun additif ni colorant.</p>
+                    <p>Vous pouvez le déguster sur un plateau de fromage et / ou pour faire gratiner vos plats.</p>
+                    <p>Conservez votre Comté au frais et consommez le rapidement.</p>
+                    <h2>Accompagnement</h2>
+                    <p>A déguster avec un Vin jaune ou un blanc du Jura.</p>
+                    <h2>Affinage</h2>
+                    <p>18 mois maximum</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcomtePrestigeFruitierePlateauArboisien" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcomtePrestigeFruitierePlateauArboisien')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/comtePrestigeFruitierePlateauArboisien.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Comté Prestige
+                        </h2>
+                        <h3>Fruitière du plateau arboisien</h3>
+                        <p>Prix au kg : 31,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Affinage</h2>
+                    <p>Entre 24 et 30 mois</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdmorbierJeuneFruitierePlateauArboisien" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdmorbierJeuneFruitierePlateauArboisien')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/morbierJeuneFruitierePlateauArboisien.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Morbier Jeune
+                        </h2>
+                        <h3>Fruitière du plateau arboisien</h3>
+                        <p>Prix au kg : 16,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Fromage au lait cru à pâte pressée non cuite à base de lait cru de vache Montbéliarde
+                        exclusivement.
+                        Le morbier se conserve au frais et se consomme rapidement.</p>
+                    <p>Marquée en son centre et sur toute la tranche d’une désormais célèbre raie noire, sa pâte révèle
+                        bien d’autres surprises et qualités. Juste colorée, entre l’ivoire et le jaune pâle, elle
+                        s’autorise une légère et discrète ouverture et parfois même quelques trous. Le Morbier dévoile
+                        un parfum franc et persistant, au léger goût de crème et de fruit.</p>
+                    <h2>Affinage</h2>
+                    <p>50 à 60 jours</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdmorbierVieuxFruitierePlateauArboisien" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdmorbierVieuxFruitierePlateauArboisien')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/morbierVieuxFruitierePlateauArboisien.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Morbier Vieux
+                        </h2>
+                        <h3>Fruitière du plateau arboisien</h3>
+                        <p>Prix au kg : 17,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Le "Morbier vieux" est affiné entre 70 et 90 jours dans notre cave. Cette longue période
+                        d'affinage va permettre au Morbier de développer de nombreuses saveurs.</p>
+                    <p>Celui-ci aura un goût plus prononcé en bouche que le morbier jeune proposé sur notre site</p>
+                    <h2>Conservation</h2>
+                    <p>Le morbier se conserve au frais et se consomme rapidement.</p>
+                    <h2>Affinage</h2>
+                    <p>70 à 80 jours</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdmontDOrFromagerieSanceyRichard" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdmontDOrFromagerieSanceyRichard')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/montDOrFromagerieSanceyRichard.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Mont d'Or
+                        </h2>
+                        <h3>Fromagerie Sancey-Richard</h3>
+                        <p>Prix au kg : 14,00 €</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Le Mont d'Or est un fromage AOP saisonnier, reconnaissable à sa boite et sa sangle en épicéa.</p>
+                    <p>Vendu uniquement du 10 septembre au 10 mai.</p>
+                    <p>Caractérisé par ses notes boisées, son goût crémeux et sa pâte onctueuse.
+                        Le mont d’or peut se déguster froid ou chaud !
+                        Fromage AOP fabriqué du 15 août au 15 mars et vendu uniquement du 10 septembre au 10 mai.
+                        Notre mont d’or a obtenu la médaille d’or au concours général agricole, à Paris, en 2018 et en
+                        2020.
+                        Médaille d’or du concours interprofessionnel en 2019.
+                        La famille Sancey Richard a été précurseur de la célèbre « boite chaude » en 1983 avec notre
+                        fond’or.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcancoilloteAbsintheJuraFlore" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcancoilloteAbsintheJuraFlore')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cancoilloteAbsintheJuraFlore.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cancoillote à l'Absinthe
+                        </h2>
+                        <h3>Crèmerie Jura Flore</h3>
+                        <p>Prix : 6,00 € les 240 g</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La Cancoillotte est une spécialité fromagère emblématique de la région de Franche-Comté en
+                        France. Ce fromage unique se distingue par sa texture onctueuse et légèrement liquide, ce qui en
+                        fait un délice facile à tartiner et à intégrer dans diverses préparations culinaires. La base de
+                        la Cancoillotte repose sur du lait écrémé caillé, auquel sont ajoutés du beurre, du sel et des
+                        sels de fonte pour obtenir cette consistance fluide et appétissante.</p>
+                    <p>Ce fromage présente un goût fin et savoureux, souvent agrémenté de délicates notes lactiques et
+                        beurrées. Il est disponible en plusieurs parfums, chacun apportant une touche de caractère
+                        particulière : cumin, échalotes, ail, champignons, basilic, et même absinthe. Ces variations
+                        permettent de satisfaire une grande variété de palais et de créer des expériences gustatives
+                        uniques.</p>
+                    <p>Elle se déguste aussi bien froide, sur une tranche de pain frais, que
+                        chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
+                        Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
+                        gastronomique de la Franche-Comté.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcancoilloteAilDesOursJuraFlore" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcancoilloteAilDesOursJuraFlore')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cancoilloteAilDesOursJuraFlore.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cancoillote à l'Ail des ours
+                        </h2>
+                        <h3>Crèmerie Jura Flore</h3>
+                        <p>Prix : 6,00 € les 240 g</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La Cancoillotte est une spécialité fromagère emblématique de la région de Franche-Comté en
+                        France. Ce fromage unique se distingue par sa texture onctueuse et légèrement liquide, ce qui en
+                        fait un délice facile à tartiner et à intégrer dans diverses préparations culinaires. La base de
+                        la Cancoillotte repose sur du lait écrémé caillé, auquel sont ajoutés du beurre, du sel et des
+                        sels de fonte pour obtenir cette consistance fluide et appétissante.</p>
+                    <p>Ce fromage présente un goût fin et savoureux, souvent agrémenté de délicates notes lactiques et
+                        beurrées. Il est disponible en plusieurs parfums, chacun apportant une touche de caractère
+                        particulière : cumin, échalotes, ail, champignons, basilic, et même absinthe. Ces variations
+                        permettent de satisfaire une grande variété de palais et de créer des expériences gustatives
+                        uniques.</p>
+                    <p>Elle se déguste aussi bien froide, sur une tranche de pain frais, que
+                        chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
+                        Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
+                        gastronomique de la Franche-Comté.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcancoilloteAilJuraFlore" class="infosProdGlob">
+                <div id="croixFermetureDetailProd" onclick="fermetureInfosProduit('#infosProdcancoilloteAilJuraFlore')">
+                    ✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cancoilloteAilJuraFlore.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cancoillote à l'Ail
+                        </h2>
+                        <h3>Crèmerie Jura Flore</h3>
+                        <p>Prix : 6,00 € les 240 g</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La Cancoillotte est une spécialité fromagère emblématique de la région de Franche-Comté en
+                        France. Ce fromage unique se distingue par sa texture onctueuse et légèrement liquide, ce qui en
+                        fait un délice facile à tartiner et à intégrer dans diverses préparations culinaires. La base de
+                        la Cancoillotte repose sur du lait écrémé caillé, auquel sont ajoutés du beurre, du sel et des
+                        sels de fonte pour obtenir cette consistance fluide et appétissante.</p>
+                    <p>Ce fromage présente un goût fin et savoureux, souvent agrémenté de délicates notes lactiques et
+                        beurrées. Il est disponible en plusieurs parfums, chacun apportant une touche de caractère
+                        particulière : cumin, échalotes, ail, champignons, basilic, et même absinthe. Ces variations
+                        permettent de satisfaire une grande variété de palais et de créer des expériences gustatives
+                        uniques.</p>
+                    <p>Elle se déguste aussi bien froide, sur une tranche de pain frais, que
+                        chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
+                        Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
+                        gastronomique de la Franche-Comté.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcancoilloteBasilicJuraFlore" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcancoilloteBasilicJuraFlore')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cancoilloteBasilicJuraFlore.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cancoillote au Basilic
+                        </h2>
+                        <h3>Crèmerie Jura Flore</h3>
+                        <p>Prix : 6,00 € les 240 g</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La Cancoillotte est une spécialité fromagère emblématique de la région de Franche-Comté en
+                        France. Ce fromage unique se distingue par sa texture onctueuse et légèrement liquide, ce qui en
+                        fait un délice facile à tartiner et à intégrer dans diverses préparations culinaires. La base de
+                        la Cancoillotte repose sur du lait écrémé caillé, auquel sont ajoutés du beurre, du sel et des
+                        sels de fonte pour obtenir cette consistance fluide et appétissante.</p>
+                    <p>Ce fromage présente un goût fin et savoureux, souvent agrémenté de délicates notes lactiques et
+                        beurrées. Il est disponible en plusieurs parfums, chacun apportant une touche de caractère
+                        particulière : cumin, échalotes, ail, champignons, basilic, et même absinthe. Ces variations
+                        permettent de satisfaire une grande variété de palais et de créer des expériences gustatives
+                        uniques.</p>
+                    <p>Elle se déguste aussi bien froide, sur une tranche de pain frais, que
+                        chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
+                        Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
+                        gastronomique de la Franche-Comté.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcancoilloteCuminJuraFlore" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcancoilloteCuminJuraFlore')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cancoilloteCuminJuraFlore.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cancoillote au Cumin
+                        </h2>
+                        <h3>Crèmerie Jura Flore</h3>
+                        <p>Prix : 6,00 € les 240 g</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La Cancoillotte est une spécialité fromagère emblématique de la région de Franche-Comté en
+                        France. Ce fromage unique se distingue par sa texture onctueuse et légèrement liquide, ce qui en
+                        fait un délice facile à tartiner et à intégrer dans diverses préparations culinaires. La base de
+                        la Cancoillotte repose sur du lait écrémé caillé, auquel sont ajoutés du beurre, du sel et des
+                        sels de fonte pour obtenir cette consistance fluide et appétissante.</p>
+                    <p>Ce fromage présente un goût fin et savoureux, souvent agrémenté de délicates notes lactiques et
+                        beurrées. Il est disponible en plusieurs parfums, chacun apportant une touche de caractère
+                        particulière : cumin, échalotes, ail, champignons, basilic, et même absinthe. Ces variations
+                        permettent de satisfaire une grande variété de palais et de créer des expériences gustatives
+                        uniques.</p>
+                    <p>Elle se déguste aussi bien froide, sur une tranche de pain frais, que
+                        chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
+                        Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
+                        gastronomique de la Franche-Comté.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcancoilloteEchalotteJuraFlore" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcancoilloteEchalotteJuraFlore')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cancoilloteEchalotteJuraFlore.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cancoillote à l'échalotte
+                        </h2>
+                        <h3>Crèmerie Jura Flore</h3>
+                        <p>Prix : 6,00 € les 240 g</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La Cancoillotte est une spécialité fromagère emblématique de la région de Franche-Comté en
+                        France. Ce fromage unique se distingue par sa texture onctueuse et légèrement liquide, ce qui en
+                        fait un délice facile à tartiner et à intégrer dans diverses préparations culinaires. La base de
+                        la Cancoillotte repose sur du lait écrémé caillé, auquel sont ajoutés du beurre, du sel et des
+                        sels de fonte pour obtenir cette consistance fluide et appétissante.</p>
+                    <p>Ce fromage présente un goût fin et savoureux, souvent agrémenté de délicates notes lactiques et
+                        beurrées. Il est disponible en plusieurs parfums, chacun apportant une touche de caractère
+                        particulière : cumin, échalotes, ail, champignons, basilic, et même absinthe. Ces variations
+                        permettent de satisfaire une grande variété de palais et de créer des expériences gustatives
+                        uniques.</p>
+                    <p>Elle se déguste aussi bien froide, sur une tranche de pain frais, que
+                        chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
+                        Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
+                        gastronomique de la Franche-Comté.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcancoilloteMorilleJuraFlore" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcancoilloteMorilleJuraFlore')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cancoilloteMorilleJuraFlore.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cancoillote aux Morilles
+                        </h2>
+                        <h3>Crèmerie Jura Flore</h3>
+                        <p>Prix : 6,00 € les 240 g</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La Cancoillotte est une spécialité fromagère emblématique de la région de Franche-Comté en
+                        France. Ce fromage unique se distingue par sa texture onctueuse et légèrement liquide, ce qui en
+                        fait un délice facile à tartiner et à intégrer dans diverses préparations culinaires. La base de
+                        la Cancoillotte repose sur du lait écrémé caillé, auquel sont ajoutés du beurre, du sel et des
+                        sels de fonte pour obtenir cette consistance fluide et appétissante.</p>
+                    <p>Ce fromage présente un goût fin et savoureux, souvent agrémenté de délicates notes lactiques et
+                        beurrées. Il est disponible en plusieurs parfums, chacun apportant une touche de caractère
+                        particulière : cumin, échalotes, ail, champignons, basilic, et même absinthe. Ces variations
+                        permettent de satisfaire une grande variété de palais et de créer des expériences gustatives
+                        uniques.</p>
+                    <p>Elle se déguste aussi bien froide, sur une tranche de pain frais, que
+                        chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
+                        Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
+                        gastronomique de la Franche-Comté.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcancoilloteNatureJuraFlore" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcancoilloteNatureJuraFlore')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cancoilloteNatureJuraFlore.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cancoillote Nature
+                        </h2>
+                        <h3>Crèmerie Jura Flore</h3>
+                        <p>Prix : 6,00 € les 240 g</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La Cancoillotte est une spécialité fromagère emblématique de la région de Franche-Comté en
+                        France. Ce fromage unique se distingue par sa texture onctueuse et légèrement liquide, ce qui en
+                        fait un délice facile à tartiner et à intégrer dans diverses préparations culinaires. La base de
+                        la Cancoillotte repose sur du lait écrémé caillé, auquel sont ajoutés du beurre, du sel et des
+                        sels de fonte pour obtenir cette consistance fluide et appétissante.</p>
+                    <p>Ce fromage présente un goût fin et savoureux, souvent agrémenté de délicates notes lactiques et
+                        beurrées. Il est disponible en plusieurs parfums, chacun apportant une touche de caractère
+                        particulière : cumin, échalotes, ail, champignons, basilic, et même absinthe. Ces variations
+                        permettent de satisfaire une grande variété de palais et de créer des expériences gustatives
+                        uniques.</p>
+                    <p>Elle se déguste aussi bien froide, sur une tranche de pain frais, que
+                        chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
+                        Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
+                        gastronomique de la Franche-Comté.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdcancoilloteSavagninJuraFlore" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdcancoilloteSavagninJuraFlore')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/cancoilloteSavagninJuraFlore.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Cancoillote au Savagnin
+                        </h2>
+                        <h3>Crèmerie Jura Flore</h3>
+                        <p>Prix : 6,00 € les 240 g</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La Cancoillotte est une spécialité fromagère emblématique de la région de Franche-Comté en
+                        France. Ce fromage unique se distingue par sa texture onctueuse et légèrement liquide, ce qui en
+                        fait un délice facile à tartiner et à intégrer dans diverses préparations culinaires. La base de
+                        la Cancoillotte repose sur du lait écrémé caillé, auquel sont ajoutés du beurre, du sel et des
+                        sels de fonte pour obtenir cette consistance fluide et appétissante.</p>
+                    <p>Ce fromage présente un goût fin et savoureux, souvent agrémenté de délicates notes lactiques et
+                        beurrées. Il est disponible en plusieurs parfums, chacun apportant une touche de caractère
+                        particulière : cumin, échalotes, ail, champignons, basilic, et même absinthe. Ces variations
+                        permettent de satisfaire une grande variété de palais et de créer des expériences gustatives
+                        uniques.</p>
+                    <p>Elle se déguste aussi bien froide, sur une tranche de pain frais, que
+                        chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
+                        Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
+                        gastronomique de la Franche-Comté.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdptioteMorteauIGPCuitesMorteauSaucisses" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdptioteMorteauIGPCuitesMorteauSaucisses')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/ptioteMorteauIGPCuitesMorteauSaucisses.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>P'tiote Morteau IGP cuites
+                        </h2>
+                        <h3>Morteau Saucisse</h3>
+                        <p>Prix à l'unité : 10,00€</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La P'tiote Morteau IGP cuites est une spécialité charcutière renommée de la région de
+                        Franche-Comté. Proposées en emballages contenant deux petites saucisses, ces délices sont
+                        idéales pour un repas convivial en famille ou entre amis. Leur taille réduite en fait également
+                        un choix parfait pour une collation ou un pique-nique.</p>
+                    <h2>Mode de cuisson</h2>
+                    <ul>
+                        <li>A l'eau : Plongez les saucisses dans une casserole d'eau frémissante et laissez cuire
+                            pendant 30 minutes.</li>
+                        <li>A la poêle : Faites revenir les saucisses à feu moyen pendant environ 15 minutes, en les
+                            retournant régulièrement.</li>
+                    </ul>
+                    <h2>Dégustation</h2>
+                    <p>Délicieuses avec des pommes de terre vapeur, une salade verte ou une choucroute.</p>
+                    <p>A déguster avec un vin blanc sec de la région, comme un Jura</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdsaucissesDeMorteauIGPCuitesMorteauSaucisses" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdsaucissesDeMorteauIGPCuitesMorteauSaucisses')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/saucissesDeMorteauIGPCuitesMorteauSaucisses.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Saucisse de Morteau IGP cuite
+                        </h2>
+                        <h3>Morteau Saucisse</h3>
+                        <p>Prix à l'unité : 12,00€</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>La Saucisse de Morteau IGP cuite est une véritable institution gastronomique de la Franche-Comté.
+                        Vendue en emballages contenant une grande saucisse, elle est parfaite pour les repas festifs ou
+                        les grandes occasions. Cette saucisse, généreusement proportionnée, est idéale pour satisfaire
+                        les amateurs de charcuterie les plus exigeants.</p>
+                    <h2>Mode de cuisson</h2>
+                    <ul>
+                        <li>A l'eau : Laissez cuire la saucisse dans une eau frémissante pendant 40 minutes.</li>
+                        <li>Au four : Préchauffez votre four à 180°C et laissez cuire la saucisse pendant environ 25
+                            minutes.</li>
+                    </ul>
+                    <h2>Dégustation</h2>
+                    <p>Parfaite avec un gratin dauphinois, une choucroute ou des lentilles.</p>
+                    <p>A déguster avec un vin rouge léger de la région, comme un Pinot Noir.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdsaucisseDeMorteauACuireMorteauSaucisse" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdsaucisseDeMorteauACuireMorteauSaucisse')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/saucisseDeMorteauACuireMorteauSaucisse.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Saucisses de Morteau à cuire
+                        </h2>
+                        <h3>Morteau Saucisse</h3>
+                        <p>Prix à l'unité : 12,00€</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <p>Les Saucisses de Morteau IGP à cuire sont une spécialité emblématique de la région de
+                        Franche-Comté. Reconnues pour leur qualité exceptionnelle et leur goût authentique, ces
+                        saucisses sont parfaites pour les amateurs de charcuterie artisanale. Chaque emballage contient
+                        une grande saucisse, idéale pour les repas festifs ou les occasions spéciales.</p>
+                    <h2>Mode de cuisson</h2>
+                    <ul>
+                        <li>À l'eau : Faites cuire la saucisse dans une eau frémissante pendant 40 minutes.</li>
+                        <li>Au four : Préchauffez votre four à 180°C et laissez cuire la saucisse pendant environ 25
+                            minutes.</li>
+                    </ul>
+                    <h2>Dégustation</h2>
+                    <p>Parfaite avec un gratin dauphinois, une choucroute ou des lentilles.</p>
+                    <p>A déguster avec un vin rouge léger de la région, comme un Pinot Noir.</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdsaucisseMontbéliardSalaisonsComtoises" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdsaucisseMontbéliardSalaisonsComtoises')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/saucisseMontbéliardSalaisonsComtoises.png">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Saucisse de Montbéliard IGP
+                        </h2>
+                        <h3>Les Salaisons Comtoises</h3>
+                        <p>Prix à l'unité : 8,00€</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Ingrédients</h2>
+                    <p>Viande de porc (97%) origine France, sel, sirop de glucose, épices et plante aromatique,
+                        dextrose,antioxydant:E301 conservateur: E250,boyau naturel de porc</p>
+                    <h2>Mode de cuisson</h2>
+                    <p>20 mn dans de l'eau frémissante.</p>
+                    <h2>Conservation</h2>
+                    <p>A conserver entre 0° et +4°c</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdjambonFumeEntierSalaisonsComtoises" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdjambonFumeEntierSalaisonsComtoises')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/jambonFumeEntierSalaisonsComtoises.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Jambon Fumé entier
+                        </h2>
+                        <h3>Les Salaisons Comtoises</h3>
+                        <p>Prix à l'unité : 102,00€</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Ingrédients</h2>
+                    <p>Viande de porc origine: France, conservateur: E252,sel,sirop de glucose, dextrose, arômes
+                        naturels, antioxydant: E301</p>
+                    <p>Le jambon fumé est cuit avec son os, le poids peut varier de 9 et 12kg.</p>
+                    <h2>Conservation</h2>
+                    <p>0 et 4°c</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+            <div id="infosProdjambonFume4TranchesSalaisonsComtoises" class="infosProdGlob">
+                <div id="croixFermetureDetailProd"
+                    onclick="fermetureInfosProduit('#infosProdjambonFume4TranchesSalaisonsComtoises')">✕
+                </div>
+                <div id="partieGauche">
+                    <div id="imagePartieGauche">
+                        <img id="imageDetailProd" src="Images/Produits/jambonFume4TranchesSalaisonsComtoises.jpg">
+                    </div>
+                    <div id="infosPrincipalesPartieGauche">
+                        <h2>Jambon Fumé (4 tranches)
+                        </h2>
+                        <h3>Les Salaisons Comtoises</h3>
+                        <p>Prix à l'unité : 13,00€</p>
+                    </div>
+                </div>
+                <div id="partieDroiteTexte">
+                    <h1>Description</h1>
+                    <h2>Ingrédients</h2>
+                    <p>Viande de porc origine: France, conservateur: E252,sel,sirop de glucose, dextrose, arômes
+                        naturels, antioxydant: E301</p>
+                    <h2>Conservation</h2>
+                    <p>0 et 4°c</p>
+                    <button>Ajouter au panier</button>
+                    <button>Commander</button>
+                </div>
+            </div>
+        </section>
         <footer>
+
             A propos <br>
             --- <br>
             Le Terroir Comtois <br>
-            Franche-Comté (25)<br>
+            Franche-Comté, Commune de Larnod (25)<br>
+            --- <br>
+            Tous droits réservés - Le Terroir Comtois © 2025 <br>
+            --- <br>
+            L'abus d'alcool est dangereux pour la santé, sachez consommer avec modération. Interdit aux moins de 18 ans.
             <br>
-            Created by Mathéo GENSSE
-            <br>
-            © 2025 <br>
-            ---
+            --- <br>
         </footer>
     </section>
 
