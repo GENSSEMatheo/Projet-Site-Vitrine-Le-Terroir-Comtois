@@ -3,10 +3,7 @@ function manageScrollAnimations() {
         const rect = el.getBoundingClientRect();
         return (
             rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) );
     }
 
     function checkElementsVisibility() {
@@ -76,6 +73,12 @@ function fermetureInfosProduit(idProduit) {
     }
 }
 
+function reductionNav(){
+    const navbar = document.getElementById('navGlob');
+    const contenu = document.getElementById('contenu');
+    navbar.style.display = 'none';
+    contenu.style.marginLeft = '0rem';
+}
 
 //APPEL AUTOMATIQUE DE FONCTIONS
 document.addEventListener('DOMContentLoaded', () => {

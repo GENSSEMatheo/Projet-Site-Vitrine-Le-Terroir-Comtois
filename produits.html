@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <nav>
-        <section id="ensembleNav">
+    <nav id="navGlob">
+            <img src="Images/flecheGauche.png" id="flecheNav" onclick="reductionNav()">
             <img src="Images/logo.png" alt="Logo de notre entreprise" id="logoEntrepriseRond">
             <ul id="menuGlob">
                 <li id="mainMenuLi"><a href="index.html">Accueil</a></li><br>
@@ -73,30 +73,31 @@
                         <li onclick="ouvertureFicheDePoste('#fichePosteSophieGirardotGlob')">Sophie Girardot -
                             Responsable des stocks</li>
                         <li onclick="ouvertureFicheDePoste('#fichePosteAntoinePerrenotGlob')">Antoine Perrenot -
-                            Responsable des relations clients</li>
+                            Responsable de vente</li>
+                            <li onclick="ouvertureFicheDePoste('#fichePosteLucieJeannerotGlob')">Lucie Jeannerot - Responsable de caisse
+                            </li>
+                        <h3 id="sousTitreSousMenu">Nos employés logistique</h3>
+
+                        <li onclick="ouvertureFicheDePoste('#fichePosteThomasManzoniGlob')">Thomas Manzoni
+                        </li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteFrancoisGigotrGlob')">François Gigot
+                        </li>
                         <h3 id="sousTitreSousMenu">Nos vendeurs(euses)</h3>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteLucieJeannerotGlob')">Lucie Jeannerot - Vendeuse
+                        <li onclick="ouvertureFicheDePoste('#fichePosteHeleneVouillotGlob')">Hélène Vouillot
                         </li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteThomasManzoniGlob')">Thomas Manzoni - Vendeur
-                        </li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteFrancoisGigotrGlob')">François Gigot - Vendeur
-                        </li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteHeleneVouillotGlob')">Hélène Vouillot - Vendeuse
-                        </li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteNicolasCartGlob')">Nicolas Cart - Vendeur</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteNicolasCartGlob')">Nicolas Cart</li>
                         <h3 id="sousTitreSousMenu">Nos Caissiers(es)</h3>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteElodieMillotGlob')">Elodie Millot - Caissière
+                        <li onclick="ouvertureFicheDePoste('#fichePosteElodieMillotGlob')">Elodie Millot
                         </li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot - Caissière</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot</li>
                     </ul>
                 </li><br>
                 <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a></li>
             </ul>
-        </section>
 
     </nav>
     <section id="contenu"
-        style="background-image: url(Images/fondDroiteProduits.jpg);background-repeat: no-repeat;background-size: cover;background-attachment: fixed;width: 80%;">
+        style="background-image: url(Images/fondDroiteProduits.jpg);background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
         <header id="entetePage">
             <div id="texteTitresEntete">
                 <p class="slide-in">Nos produits</p>
@@ -2225,18 +2226,12 @@
                     <h2>Mode de culture</h2>
                     <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
                     <h2>Vignification et élevage</h2>
-<<<<<<< HEAD
                     <p>Vendanges manuelles, pressurage de la vendange entière, fermentation en cuve inox puis élevage de
                         2 ans en fûts de chêne (228 L) sous voile de levures (élevage oxydatif, fûts non ouillés).</p>
                     <h2>Dégustation</h2>
                     <p>Servir à 14° sur des poissons fumés (haddock), plats persillés (escargots), grenouilles, viandes
                         blanches avec crême et champignons (morilles), plats épicés (curry), plats au fromage (Comté).
                     </p>
-=======
-                    <p>Vendanges manuelles, pressurage de la vendange entière, fermentation en cuve inox puis élevage de 2 ans en fûts de chêne (228 L) sous voile de levures (élevage oxydatif, fûts non ouillés).</p>
-                    <h2>Dégustation</h2>
-                    <p>Servir à 14° sur des poissons fumés (haddock), plats persillés (escargots), grenouilles, viandes blanches avec crême et champignons (morilles), plats épicés (curry), plats au fromage (Comté).</p>
->>>>>>> 9eef5547a34d177b0cf09d9b4f3dacdf238053b0
                     <h2>Conservation</h2>
                     <p>30 ans
                     </p>
@@ -2271,18 +2266,12 @@
                     <h2>Mode de culture</h2>
                     <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
                     <h2>Vignification et élevage</h2>
-<<<<<<< HEAD
                     <p>Vendanges manuelles, pressurage de la vendange entière, fermentation en cuve inox puis élevage de
                         3 ans en fûts de chêne (228 L) sous voile de levures (élevage oxydatif, fûts non ouillés).</p>
                     <h2>Dégustation</h2>
                     <p>Servir à 13° sur des poissons fumés (haddock), plats persillés (escargots), grenouilles, viandes
                         blanches avec crême et champignons (morilles), plats épicés (curry), plats au fromage (Comté).
                     </p>
-=======
-                    <p>Vendanges manuelles, pressurage de la vendange entière, fermentation en cuve inox puis élevage de 3 ans en fûts de chêne (228 L) sous voile de levures (élevage oxydatif, fûts non ouillés).</p>
-                    <h2>Dégustation</h2>
-                    <p>Servir à 13° sur des poissons fumés (haddock), plats persillés (escargots), grenouilles, viandes blanches avec crême et champignons (morilles), plats épicés (curry), plats au fromage (Comté).</p>
->>>>>>> 9eef5547a34d177b0cf09d9b4f3dacdf238053b0
                     <h2>Conservation</h2>
                     <p>30 ans
                     </p>
@@ -2319,18 +2308,12 @@
                     <h2>Mode de culture</h2>
                     <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
                     <h2>Vignification et élevage</h2>
-<<<<<<< HEAD
                     <p>Vendanges manuelles, pressurage de la vendange entière, fermentation en cuve inox puis élevage de
                         3 ans en fûts de chêne (228 L) sous voile de levures (élevage oxydatif, fûts non ouillés).</p>
                     <h2>Dégustation</h2>
                     <p>Servir à 14° sur des poissons fumés (haddock), plats persillés (escargots), grenouilles, viandes
                         blanches avec crême et champignons (morilles), plats épicés (curry), plats au fromage (Comté).
                     </p>
-=======
-                    <p>Vendanges manuelles, pressurage de la vendange entière, fermentation en cuve inox puis élevage de 3 ans en fûts de chêne (228 L) sous voile de levures (élevage oxydatif, fûts non ouillés).</p>
-                    <h2>Dégustation</h2>
-                    <p>Servir à 14° sur des poissons fumés (haddock), plats persillés (escargots), grenouilles, viandes blanches avec crême et champignons (morilles), plats épicés (curry), plats au fromage (Comté).</p>
->>>>>>> 9eef5547a34d177b0cf09d9b4f3dacdf238053b0
                     <h2>Conservation</h2>
                     <p>50 ans
                     </p>
@@ -2367,12 +2350,8 @@
                     <h2>Mode de culture</h2>
                     <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
                     <h2>Vignification et élevage</h2>
-<<<<<<< HEAD
                     <p>Vendanges manuelles, pressurage des grappes entières, fermentation et élevage pendant 8 mois en
                         cuve inox.</p>
-=======
-                    <p>Vendanges manuelles, pressurage des grappes entières, fermentation et élevage pendant 8 mois en cuve inox.</p>
->>>>>>> 9eef5547a34d177b0cf09d9b4f3dacdf238053b0
                     <h2>Dégustation</h2>
                     <p>Boire frais 10-12 °C, apéritif et produits de la mer.</p>
                     <h2>Conservation</h2>
@@ -2411,12 +2390,8 @@
                     <h2>Mode de culture</h2>
                     <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
                     <h2>Vignification et élevage</h2>
-<<<<<<< HEAD
                     <p>Cuvée parcellaire, vendanges manuelles, pressurage de la vendange entière, élevage de 10 mois en
                         cuve inox.</p>
-=======
-                    <p>Cuvée parcellaire, vendanges manuelles, pressurage de la vendange entière, élevage de 10 mois en cuve inox.</p>
->>>>>>> 9eef5547a34d177b0cf09d9b4f3dacdf238053b0
                     <h2>Dégustation</h2>
                     <p>Servir à 12° avec des poissons, fruits de mer, apéritif.</p>
                     <h2>Conservation</h2>
@@ -2499,12 +2474,7 @@
                 </div>
             </div>
             <div id="infosProdtrio2023Berthet-Bondet" class="infosProdGlob">
-<<<<<<< HEAD
                 <div id="croixFermetureDetailProd" onclick="fermetureInfosProduit('#infosProdtrio2023Berthet-Bondet')">✕
-=======
-                <div id="croixFermetureDetailProd"
-                    onclick="fermetureInfosProduit('#infosProdtrio2023Berthet-Bondet')">✕
->>>>>>> 9eef5547a34d177b0cf09d9b4f3dacdf238053b0
                 </div>
                 <div id="partieGauche">
                     <div id="imagePartieGauche">
@@ -2527,12 +2497,8 @@
                     <h2>Mode de culture</h2>
                     <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
                     <h2>Vignification et élevage</h2>
-<<<<<<< HEAD
                     <p>Vendanges manuelles, table de tri, macération courte (environ une semaine) des baies entières
                         égrappées, élevage en cuve inox pendant 12 mois.</p>
-=======
-                    <p>Vendanges manuelles, table de tri, macération courte (environ une semaine) des baies entières égrappées, élevage en cuve inox pendant 12 mois.</p>
->>>>>>> 9eef5547a34d177b0cf09d9b4f3dacdf238053b0
                     <h2>Dégustation</h2>
                     <p>Servir à 14° avec des charcuteries, viandes fumées, grillées.</p>
                     <h2>Conservation</h2>
@@ -2567,12 +2533,8 @@
                     <h2>Mode de culture</h2>
                     <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
                     <h2>Vignification et élevage</h2>
-<<<<<<< HEAD
                     <p>Cuvée parcellaire, vendanges manuelles, table de tri, macération courte (environ une semaine) des
                         baies entières égrappées, élevage en fûts de chêne pendant 12 mois.
-=======
-                    <p>Cuvée parcellaire, vendanges manuelles, table de tri, macération courte (environ une semaine) des baies entières égrappées, élevage en fûts de chêne pendant 12 mois.
->>>>>>> 9eef5547a34d177b0cf09d9b4f3dacdf238053b0
                     </p>
                     <h2>Dégustation</h2>
                     <p>Servir à 14° avec des charcuteries, viandes rouges, grillades.</p>
@@ -2599,20 +2561,12 @@
                     </div>
                 </div>
                 <div id="partieDroiteTexte">
-<<<<<<< HEAD
                     <h1>Description</h1>
                     <h2>Mode de culture</h2>
                     <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
                     <h2>Vignification et élevage</h2>
                     <p>Blanc de blanc extra brut. Vendanges manuelles, table de tri, pressurage direct de la vendange
                         entière, méthode champenoise.
-=======
-                    <h1>Description</h1>p>
-                    <h2>Mode de culture</h2>
-                    <p>Agriculture biologique, enherbement un rang sur deux et travail du sol.</p>
-                    <h2>Vignification et élevage</h2>
-                    <p>Blanc de blanc extra brut. Vendanges manuelles, table de tri, pressurage direct de la vendange entière, méthode champenoise.
->>>>>>> 9eef5547a34d177b0cf09d9b4f3dacdf238053b0
                     </p>
                     <h2>Dégustation</h2>
                     <p>Servir à 8° en apéritif ou dessert.</p>
@@ -2620,7 +2574,6 @@
                     <button>Commander</button>
                 </div>
             </div>
-<<<<<<< HEAD
             <div id="infosProdcomteDouxFruitierePlateauArboisien" class="infosProdGlob">
                 <div id="croixFermetureDetailProd"
                     onclick="fermetureInfosProduit('#infosProdcomteDouxFruitierePlateauArboisien')">✕
@@ -3336,8 +3289,6 @@
                     <button>Commander</button>
                 </div>
             </div>
-=======
->>>>>>> 9eef5547a34d177b0cf09d9b4f3dacdf238053b0
         </section>
         <footer>
 

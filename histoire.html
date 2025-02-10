@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <nav>
-        <section id="ensembleNav">
+    <nav id="navGlob">
+            <img src="Images/flecheGauche.png" id="flecheNav" onclick="reductionNav()">
             <img src="Images/logo.png" alt="Logo de notre entreprise" id="logoEntrepriseRond">
             <ul id="menuGlob">
                 <li id="mainMenuLi"><a href="index.html">Accueil</a></li><br>
@@ -67,30 +67,31 @@
                         <li onclick="ouvertureFicheDePoste('#fichePosteSophieGirardotGlob')">Sophie Girardot -
                             Responsable des stocks</li>
                         <li onclick="ouvertureFicheDePoste('#fichePosteAntoinePerrenotGlob')">Antoine Perrenot -
-                            Responsable des relations clients</li>
+                            Responsable de vente</li>
+                            <li onclick="ouvertureFicheDePoste('#fichePosteLucieJeannerotGlob')">Lucie Jeannerot - Responsable de caisse
+                            </li>
+                        <h3 id="sousTitreSousMenu">Nos employés logistique</h3>
+
+                        <li onclick="ouvertureFicheDePoste('#fichePosteThomasManzoniGlob')">Thomas Manzoni
+                        </li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteFrancoisGigotrGlob')">François Gigot
+                        </li>
                         <h3 id="sousTitreSousMenu">Nos vendeurs(euses)</h3>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteLucieJeannerotGlob')">Lucie Jeannerot - Vendeuse
+                        <li onclick="ouvertureFicheDePoste('#fichePosteHeleneVouillotGlob')">Hélène Vouillot
                         </li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteThomasManzoniGlob')">Thomas Manzoni - Vendeur
-                        </li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteFrancoisGigotrGlob')">François Gigot - Vendeur
-                        </li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteHeleneVouillotGlob')">Hélène Vouillot - Vendeuse
-                        </li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteNicolasCartGlob')">Nicolas Cart - Vendeur</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteNicolasCartGlob')">Nicolas Cart</li>
                         <h3 id="sousTitreSousMenu">Nos Caissiers(es)</h3>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteElodieMillotGlob')">Elodie Millot - Caissière
+                        <li onclick="ouvertureFicheDePoste('#fichePosteElodieMillotGlob')">Elodie Millot
                         </li>
-                        <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot - Caissière</li>
+                        <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot</li>
                     </ul>
                 </li><br>
                 <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a></li>
             </ul>
-        </section>
 
     </nav>
     <section id="contenu"
-        style="background-image: url(Images/fondDroiteHistoire.jpg);background-repeat: no-repeat;background-size: cover;background-attachment: fixed;width: 80%;">
+        style="background-image: url(Images/fondDroiteHistoire.jpg);background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
         <header id="entetePage">
             <div id="texteTitresEntete">
                 <p class="slide-in">Notre histoire</p>
