@@ -15,48 +15,33 @@
 
 <body>
     <nav id="navGlob">
-            <img src="Images/flecheGauche.png" id="flecheNav" onclick="reductionNav()">
+        <img src="Images/flecheGauche.png" id="flecheNav" onclick="manageNavOpenClose()">
             <img src="Images/logo.png" alt="Logo de notre entreprise" id="logoEntrepriseRond">
             <ul id="menuGlob">
                 <li id="mainMenuLi"><a href="index.html">Accueil</a></li><br>
                 <li id="mainMenuLi"><a href="activite.html">Notre activité</a></li><br>
                 <li id="mainMenuLi"><a href="histoire.html">Notre histoire</a></li><br>
-                <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="produits.html">Nos produits </a>
-                    <ul id="listeSousMenu">
-                        <h2 id="TitreSousMenu">Nos produits</h2>
-                        <h3 id="sousTitreSousMenu">Nos vins</h3>
-                        <li>Vins rouges</li>
-                        <li>Vins blancs</li>
-                        <li>Vin Jaune</li>
-                        <li>Vin de Paille</li>
-                        <li>Macvin du Jura</li>
-                        <li>Rosés</li>
-                        <li>Crémants du Jura</li>
-                        <h3 id="sousTitreSousMenu">Nos fromages</h3>
-                        <li>Comté</li>
-                        <li>Morbier</li>
-                        <li>Mont d'or</li>
-                        <li>Cancoillote</li>
-                        <h3 id="sousTitreSousMenu">Notre charcuterie</h3>
-                        <li>Saucisse de Morteau</li>
-                        <li>Saucisse de Montbéliard</li>
-                        <li>Jambon fumé du Haut-Doubs</li>
-                    </ul>
-                </li><br>
+                <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="produits.html">Nos produits </a></li><br>
                 <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="fournisseurs.html">Nos fournisseurs</a>
                     <ul id="listeSousMenu">
                         <h2 id="TitreSousMenu">Nos fournisseurs</h2>
                         <h3 id="sousTitreSousMenu">Nos vins</h3>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobTissot')">Domaine TISSOT</li>
                         <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBadoz')">Domaine BADOZ</li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBerthet-Bondet')">Domaine BERTHET-BONDET</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobBerthet-Bondet')">Domaine
+                            BERTHET-BONDET</li>
                         <h3 id="sousTitreSousMenu">Nos fromages</h3>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPlateauArboisien')">Fruitière du plateau arboisien</li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSancey-Richard')">Fromagerie Sancey-Richard</li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobJuraFlore')">Crèmerie Juraflore</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobPlateauArboisien')">Fruitière du
+                            plateau arboisien</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSancey-Richard')">Fromagerie
+                            Sancey-Richard</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobJuraFlore')">Crèmerie Juraflore
+                        </li>
                         <h3 id="sousTitreSousMenu">Notre charcuterie</h3>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobMorteauSaucisse')">MORTEAU SAUCISSE</li>
-                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsComtoises')">Les Salaisons Comtoises</li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobMorteauSaucisse')">MORTEAU SAUCISSE
+                        </li>
+                        <li onclick="ouvertureInfosFournisseur('#infosFournisseurGlobSalaisonsComtoises')">Les Salaisons
+                            Comtoises</li>
                     </ul>
                 </li><br>
                 <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="personnel.html">Notre équipe</a>

@@ -1,6 +1,23 @@
 /*------------------------------------*/
 /*CONTENU IDENTIQUE A TOUTES LES PAGES*/
 /*------------------------------------*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aa7d00;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .slide-in {
     opacity: 0;
     transform: translateY(20px);
@@ -27,8 +44,10 @@ body {
     width: 18%;
     z-index: 2;
     padding: 1%;
-    border-right: black solid 1px;
+    border-right: black solid;
     position: fixed;
+    margin-left: 0%;
+    transition: all ease 0.5s;
 }
 
 #navGlob #flecheNav {
@@ -37,11 +56,8 @@ body {
     left: 90%;
     top: 2%;
     cursor: pointer;
-}
-
-#navGlob #logoEntrepriseRond {
     display: flex;
-    align-self: center;
+    transition: all ease 0.2s;
 }
 
 #menuGlob {
@@ -50,11 +66,12 @@ body {
     list-style: none;
     padding: 0%;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     border-top: solid black;
     padding-top: 7%;
     text-transform: uppercase;
     overflow: hidden;
+
 }
 
 #menuGlob #mainMenuLi {
@@ -90,9 +107,10 @@ body {
 
 #navGlob #logoEntrepriseRond {
     width: 80%;
-    border: solid black;
+    border: solid black 0.1vw;
     border-radius: 50%;
-    transition: all ease 0.5s;
+    display: flex;
+    align-self: center;
 }
 
 #listeSousMenu {
@@ -153,18 +171,17 @@ body {
 #contenu {
     margin-left: 20%;
     width: 80%;
+    transition: all ease 0.5s;
 }
 
 
 
 #entetePage {
-    background-color: #ffffff;
     width: 100%;
     height: 60vh;
     justify-self: left;
     display: flex;
     background-color: #0000006e;
-    justify-self: left;
 }
 
 #texteTitresEntete {
@@ -172,7 +189,7 @@ body {
     color: white;
     padding: 2%;
     align-self: last baseline;
-    width: 60%;
+    width: 55%;
 }
 
 #texteTitresEntete h1 {
@@ -198,8 +215,9 @@ body {
 }
 
 #sectionGlobFondBlanc img {
-    width: 20%;
+    width: 60rem;
     margin: 2%;
+    overflow: hidden;
     transition: all ease 1s;
 }
 
@@ -309,32 +327,36 @@ footer li {
     background-color: #0000006e;
     color: white;
     text-align: center;
+    overflow: hidden;
 
 }
-#sectionGlobFondEquipe.gerant #personne{
-    width: 22rem;
+
+#sectionGlobFondEquipe.gerant #personne {
+    width: 17rem;
     background-color: #9b0027;
 }
 
-#sectionGlobFondEquipe.gerant img{
-    width: 20rem;
+#sectionGlobFondEquipe.gerant img {
+    width: 15rem;
 }
 
 
-#sectionGlobFondEquipe.responsable #personne{
+#sectionGlobFondEquipe.responsable #personne {
     width: 15rem;
     background-color: #005000;
 }
-#sectionGlobFondEquipe.responsable img{
+
+#sectionGlobFondEquipe.responsable img {
     width: 13rem;
 }
 
 
-#sectionGlobFondEquipe.simpleEmploye #personne{
+#sectionGlobFondEquipe.simpleEmploye #personne {
     width: 10rem;
     background-color: #aa7d00;
 }
-#sectionGlobFondEquipe.simpleEmploye img{
+
+#sectionGlobFondEquipe.simpleEmploye img {
     width: 8rem;
 }
 
@@ -352,7 +374,7 @@ footer li {
     margin: 1%;
     padding: 1%;
     padding-bottom: 10%;
-    border-radius: 0 0 50vw 50vw;
+    border-radius: 0 0 10vw 10vw;
     border: solid;
 }
 
@@ -374,6 +396,12 @@ footer li {
     transform: scale(0.9);
 }
 
+.ficheDePosteGlob iframe {
+    width: 80vw;
+    height: 80vh;
+    border: solid #aa7d00 0.3vw;
+}
+
 .ficheDePosteGlob {
     position: fixed;
     font-size: 1rem;
@@ -387,31 +415,34 @@ footer li {
     transition: transform ease 1s;
 }
 
-#fichePoste {
-    background-color: #615d5e;
-    color: white;
-    width: 80%;
-    height: 80%;
-    padding: 1vh 1vw;
-    text-align: center;
-    overflow-y: scroll;
-    border: solid black;
-}
 
 #croixFermetureFichePoste {
     display: block;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
+    justify-self: center;
+    left: 47vw;
+    top: 0.7vh;
+    font-size: 1.5vw;
+    background-color: #aa7d00;
+    border-radius: 50vw;
+    padding: 1vw 1.5vw 1vw 1.5vw;
+    border: solid 2px;
+    transition: all ease 0.5s;
+
 }
 
-#fichePoste ul {
-    list-style: none;
+#croixFermetureFichePoste:hover {
+    background-color: #aa7d00a1;
+    transform: scale(0.9);
 }
-#globTelechargerOrganigramme{
+
+#globTelechargerOrganigramme {
     background-color: #0000006e;
     display: flex;
     justify-content: center;
 }
+
 #telechargerOrganigramme {
     padding: 1%;
     font-size: 1.5rem;
@@ -490,7 +521,7 @@ footer li {
     border-radius: 0.5vw;
     color: white;
     flex-wrap: wrap;
-    width: 25rem;
+    width: 20rem;
     border: solid white 2px;
 }
 
@@ -516,6 +547,7 @@ footer li {
     transition: transform ease 1s;
     transform: scale(0);
 }
+
 
 #infosFournisseur {
     margin: 10vh 10vw;
@@ -544,6 +576,7 @@ footer li {
 #barreFiltresProduits {
     background-color: white;
     padding: 3% 0;
+    overflow: hidden;
 }
 
 #barreFiltresProduits p {
@@ -571,19 +604,11 @@ footer li {
 #sectionProduitsGlob {
     background-color: #0000006e;
     text-align: center;
-    margin-top: -1%;
+    margin-top: 0%;
+    overflow: hidden;
 }
 
-#sectionProduitsGlob h1 {
-    margin: 0;
-    text-transform: uppercase;
-    padding: 2% 0;
-    font-size: xx-large;
-    background-color: white;
-    color: black;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
-}
+
 
 #listesProduitsUl {
     display: flex;
@@ -711,6 +736,7 @@ footer li {
     padding: 1vw;
     overflow-y: scroll;
     display: flex;
+    flex-direction: column;
 }
 
 .infosProdGlob #partieDroiteTexte h1 {
@@ -728,5 +754,261 @@ footer li {
     border: solid;
     font-weight: bold;
     cursor: pointer;
-    font-size: 1vw;
+    font-size: 1rem;
+    width: 30rem;
+    margin: 1%;
+    transition: all ease 0.5s;
+}
+
+.infosProdGlob #partieDroiteTexte button:hover {
+    transform: scale(0.9);
+    background-color: #aa7d009a;
+}
+
+
+/*----------*/
+/*RESPONSIVE*/
+/*----------*/
+@media only screen and (max-width: 768px) {
+
+    /*------------------------------------*/
+    /*CONTENU IDENTIQUE A TOUTES LES PAGES*/
+    /*------------------------------------*/
+
+    body {
+        flex-direction: column;
+    }
+
+    #navGlob {
+        display: none;
+    }
+
+    #contenu {
+        margin-left: 0%;
+        width: 100%;
+    }
+    #imageDroiteEntete{
+        display: none;
+    }
+
+
+    #entetePage {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    #texteTitresEntete {
+        align-self: center;
+        width: 100%;
+    }
+
+
+    #sectionGlobFondBlanc {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #sectionGlobFondBlanc img {
+        width: 95%;
+    }
+
+    #sectionFondBlancTexte {
+        border-left: 0;
+        border-top: solid black 1px;
+        margin: 2vw;
+        text-align: justify;
+        padding: 5vw;
+    }
+
+    /*----------------*/
+    /*CONTENU HISTOIRE*/
+    /*----------------*/
+    #sectionFondHistoireTexte{
+        padding: 2vw;
+    }
+    #titreEtAnnee {
+        flex-direction: column;
+    }
+
+    #sectionFondHistoireTexte p {
+        margin-left: 0;
+        text-align: justify;
+    }
+
+    #titreEtAnnee h2 {
+        margin: 0%;
+
+    }
+
+    #titreEtAnnee #titre {
+        padding: 1rem;
+        text-align: center;
+        background-color: #000000;
+        border-radius: 0 0 10vw 10vw;
+        border: solid 1px;
+    }
+
+    #titreEtAnnee #annee {
+        margin-right: 0;
+        border-radius: 0;
+        text-align: center;
+        width: 100%;
+        border: solid 1px;
+    }
+
+    /*--------------*/
+    /*CONTENU EQUIPE*/
+    /*--------------*/
+
+    #personne {
+        background-color: #615d5e;
+        margin: 7%;
+        padding: 5%;
+    }
+
+    .ficheDePosteGlob iframe {
+        border: solid #aa7d00 1vw;
+    }
+
+
+    #croixFermetureFichePoste {
+        left: 42vw;
+        top: 2vh;
+        font-size: 7vw;
+        padding: 1vh 5vw 1vh 5vw;
+
+    }
+
+    #telechargerOrganigramme {
+        padding: 5%;
+        font-size: 1.5rem;
+        width: 80%;
+    }
+    /*--------------------*/
+    /*CONTENU FOURNISSEURS*/
+    /*--------------------*/
+    #sectionGlobTousFournisseurs h1 {
+        padding: 3% 0;
+    }
+
+    #listeDesFournisseursUl {
+        margin: 2%;
+
+    }
+
+    #listeDesFournisseursUl li {
+        margin: 5%;
+        padding: 5%;
+        border-radius: 5vw;
+    }
+
+    #listeDesFournisseursUl img {
+        border-radius: 5vw;
+    }
+
+
+    #infosFournisseur {
+        margin: 10vh 5vw;
+        padding: 5%;
+    }
+
+    /*----------------*/
+    /*CONTENU PRODUITS*/
+    /*----------------*/
+    #barreFiltresProduits {
+        padding: 3%;
+    }
+
+    #barreFiltresProduits p {
+        text-align: center;
+    }
+
+    #barreFiltreProduitsCheckboxListesPartieSuperieur {
+        flex-direction: column;
+    }
+
+    #barreFiltreProduitsCheckboxListesPartieSuperieur ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    #barreFiltreProduitsCheckboxListesPartieSuperieur .listeParTypeProdGlob {
+        border-left: 0;
+        padding-left: 0;
+    }
+    #barreFiltreProduitsCheckboxListesPartieSuperieur .listeParTypeProdGlob h2{
+        text-align: center;
+    }
+
+    #listesProduitsUl li {
+        margin: 1%;
+        padding: 2%;
+        width: 43vw;
+    }
+
+    #listesProduitsUl img {
+        width: 18rem;
+        border-radius: 0.5vw;
+        aspect-ratio: 4/3;
+        transition: transform ease 0.5s;
+    }
+
+    #listesProduitsUl img:hover {
+        transform: scale(0.9);
+    }
+
+    #listesProduitsUl .imageProduitVins {
+        aspect-ratio: 9/20;
+        width: 10rem;
+        border: 0;
+    }
+    #listesProduitsUl .imageProduitFromage{
+        width: 100%;
+    }
+    #listesProduitsUl .imageProduitCharcuterie {
+        width: 100%;
+    }
+
+    .infosProdGlob {
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .infosProdGlob #partieGauche {
+        width: 100%;
+        overflow:visible;
+        height: auto;
+        border-bottom: solid;
+    }
+
+    #imageDetailProd {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .infosProdGlob #partieGauche #infosPrincipalesPartieGauche {
+        height: auto;
+        text-align: center;
+    }
+
+
+
+    .infosProdGlob #partieDroiteTexte {
+        height: 100%;
+        width: 95%;
+        overflow:visible;
+        text-align: center;
+    }
+
+
+    .infosProdGlob #partieDroiteTexte button {
+        width: 80%;
+        margin: 2% 10%;
+    }
+
 }

@@ -73,12 +73,29 @@ function fermetureInfosProduit(idProduit) {
     }
 }
 
-function reductionNav(){
+let navOpen = true;
+function manageNavOpenClose() {
     const navbar = document.getElementById('navGlob');
     const contenu = document.getElementById('contenu');
-    navbar.style.display = 'none';
-    contenu.style.marginLeft = '0rem';
+    const fleche = document.getElementById('flecheNav');
+
+    if (navOpen) {
+        navbar.style.marginLeft = '-22%';
+        navbar.style.padding = '4%';
+        contenu.style.width = '97%';
+        contenu.style.marginLeft = '3%';
+        fleche.style.transform = 'rotate(180deg)'
+    } else {
+        navbar.style.marginLeft = '0%';
+        navbar.style.padding = '1%';
+        contenu.style.width = '80%';
+        contenu.style.marginLeft = '20%';
+        fleche.style.transform = 'rotate(0deg)'
+    }
+
+    navOpen =!navOpen;
 }
+
 
 //APPEL AUTOMATIQUE DE FONCTIONS
 document.addEventListener('DOMContentLoaded', () => {
