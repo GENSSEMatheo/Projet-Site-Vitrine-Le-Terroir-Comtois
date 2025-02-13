@@ -14,6 +14,13 @@
 </head>
 
 <body>
+    <div id="burgerMenu" onclick="burgerMenuClic()">
+        <span id="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+    </div>
     <nav id="navGlob">
         <img src="Images/flecheGauche.png" id="flecheNav" onclick="manageNavOpenClose()">
             <img src="Images/logo.png" alt="Logo de notre entreprise" id="logoEntrepriseRond">
@@ -71,7 +78,7 @@
                         <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot</li>
                     </ul>
                 </li><br>
-                <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a></li>
+                <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a><span id="numPanier">0</span></li>
             </ul>
 
     </nav>
@@ -846,7 +853,7 @@
                     <p>De 0 à 2 ans</p>
                     <h2>Accord mets et vins</h2>
                     <p>Apéritifs entrées et desserts / Moments de fêtes / À servir entre 7 et 9° maximum</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcremantDuJuraBlancBrutTissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -887,7 +894,7 @@
                     <p>Apéritifs et desserts /
                         Moments de fêtes /
                         À servir entre 7 et 9° maximum</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcremantDuJuraRoseBrutTissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -934,7 +941,7 @@
                         grillades au barbecue, les volailles et les poissons.
                         à servir entre 8 et 12°
                         Garde : vin à boire jeune sur le fruit et la fraîcheur 1 à 2 ans</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisRoséDecouverte2023Tissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -976,7 +983,7 @@
                     <p>Se sert en apéritif, avec les poissons fins, volailles à la crème.
 
                         Servir entre 10 et 13°</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisChardonnayLesCorveeSousCuron2022Tissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1004,7 +1011,7 @@
                     <h2>Vinification et élevage</h2>
                     <p>Vendange manuelle, pressurage pneumatique avec un élevage sur des lies fines de 12 mois en pièces
                         neuves de 228 litres. (chauffe moyenne)</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisChardonnayLaMailloche2022Tissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1052,7 +1059,7 @@
                     <h2>Accord mets et vins</h2>
                     <p>Accompagne l'apéritif, le bar grillé, le poisson au beurre blanc ainsi que les viandes blanches.
                         À servir entre 10 et 13°</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisNatureSavagninFloral2022Tissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1096,7 +1103,7 @@
                     <h2>Accord mets et vins</h2>
                     <p>Idéal avec les entrées, poissons, fruits de mer, huîtres et coquillages, la charcuterie fumée.
                         Service entre 10 et 13°</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisChardonnay2020Tissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1141,7 +1148,7 @@
                     <p>Fruits secs et le Comté, Mont d'or au four, la cuisine au fromage, la cuisine asiatique et les
                         plats traditionnels à base de crème
                         À servir entre 10 et 13°</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisBlancTypeTradition2020Tissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1185,7 +1192,7 @@
                     <p>Idéal à l'apéritif accompagné de comté et de fruits secs
                         Sublime la cuisine asiatique et les plats traditionnels à base de crème fraîche
                         Servir entre 10 et 13°</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisSavagnin2018Tissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1229,7 +1236,7 @@
                     <p>Idéal avec les entrées la charcuterie, les grillades, les viandes grillées, les volailles, la
                         raclette et les fromages
                         Service entre 12 et 14°</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisPoulsard2019GrandeReserveTissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1274,7 +1281,7 @@
                     <h2>Accord mets et vins</h2>
                     <p>Parfait avec une pièce de bœuf, petit gibier en sauce et un plateau de fromages
                         Service entre 12 et 14°</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisTrousseau2021Tissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1318,7 +1325,7 @@
                         pavé de boeuf
                         Service entre 12 et 14°
                         l'été à servir légèrement frais à 12°</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisPinotNoirGrandeReserve2022Tissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1366,7 +1373,7 @@
                     <p>Noix et Comté, coq au vin jaune, cuisine orientale au curry ou au safran.
 
                         Servir entre 14 et 16 °</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisVinJaune2017Tissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1419,7 +1426,7 @@
                     <h2>Accord mets et vins</h2>
                     <p>À servir à l'aperitif avec un foie gras, un roquefort ou les desserts
                         À servir entre 7 et 8°</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdarboisVinPaille2018Tissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1466,7 +1473,7 @@
                         et raisins de corinthe, pain d'épices, desserts aux fruits caramelisés.
 
                         Service entre 5 et 8°</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdmacvinDuJuraBlancTissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1514,7 +1521,7 @@
                         ou la tarte aux noix
 
                         Service entre 5 et 8°</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdmacvinDuJuraRougeTissot')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1552,7 +1559,7 @@
                     </p>
                     <h2>Conservation</h2>
                     <p>Pour une bonne fraîcheur déguster dans les 2 ans, garde 5 ans.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdchardonnay2023TerroirDuRevermontBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1590,7 +1597,7 @@
                     </p>
                     <h2>Conservation</h2>
                     <p>Potentiel de garde de 10 ans</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdchardonnay2023BiosLesRoussotsBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1634,7 +1641,7 @@
                     </p>
                     <h2>Conservation</h2>
                     <p>Garde jusqu'à 5 ans pour sa fraicheur et au delà de 10 ans avec évolution.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcuvéeArrogance2023BioBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1693,7 +1700,7 @@
                     </p>
                     <h2>Conservation</h2>
                     <p>Une bouteille à savourer aujourd’hui ou à garder encore 10 ans de plus.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcuvéeEdouard2023BioBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1733,7 +1740,7 @@
                     </p>
                     <h2>Conservation</h2>
                     <p>Se déguste jeune, mais possède un potentiel de garde de 8 ans</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcuvéeVictoriaBadoz2020BioSavagninOuilléBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1764,7 +1771,7 @@
                     </p>
                     <h2>Conservation</h2>
                     <p>Potentiel de garde de 25 ans</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdsavagninType2020Badoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1803,7 +1810,7 @@
                     </p>
                     <h2>Conservation</h2>
                     <p>Potentiel de garde de 25 ans</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdtraditionBio2022ChardonnaySavagninBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1842,7 +1849,7 @@
                     </p>
                     <h2>Conservation</h2>
                     <p>Pour une bonne fraîcheur déguster dans les 2 ans, garde 5 ans.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdroseEte2023BiosCuveeGustaveCourbetBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1878,7 +1885,7 @@
                     </p>
                     <h2>Conservation</h2>
                     <p>Environ 10 ans.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdpinotNoir2022ArboisPupillinBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1910,7 +1917,7 @@
                     <h2>Conservation</h2>
                     <p>Le cépage Trousseau permet une conservation d'environ 10 ans.
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdtrousseau2022Badoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -1952,7 +1959,7 @@
                     <h2>Conservation</h2>
                     <p>Potentiel de garde de 30 à 100 ans
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdchateauChalon2017Badoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2002,7 +2009,7 @@
                     <p>Superbe potentiel de garde pour ce vin jaune de 30 à 100 ans
                         Le cadeau idéal pour les années de naissance
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdvinJaune2016LesRoussotBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2048,7 +2055,7 @@
                     <h2>Conservation</h2>
                     <p>Potentiel de garde de 15 à 50 ans
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdvinDePaille2018Badoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2097,7 +2104,7 @@
                     <p>Un vin encore jeune qui doit se fondre pendant quelques années.
                         Potentiel de garde de 15 à 50 ans
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdvinDePaille2020BioBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2126,7 +2133,7 @@
                     <h2>Conservation</h2>
                     <p>Se boit très jeune afin de profiter de sa fraîcheur aromatique.
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdblancDeBlancBrutBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2174,7 +2181,7 @@
                     <h2>Conservation</h2>
                     <p>Potentiel de garde de 25 ans
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdmacvinDuJuraBlancBioBadoz')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2214,7 +2221,7 @@
                     <h2>Conservation</h2>
                     <p>30 ans
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdtradition2020Berthet-Bondet')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2256,7 +2263,7 @@
                     </p>
                     <h2>Apogée</h2>
                     <p>5 ans</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdsavagnin2019Berthet-Bondet')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2298,7 +2305,7 @@
                     </p>
                     <h2>Apogée</h2>
                     <p>10 ans</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdchateauChalon2017Berthet-Bondet')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2338,7 +2345,7 @@
                     </p>
                     <h2>Apogée</h2>
                     <p>2 ans</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdlaSource2023Berthet-Bondet')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2378,7 +2385,7 @@
                     </p>
                     <h2>Apogée</h2>
                     <p>3 ans</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdsavagnier2022Berthet-Bondet')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2415,7 +2422,7 @@
                     <h2>Conservation</h2>
                     <p>10 ans
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdlaPoirière2023Berthet-Bondet')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2448,7 +2455,7 @@
                     <h2>Conservation</h2>
                     <p>10 ans
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdlAcasia2022Berthet-Bondet')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2483,7 +2490,7 @@
                     <h2>Conservation</h2>
                     <p>7 ans
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdtrio2023Berthet-Bondet')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2520,7 +2527,7 @@
                     <h2>Conservation</h2>
                     <p>10 ans
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdlaQueueDuRenard2022Berthet-Bondet')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2549,7 +2556,7 @@
                     </p>
                     <h2>Dégustation</h2>
                     <p>Servir à 8° en apéritif ou dessert.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcremantBrutNatureBerthet-Bondet')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2585,7 +2592,7 @@
                     <p>Une fondue au Comté s’accompagne de vins du Jura, idéalement le même que celui utilisé pour
                         préparer la fondue.
                     </p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcomteDouxFruitierePlateauArboisien')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2617,7 +2624,7 @@
                     <p>Conserver votre Comté au frais et consommer le rapidement.</p>
                     <h2>Affinage</h2>
                     <p>12 à 14 mois</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcomteFruiteFruitierePlateauArboisien')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2653,7 +2660,7 @@
                     <p>A déguster avec un Vin jaune ou un blanc du Jura.</p>
                     <h2>Affinage</h2>
                     <p>18 mois maximum</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcomte18moisFruitierePlateauArboisien')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2676,7 +2683,7 @@
                     <h1>Description</h1>
                     <h2>Affinage</h2>
                     <p>Entre 24 et 30 mois</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcomtePrestigeFruitierePlateauArboisien')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2706,7 +2713,7 @@
                         un parfum franc et persistant, au léger goût de crème et de fruit.</p>
                     <h2>Affinage</h2>
                     <p>50 à 60 jours</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdmorbierJeuneFruitierePlateauArboisien')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2734,7 +2741,7 @@
                     <p>Le morbier se conserve au frais et se consomme rapidement.</p>
                     <h2>Affinage</h2>
                     <p>70 à 80 jours</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdmorbierVieuxFruitierePlateauArboisien')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2765,7 +2772,7 @@
                         Médaille d’or du concours interprofessionnel en 2019.
                         La famille Sancey Richard a été précurseur de la célèbre « boite chaude » en 1983 avec notre
                         fond’or.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdmontDOrFromagerieSanceyRichard')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2800,7 +2807,7 @@
                         chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
                         Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
                         gastronomique de la Franche-Comté.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcancoilloteAbsintheJuraFlore')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2835,7 +2842,7 @@
                         chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
                         Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
                         gastronomique de la Franche-Comté.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcancoilloteAilDesOursJuraFlore')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2870,7 +2877,7 @@
                         chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
                         Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
                         gastronomique de la Franche-Comté.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcancoilloteAilJuraFlore')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2905,7 +2912,7 @@
                         chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
                         Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
                         gastronomique de la Franche-Comté.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcancoilloteBasilicJuraFlore')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2940,7 +2947,7 @@
                         chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
                         Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
                         gastronomique de la Franche-Comté.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcancoilloteCuminJuraFlore')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -2975,7 +2982,7 @@
                         chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
                         Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
                         gastronomique de la Franche-Comté.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcancoilloteEchalotteJuraFlore')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -3010,7 +3017,7 @@
                         chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
                         Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
                         gastronomique de la Franche-Comté.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcancoilloteMorilleJuraFlore')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -3045,7 +3052,7 @@
                         chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
                         Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
                         gastronomique de la Franche-Comté.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcancoilloteNatureJuraFlore')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -3080,7 +3087,7 @@
                         chaude, en nappage de pommes de terre vapeur ou de charcuteries franc-comtoises. En résumé, la
                         Cancoillotte est un fromage polyvalent, savoureux et profondément ancré dans la culture
                         gastronomique de la Franche-Comté.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdcancoilloteSavagninJuraFlore')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -3115,7 +3122,7 @@
                     <h2>Dégustation</h2>
                     <p>Délicieuses avec des pommes de terre vapeur, une salade verte ou une choucroute.</p>
                     <p>A déguster avec un vin blanc sec de la région, comme un Jura</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdptioteMorteauIGPCuitesMorteauSaucisses')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -3149,7 +3156,7 @@
                     <h2>Dégustation</h2>
                     <p>Parfaite avec un gratin dauphinois, une choucroute ou des lentilles.</p>
                     <p>A déguster avec un vin rouge léger de la région, comme un Pinot Noir.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdsaucissesDeMorteauIGPCuitesMorteauSaucisses')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -3183,7 +3190,7 @@
                     <h2>Dégustation</h2>
                     <p>Parfaite avec un gratin dauphinois, une choucroute ou des lentilles.</p>
                     <p>A déguster avec un vin rouge léger de la région, comme un Pinot Noir.</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdsaucisseDeMorteauACuireMorteauSaucisse')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -3211,7 +3218,7 @@
                     <p>20 mn dans de l'eau frémissante.</p>
                     <h2>Conservation</h2>
                     <p>A conserver entre 0° et +4°c</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdsaucisseMontbéliardSalaisonsComtoises')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -3238,7 +3245,7 @@
                     <p>Le jambon fumé est cuit avec son os, le poids peut varier de 9 et 12kg.</p>
                     <h2>Conservation</h2>
                     <p>0 et 4°c</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdjambonFumeEntierSalaisonsComtoises')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>
@@ -3264,7 +3271,7 @@
                         naturels, antioxydant: E301</p>
                     <h2>Conservation</h2>
                     <p>0 et 4°c</p>
-                    <button>Ajouter au panier</button>
+                    <button onclick="ajouterAuPanier('#infosProdjambonFume4TranchesSalaisonsComtoises')">Ajouter 1 au panier</button>
                     <button>Commander</button>
                 </div>
             </div>

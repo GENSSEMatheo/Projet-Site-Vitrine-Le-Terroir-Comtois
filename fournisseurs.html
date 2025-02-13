@@ -14,6 +14,13 @@
 </head>
 
 <body>
+    <div id="burgerMenu" onclick="burgerMenuClic()">
+        <span id="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+    </div>
     <nav id="navGlob">
         <img src="Images/flecheGauche.png" id="flecheNav" onclick="manageNavOpenClose()">
             <img src="Images/logo.png" alt="Logo de notre entreprise" id="logoEntrepriseRond">
@@ -71,7 +78,7 @@
                         <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot</li>
                     </ul>
                 </li><br>
-                <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a></li>
+                <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a><span id="numPanier">0</span></li>
             </ul>
 
     </nav>
@@ -175,7 +182,7 @@
         <section id="infosFournisseurs">
             <div id="infosFournisseurGlobTissot" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
+                    <div id="croixFermetureFiche"
                         onclick="fermetureInfosFournisseur('#infosFournisseurGlobTissot')">✕
                     </div>
                     
@@ -263,7 +270,7 @@
             </div>
             <div id="infosFournisseurGlobBadoz" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
+                    <div id="croixFermetureFiche"
                         onclick="fermetureInfosFournisseur('#infosFournisseurGlobBadoz')">✕
                     </div>
                     <img src="Images/domaineBadoz.png" alt="Domaine Badoz">
@@ -354,7 +361,7 @@
             </div>
             <div id="infosFournisseurGlobBerthet-Bondet" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
+                    <div id="croixFermetureFiche"
                         onclick="fermetureInfosFournisseur('#infosFournisseurGlobBerthet-Bondet')">✕
                     </div>
                     <img src="Images/domaineBerthet-Bondet.png" alt="Domaine Berthet-Bondet">
@@ -442,7 +449,7 @@
 
             <div id="infosFournisseurGlobPlateauArboisien" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
+                    <div id="croixFermetureFiche"
                         onclick="fermetureInfosFournisseur('#infosFournisseurGlobPlateauArboisien')">✕
                     </div>
                     <img src="Images/fruitierePlateauArboisien.png" alt="Fruitière du PLATEAU ARBOISIEN">
@@ -531,7 +538,7 @@
             </div>
             <div id="infosFournisseurGlobSancey-Richard" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
+                    <div id="croixFermetureFiche"
                         onclick="fermetureInfosFournisseur('#infosFournisseurGlobSancey-Richard')">✕
                     </div>
                     <img src="Images/fromagerieSanceyRichard.png" alt="Fromagerie Sancey-Richard">
@@ -619,7 +626,7 @@
             </div>
             <div id="infosFournisseurGlobJuraFlore" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
+                    <div id="croixFermetureFiche"
                         onclick="fermetureInfosFournisseur('#infosFournisseurGlobJuraFlore')">✕
                     </div>
                     <img src="Images/cremerieJuraFlore.png" alt="Crémerie Juraflore">
@@ -704,7 +711,7 @@
 
             <div id="infosFournisseurGlobMorteauSaucisse" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
+                    <div id="croixFermetureFiche"
                         onclick="fermetureInfosFournisseur('#infosFournisseurGlobMorteauSaucisse')">✕
                     </div>
                     <img src="Images/morteauSaucisse.jpg" alt="MORTEAU SAUCISSE">
@@ -782,7 +789,7 @@
             </div>
             <div id="infosFournisseurGlobSalaisonsComtoises" class="infosFournisseurGlob">
                 <div id="infosFournisseur">
-                    <div id="croixFermetureFichePoste"
+                    <div id="croixFermetureFiche"
                         onclick="fermetureInfosFournisseur('#infosFournisseurGlobSalaisonsComtoises')">✕
                     </div>
                     <img src="Images/salaisonsComtoises.jpg" alt="Salaisons Comtoises">

@@ -14,6 +14,13 @@
 </head>
 
 <body>
+    <div id="burgerMenu" onclick="burgerMenuClic()">
+        <span id="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+    </div>
     <nav id="navGlob">
         <img src="Images/flecheGauche.png" id="flecheNav" onclick="manageNavOpenClose()">
             <img src="Images/logo.png" alt="Logo de notre entreprise" id="logoEntrepriseRond">
@@ -71,7 +78,7 @@
                         <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot</li>
                     </ul>
                 </li><br>
-                <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a></li>
+                <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a><span id="numPanier">0</span></li>
             </ul>
 
     </nav>
@@ -164,58 +171,58 @@
             <a id="telechargerOrganigramme" href="organigramme.pdf" download>Télécharger notre organigramme</a>
         </section>
         <div id="fichePostePierreMarmierGlob" class="ficheDePosteGlob">
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePostePierreMarmierGlob')">✕
+                <div id="croixFermetureFiche" onclick="fermetureFicheDePoste('#fichePostePierreMarmierGlob')">✕
                 </div>
                 <iframe src="FichesPostes/Fiche de Poste Pierre Marmier.pdf" frameborder="0"></iframe>
         </div>
         <div id="fichePosteSophieGirardotGlob" class="ficheDePosteGlob">
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteSophieGirardotGlob')">✕
+                <div id="croixFermetureFiche" onclick="fermetureFicheDePoste('#fichePosteSophieGirardotGlob')">✕
                 </div>
                 <iframe src="FichesPostes/Fiche de Poste Sophie Girardot.pdf" frameborder="0"></iframe>
         </div>
         <div id="fichePosteAntoinePerrenotGlob" class="ficheDePosteGlob">
             
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteAntoinePerrenotGlob')">✕
+                <div id="croixFermetureFiche" onclick="fermetureFicheDePoste('#fichePosteAntoinePerrenotGlob')">✕
                 </div>
                 <iframe src="FichesPostes/Fiche de Poste Antoine Perrenot.pdf" frameborder="0"></iframe>
         </div>
         <div id="fichePosteLucieJeannerotGlob" class="ficheDePosteGlob">
             
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteLucieJeannerotGlob')">✕
+                <div id="croixFermetureFiche" onclick="fermetureFicheDePoste('#fichePosteLucieJeannerotGlob')">✕
                 </div>
                 <iframe src="FichesPostes/Fiche de Poste Lucie Jeannerot.pdf" frameborder="0"></iframe>
         </div>
         <div id="fichePosteThomasManzoniGlob" class="ficheDePosteGlob">
             
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteThomasManzoniGlob')">✕
+                <div id="croixFermetureFiche" onclick="fermetureFicheDePoste('#fichePosteThomasManzoniGlob')">✕
                 </div>
                 <iframe src="FichesPostes/Fiche de Poste Thomas Manzoni.pdf" frameborder="0"></iframe>
         </div>
         <div id="fichePosteFrancoisGigotGlob" class="ficheDePosteGlob">
           
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteFrancoisGigotGlob')">✕
+                <div id="croixFermetureFiche" onclick="fermetureFicheDePoste('#fichePosteFrancoisGigotGlob')">✕
                 </div>
                 <iframe src="FichesPostes/Fiche de Poste François Gigot.pdf" frameborder="0"></iframe>
 
         </div>
         <div id="fichePosteHeleneVouillotGlob" class="ficheDePosteGlob">
             
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteHeleneVouillotGlob')">✕
+                <div id="croixFermetureFiche" onclick="fermetureFicheDePoste('#fichePosteHeleneVouillotGlob')">✕
                 </div>
                 <iframe src="FichesPostes/Fiche de Poste Hélène Vouillot.pdf" frameborder="0"></iframe>
         </div>
         <div id="fichePosteNicolasCartGlob" class="ficheDePosteGlob">
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteNicolasCartGlob')">✕
+                <div id="croixFermetureFiche" onclick="fermetureFicheDePoste('#fichePosteNicolasCartGlob')">✕
                 </div>
                 <iframe src="FichesPostes/Fiche de Poste Nicolas Cart.pdf" frameborder="0"></iframe>
         </div>
         <div id="fichePosteElodieMillotGlob" class="ficheDePosteGlob">
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteElodieMillotGlob')">✕
+                <div id="croixFermetureFiche" onclick="fermetureFicheDePoste('#fichePosteElodieMillotGlob')">✕
                 </div>
                 <iframe src="FichesPostes/Fiche de Poste Elodie Millot.pdf" frameborder="0"></iframe>
         </div>
         <div id="fichePosteMarinePelotGlob" class="ficheDePosteGlob">
-                <div id="croixFermetureFichePoste" onclick="fermetureFicheDePoste('#fichePosteMarinePelotGlob')">✕
+                <div id="croixFermetureFiche" onclick="fermetureFicheDePoste('#fichePosteMarinePelotGlob')">✕
                 </div>
                 <iframe src="FichesPostes/Fiche de Poste Marine Pelot.pdf" frameborder="0"></iframe>
         </div>

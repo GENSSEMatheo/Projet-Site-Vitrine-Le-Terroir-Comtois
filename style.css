@@ -18,6 +18,7 @@
     background: #555;
 }
 
+
 .slide-in {
     opacity: 0;
     transform: translateY(20px);
@@ -148,7 +149,15 @@ body {
 .interfaceSousMenuGlob:hover #listeSousMenu {
     top: 0%;
 }
-
+#numPanier{
+    background-color: rgb(173, 0, 0);
+    color: white;
+    padding: 1% 2%;
+    border-radius: 50vw;
+    position:absolute;
+    font-size: 60%;
+    right: 5%;
+}
 #TitreSousMenu {
     text-transform: uppercase;
     background-color: black;
@@ -416,23 +425,23 @@ footer li {
 }
 
 
-#croixFermetureFichePoste {
-    display: block;
+#croixFermetureFiche {
+    display:block;
     cursor: pointer;
     position: absolute;
     justify-self: center;
-    left: 47vw;
     top: 0.7vh;
-    font-size: 1.5vw;
+    left: 48.5vw;
+    font-size: 1vw;
     background-color: #aa7d00;
     border-radius: 50vw;
-    padding: 1vw 1.5vw 1vw 1.5vw;
+    padding: 1vw 1.5vw;
     border: solid 2px;
     transition: all ease 0.5s;
 
 }
 
-#croixFermetureFichePoste:hover {
+#croixFermetureFiche:hover {
     background-color: #aa7d00a1;
     transform: scale(0.9);
 }
@@ -779,15 +788,59 @@ footer li {
         flex-direction: column;
     }
 
+    #burgerMenu {
+        position: fixed;
+        top: 2%;
+        left: 8%;
+        z-index: 5;
+        transition: transform 0.5s ease;
+    }
+
+    #burger-icon span {
+        display: flex;
+        width: 35px;
+        height: 5px;
+        background-color: #aa7d00;
+        margin: 8px 0;
+    }
+
     #navGlob {
+        display: flex;
+        position: fixed;
+        width: 90%;
+        height: 96%;
+        margin: 0;
+        bottom: 100%;
+        transition: bottom 0.5s ease;
+        padding: 5%;
+    }
+
+    #navGlob #logoEntrepriseRond {
+        width: 50%;
+    }
+
+    #menuGlob {
+        font-size: 7vw;
+        text-align: center;
+
+    }
+
+    #mainMenuLi {
+        padding-left: 0;
+    }
+    #listeSousMenu{
         display: none;
     }
+
+
+
 
     #contenu {
         margin-left: 0%;
         width: 100%;
     }
-    #imageDroiteEntete{
+
+    #imageDroiteEntete {
         display: none;
     }
 
@@ -827,9 +880,10 @@ footer li {
     /*----------------*/
     /*CONTENU HISTOIRE*/
     /*----------------*/
-    #sectionFondHistoireTexte{
+    #sectionFondHistoireTexte {
         padding: 2vw;
     }
+
     #titreEtAnnee {
         flex-direction: column;
     }
@@ -875,7 +929,7 @@ footer li {
     }
 
 
-    #croixFermetureFichePoste {
+    #croixFermetureFiche {
         left: 42vw;
         top: 2vh;
         font-size: 7vw;
@@ -888,6 +942,7 @@ footer li {
         font-size: 1.5rem;
         width: 80%;
     }
+
     /*--------------------*/
     /*CONTENU FOURNISSEURS*/
     /*--------------------*/
@@ -940,7 +995,8 @@ footer li {
         border-left: 0;
         padding-left: 0;
     }
-    #barreFiltreProduitsCheckboxListesPartieSuperieur .listeParTypeProdGlob h2{
+
+    #barreFiltreProduitsCheckboxListesPartieSuperieur .listeParTypeProdGlob h2 {
         text-align: center;
     }
 
@@ -966,9 +1022,11 @@ footer li {
         width: 10rem;
         border: 0;
     }
-    #listesProduitsUl .imageProduitFromage{
+
+    #listesProduitsUl .imageProduitFromage {
         width: 100%;
     }
+
     #listesProduitsUl .imageProduitCharcuterie {
         width: 100%;
     }
@@ -980,7 +1038,7 @@ footer li {
 
     .infosProdGlob #partieGauche {
         width: 100%;
-        overflow:visible;
+        overflow: visible;
         height: auto;
         border-bottom: solid;
     }
@@ -1001,7 +1059,7 @@ footer li {
     .infosProdGlob #partieDroiteTexte {
         height: 100%;
         width: 95%;
-        overflow:visible;
+        overflow: visible;
         text-align: center;
     }
 
