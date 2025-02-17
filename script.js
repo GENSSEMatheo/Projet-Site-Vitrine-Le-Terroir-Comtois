@@ -98,15 +98,20 @@ let burgerMenuTurn = true;
 function burgerMenuClic(){
     const burgerMenu = document.getElementById('burgerMenu');
     const navGlob = document.getElementById('navGlob');
+    const menuGlob = document.getElementById('menuGlob');
     const flecheNav = document.getElementById('flecheNav');
     if (burgerMenuTurn){
         flecheNav.style.display ='none';
         burgerMenu.style.transform = 'rotate(90deg)';
         document.body.style.overflowY = 'hidden';
+        navGlob.style.overflowY = 'scroll';
+        menuGlob.style.overflowY = 'scroll';
         navGlob.style.bottom = '0%';
     } else {
         burgerMenu.style.transform = 'rotate(0deg)';
         document.body.style.overflowY = 'scroll';
+        navGlob.style.overflowY = 'hidden';
+        menuGlob.style.overflowY = 'hidden';
         navGlob.style.bottom = '100%';
         flecheNav.style.display ='flex';
     }

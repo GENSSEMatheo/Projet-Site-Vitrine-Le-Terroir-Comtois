@@ -35,6 +35,7 @@ body {
     flex-direction: row;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 #navGlob {
@@ -816,13 +817,13 @@ footer li {
     }
 
     #navGlob #logoEntrepriseRond {
-        width: 50%;
+        width: 50vw;
+        height: 50vw;
     }
 
     #menuGlob {
-        font-size: 7vw;
+        font-size: 4vw;
         text-align: center;
-
     }
 
     #mainMenuLi {
@@ -910,7 +911,7 @@ footer li {
         margin-right: 0;
         border-radius: 0;
         text-align: center;
-        width: 100%;
+        width: 80vw;
         border: solid 1px;
     }
 
