@@ -1,0 +1,62 @@
+body {
+    background-image: url(Images/fondDroiteAccueil.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+#container {
+    width: 40vw;
+    height: 70vh;
+    padding: 2%;
+    border: 3px solid #aa7d00;
+    background: white;
+    text-align: center;
+    overflow-y: auto;
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#logoImage{
+    width: 10rem;
+    border: solid #aa7d00;
+    border-radius: 100%;
+}
+#container h1 {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #aa7d00;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    background-color: #aa7d00c0;
+}

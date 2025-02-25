@@ -1,6 +1,7 @@
 /*------------------------------------*/
 /*CONTENU IDENTIQUE A TOUTES LES PAGES*/
 /*------------------------------------*/
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -18,6 +19,63 @@
     background: #555;
 }
 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.5vw;
+    height: 1.9vw;
+}
+
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.5vw;
+    width: 1.5vw;
+    left: 0.2vw;
+    bottom: 0.2vw;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #aa7d00;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(1.6vw);
+    -ms-transform: translateX(1.6vw);
+    transform: translateX(1.6vw);
+}
+
+
+.slider.round {
+    border-radius: 50vw;
+}
+
+.slider.round:before {
+    border-radius: 50vw;
+}
 
 .slide-in {
     opacity: 0;
@@ -29,7 +87,10 @@
     opacity: 1;
     transform: translateY(0);
 }
-
+*{
+    transition: color 0.5s ease;
+    transition: background-color 0.5s ease;
+ }
 body {
     display: flex;
     flex-direction: row;
@@ -46,10 +107,11 @@ body {
     width: 18%;
     z-index: 2;
     padding: 1%;
-    border-right: black solid;
+    border-right: #000000 solid;
     position: fixed;
     margin-left: 0%;
     transition: all ease 0.5s;
+    overflow-y: auto;
 }
 
 #navGlob #flecheNav {
@@ -72,8 +134,7 @@ body {
     border-top: solid black;
     padding-top: 7%;
     text-transform: uppercase;
-    overflow: hidden;
-
+    overflow-y: auto;
 }
 
 #menuGlob #mainMenuLi {
@@ -130,11 +191,13 @@ body {
     cursor: pointer;
     padding-left: 0%;
     padding-right: 20%;
+    overflow-y: auto;
+
 }
 
 #listeSousMenu li {
     cursor: pointer;
-    font-size: 2.5vh;
+    font-size: 100%;
     text-align: left;
     padding-left: 5%;
 }
@@ -150,15 +213,17 @@ body {
 .interfaceSousMenuGlob:hover #listeSousMenu {
     top: 0%;
 }
-#numPanier{
+
+#numPanier {
     background-color: rgb(173, 0, 0);
     color: white;
     padding: 1% 2%;
     border-radius: 50vw;
-    position:absolute;
+    position: absolute;
     font-size: 60%;
     right: 5%;
 }
+
 #TitreSousMenu {
     text-transform: uppercase;
     background-color: black;
@@ -166,14 +231,14 @@ body {
     padding: 3%;
     padding-left: 5%;
     text-align: left;
-    font-size: 4vh;
+    font-size: 130%;
 }
 
 #sousTitreSousMenu {
     text-transform: uppercase;
     background-color: white;
     padding: 2.2%;
-    font-size: 3.5vh;
+    font-size: 100%;
     text-align: left;
     padding-left: 5%;
 }
@@ -191,7 +256,7 @@ body {
     height: 60vh;
     justify-self: left;
     display: flex;
-    background-color: #0000006e;
+    background-color: #0000006E;
 }
 
 #texteTitresEntete {
@@ -235,6 +300,7 @@ body {
     border-left: solid black 1px;
     margin: 2rem 0;
     padding-left: 1rem;
+    color: black;
 }
 
 #sectionFondBlancTexte h2 {
@@ -276,6 +342,7 @@ footer li {
     text-align: center;
     padding: 1%;
     margin-top: 1%;
+    color: black;
 }
 
 #horaireSection h2 {
@@ -427,7 +494,7 @@ footer li {
 
 
 #croixFermetureFiche {
-    display:block;
+    display: block;
     cursor: pointer;
     position: absolute;
     justify-self: center;
@@ -484,6 +551,7 @@ footer li {
     font-weight: bold;
     background-color: white;
     cursor: pointer;
+    color: black;
     transition: all ease 0.5s;
     border: 0;
 }
@@ -586,6 +654,7 @@ footer li {
 #barreFiltresProduits {
     background-color: white;
     padding: 3% 0;
+    color: black;
     overflow: hidden;
 }
 
@@ -829,7 +898,8 @@ footer li {
     #mainMenuLi {
         padding-left: 0;
     }
-    #listeSousMenu{
+
+    #listeSousMenu {
         display: none;
     }
 
