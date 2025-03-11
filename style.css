@@ -1,6 +1,7 @@
 /*------------------------------------*/
 /*CONTENU IDENTIQUE A TOUTES LES PAGES*/
 /*------------------------------------*/
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -18,6 +19,63 @@
     background: #555;
 }
 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.5vw;
+    height: 1.9vw;
+}
+
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.5vw;
+    width: 1.5vw;
+    left: 0.2vw;
+    bottom: 0.2vw;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #aa7d00;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(1.6vw);
+    -ms-transform: translateX(1.6vw);
+    transform: translateX(1.6vw);
+}
+
+
+.slider.round {
+    border-radius: 50vw;
+}
+
+.slider.round:before {
+    border-radius: 50vw;
+}
 
 .slide-in {
     opacity: 0;
@@ -29,7 +87,6 @@
     opacity: 1;
     transform: translateY(0);
 }
-
 body {
     display: flex;
     flex-direction: row;
@@ -134,7 +191,7 @@ body {
 
 #listeSousMenu li {
     cursor: pointer;
-    font-size: 2.5vh;
+    font-size: 100%;
     text-align: left;
     padding-left: 5%;
 }
@@ -150,15 +207,17 @@ body {
 .interfaceSousMenuGlob:hover #listeSousMenu {
     top: 0%;
 }
-#numPanier{
+
+#numPanier {
     background-color: rgb(173, 0, 0);
     color: white;
     padding: 1% 2%;
     border-radius: 50vw;
-    position:absolute;
+    position: absolute;
     font-size: 60%;
     right: 5%;
 }
+
 #TitreSousMenu {
     text-transform: uppercase;
     background-color: black;
@@ -166,14 +225,14 @@ body {
     padding: 3%;
     padding-left: 5%;
     text-align: left;
-    font-size: 4vh;
+    font-size: 130%;
 }
 
 #sousTitreSousMenu {
     text-transform: uppercase;
     background-color: white;
     padding: 2.2%;
-    font-size: 3.5vh;
+    font-size: 100%;
     text-align: left;
     padding-left: 5%;
 }
@@ -191,7 +250,7 @@ body {
     height: 60vh;
     justify-self: left;
     display: flex;
-    background-color: #0000006e;
+    background-color: rgba(0, 0, 0, 0.43);
 }
 
 #texteTitresEntete {
@@ -235,6 +294,7 @@ body {
     border-left: solid black 1px;
     margin: 2rem 0;
     padding-left: 1rem;
+    color: black;
 }
 
 #sectionFondBlancTexte h2 {
@@ -276,6 +336,7 @@ footer li {
     text-align: center;
     padding: 1%;
     margin-top: 1%;
+    color: black;
 }
 
 #horaireSection h2 {
@@ -392,10 +453,10 @@ footer li {
     text-transform: uppercase;
     color: black;
     text-decoration: none;
-    background-color: #ffffff;
+    background-color: white;
     border-radius: 50vw;
     padding: 4%;
-    border: solid;
+    border: solid black;
     font-weight: bold;
     cursor: pointer;
     font-size: 1rem;
@@ -427,7 +488,7 @@ footer li {
 
 
 #croixFermetureFiche {
-    display:block;
+    display: block;
     cursor: pointer;
     position: absolute;
     justify-self: center;
@@ -484,6 +545,7 @@ footer li {
     font-weight: bold;
     background-color: white;
     cursor: pointer;
+    color: black;
     transition: all ease 0.5s;
     border: 0;
 }
@@ -586,6 +648,7 @@ footer li {
 #barreFiltresProduits {
     background-color: white;
     padding: 3% 0;
+    color: black;
     overflow: hidden;
 }
 
@@ -699,8 +762,8 @@ footer li {
     border-right: solid 1px;
     display: flex;
     flex-direction: column;
-    padding: 0 2vw;
-    overflow: hidden;
+    padding: 2vh 2vw;
+    overflow-y: auto;
 }
 
 #imageDetailProd {
@@ -785,6 +848,11 @@ footer li {
     /*CONTENU IDENTIQUE A TOUTES LES PAGES*/
     /*------------------------------------*/
 
+    .switch {
+        display: none;
+    }
+ 
+
     body {
         flex-direction: column;
     }
@@ -829,7 +897,8 @@ footer li {
     #mainMenuLi {
         padding-left: 0;
     }
-    #listeSousMenu{
+
+    #listeSousMenu {
         display: none;
     }
 

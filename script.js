@@ -104,8 +104,8 @@ function burgerMenuClic(){
         flecheNav.style.display ='none';
         burgerMenu.style.transform = 'rotate(90deg)';
         document.body.style.overflowY = 'hidden';
-        navGlob.style.overflowY = 'scroll';
-        menuGlob.style.overflowY = 'scroll';
+        navGlob.style.overflowY = 'auto';
+        menuGlob.style.overflowY = 'auto';
         navGlob.style.bottom = '0%';
     } else {
         burgerMenu.style.transform = 'rotate(0deg)';
@@ -125,6 +125,48 @@ function ajouterAuPanier(idElementAAjouterAuPanier){
     indicateurPanierMenu.textContent = nombreEltDansPanier;
     alert('Ajout effectué avec succès')
 }
+
+function changeTheme() {
+    const styleSheets = document.styleSheets;
+    for (let i = 0; i < styleSheets.length; i++) {
+        const cssRules = styleSheets[i].cssRules;
+        for (let j = 0; j < cssRules.length; j++) {
+            const style = cssRules[j].style;
+            if (style) {
+                for (let k = 0; k < style.length; k++) {
+                    const propertyName = style[k];
+                    let propertyValue = style.getPropertyValue(propertyName).trim();
+
+                    if (propertyValue.startsWith("#")) continue;
+
+                    if (propertyValue === "black") {
+                        style.setProperty(propertyName, "white");
+                    } else if (propertyValue === "white") {
+                        style.setProperty(propertyName, "black");
+                    }
+
+                    const rgbaMatch = propertyValue.match(/^rgba\((\d+),\s*(\d+),\s*(\d+),\s*([\d.]+)\)$/);
+                    if (rgbaMatch) {
+                        let r = parseInt(rgbaMatch[1]);
+                        let g = parseInt(rgbaMatch[2]);
+                        let b = parseInt(rgbaMatch[3]);
+                        let a = rgbaMatch[4];
+
+                        if (r === 0 && g === 0 && b === 0) {
+                            style.setProperty(propertyName, `rgba(255, 255, 255, ${a})`);
+                        } else if (r === 255 && g === 255 && b === 255) {
+                            style.setProperty(propertyName, `rgba(0, 0, 0, ${a})`);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
 //APPEL AUTOMATIQUE DE FONCTIONS
 document.addEventListener('DOMContentLoaded', () => {
     manageScrollAnimations();

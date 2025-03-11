@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#aa7d00" />
     <title>Le Terroir Comtois - Notre histoire</title>
     <link rel="icon" type="image/png" href="Images/logo.png">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -78,7 +79,12 @@
                         <li onclick="ouvertureFicheDePoste('#fichePosteMarinePelotGlob')">Marine Pelot</li>
                     </ul>
                 </li><br>
-                <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a><span id="numPanier">0</span></li>
+                <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a><span id="numPanier">0</span></li><br>
+                <li id="mainMenuLi"><a href="connexionCompte.html">Me connecter</a></li><br>
+                <label class="switch">
+                    <input type="checkbox" onclick="changeTheme()">
+                    <span class="slider round"></span>
+                </label>
             </ul>
 
     </nav>
