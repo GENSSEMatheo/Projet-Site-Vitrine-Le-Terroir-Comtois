@@ -3,7 +3,7 @@ function manageScrollAnimations() {
         const rect = el.getBoundingClientRect();
         return (
             rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) );
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight));
     }
 
     function checkElementsVisibility() {
@@ -90,18 +90,18 @@ function manageNavOpenClose() {
         fleche.style.transform = 'rotate(0deg)'
     }
 
-    navOpen =!navOpen;
+    navOpen = !navOpen;
 }
 
 
 let burgerMenuTurn = true;
-function burgerMenuClic(){
+function burgerMenuClic() {
     const burgerMenu = document.getElementById('burgerMenu');
     const navGlob = document.getElementById('navGlob');
     const menuGlob = document.getElementById('menuGlob');
     const flecheNav = document.getElementById('flecheNav');
-    if (burgerMenuTurn){
-        flecheNav.style.display ='none';
+    if (burgerMenuTurn) {
+        flecheNav.style.display = 'none';
         burgerMenu.style.transform = 'rotate(90deg)';
         document.body.style.overflowY = 'hidden';
         navGlob.style.overflowY = 'auto';
@@ -113,13 +113,13 @@ function burgerMenuClic(){
         navGlob.style.overflowY = 'hidden';
         menuGlob.style.overflowY = 'hidden';
         navGlob.style.bottom = '100%';
-        flecheNav.style.display ='flex';
+        flecheNav.style.display = 'flex';
     }
-    burgerMenuTurn =! burgerMenuTurn;
+    burgerMenuTurn = !burgerMenuTurn;
 }
 
 let nombreEltDansPanier = 0;
-function ajouterAuPanier(idElementAAjouterAuPanier){
+function ajouterAuPanier(idElementAAjouterAuPanier) {
     const indicateurPanierMenu = document.getElementById('numPanier');
     nombreEltDansPanier++;
     indicateurPanierMenu.textContent = nombreEltDansPanier;
@@ -167,6 +167,8 @@ function changeTheme() {
 
 
 
+  
+
 //APPEL AUTOMATIQUE DE FONCTIONS
 document.addEventListener('DOMContentLoaded', () => {
     manageScrollAnimations();
@@ -197,17 +199,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function filtrerProduits() {
             const filtresActifs = Array.from(casesACocher)
-                .filter(caseACocher => caseACocher.checked) 
-                .map(caseACocher => caseACocher.value.toLowerCase()); 
+                .filter(caseACocher => caseACocher.checked)
+                .map(caseACocher => caseACocher.value.toLowerCase());
 
             produits.forEach(produit => {
                 const classesProduit = Array.from(produit.classList);
                 const correspondAuFiltre = filtresActifs.length === 0 || filtresActifs.some(filtre => classesProduit.includes(filtre));
 
                 if (correspondAuFiltre) {
-                    produit.style.display = 'block'; 
+                    produit.style.display = 'block';
                 } else {
-                    produit.style.display = 'none'; 
+                    produit.style.display = 'none';
                 }
             });
         }
@@ -217,13 +219,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const searchInput = document.getElementById('searchInput');
         const resultatsRecherche = document.getElementById('resultatsRecherche');
 
-        searchInput.addEventListener('keyup', function() {
+        searchInput.addEventListener('keyup', function () {
             const texte = zoneTexte.value.toLowerCase();
             const recherche = searchInput.value.toLowerCase();
             const mots = texte.split(' ');
             const resultats = mots.filter(mot => mot.includes(recherche));
 
-            resultatsRecherche.innerHTML = ''; 
+            resultatsRecherche.innerHTML = '';
             resultats.forEach(mot => {
                 const div = document.createElement('div');
                 div.textContent = mot;

@@ -95,6 +95,7 @@ body {
     overflow-x: hidden;
 }
 
+
 #navGlob {
     display: flex;
     flex-direction: column;
@@ -118,7 +119,15 @@ body {
     display: flex;
     transition: all ease 0.2s;
 }
-
+#slogan{
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 8%;
+    text-transform: uppercase;
+    font-style: italic;
+    color: black;
+    font-size: 1vw;
+}
 #menuGlob {
     display: flex;
     flex-direction: column;
@@ -129,7 +138,7 @@ body {
     border-top: solid black;
     padding-top: 7%;
     text-transform: uppercase;
-    overflow: hidden;
+    overflow-y: auto;
 
 }
 
@@ -187,6 +196,7 @@ body {
     cursor: pointer;
     padding-left: 0%;
     padding-right: 20%;
+    overflow-y: hidden;
 }
 
 #listeSousMenu li {
@@ -325,9 +335,17 @@ footer ul {
 footer li {
     margin-inline: 1%;
 }
-
-
-
+#reseauxSociauxFooterUl{
+    display: flex;
+    flex-direction: row;
+}
+#reseauxSociauxFooterUl li img{
+    width: 2rem;
+    transition: transform 0.3s ease;
+}
+#reseauxSociauxFooterUl li img:hover{
+    transform: rotate(360deg);
+}
 /*---------------*/
 /*CONTENU ACCUEIL*/
 /*---------------*/
@@ -623,11 +641,14 @@ footer li {
 
 #infosFournisseur {
     margin: 10vh 10vw;
-    background-color: #375110;
-    color: white;
+    background-image: url("/Images/fondDroiteFournisseursFlou.jpg");
+    background-attachment:fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
     width: 80vw;
     height: 80vh;
-    padding: 1%;
     border: solid;
     overflow-y: scroll;
     text-align: center;
@@ -639,9 +660,28 @@ footer li {
 
 #infosFournisseur img {
     width: 20rem;
-    border: solid;
+    justify-self: center;
+    display:block;
+    margin: 1%;
 }
-
+#infosFournisseur h2{
+    background-color: #aa7d00;
+    color: #005000;
+    text-transform: uppercase;
+    padding: 2%;
+    text-align: center;
+}
+#infosFournisseur h3{
+    background-color: #aa7d00;
+    color: white;
+    text-transform: uppercase;
+    padding: 2%;
+    text-align: center;
+}
+#infosFournisseur p{
+    padding-inline: 1%;
+    font-size: 1.5rem;
+}
 /*----------------*/
 /*CONTENU PRODUITS*/
 /*----------------*/
