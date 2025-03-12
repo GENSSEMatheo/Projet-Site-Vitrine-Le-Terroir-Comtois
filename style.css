@@ -30,7 +30,10 @@
     opacity: 1;
     transform: translateY(0);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 51bcc67d322c91bfc4d6818296104fd9884a64ab
 body {
     display: flex;
     flex-direction: row;
@@ -63,8 +66,12 @@ body {
     display: flex;
     transition: all ease 0.2s;
 }
+<<<<<<< HEAD
 
 #slogan {
+=======
+#slogan{
+>>>>>>> 51bcc67d322c91bfc4d6818296104fd9884a64ab
     text-align: center;
     margin-bottom: 0;
     margin-top: 8%;
@@ -73,7 +80,10 @@ body {
     color: black;
     font-size: 1vw;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 51bcc67d322c91bfc4d6818296104fd9884a64ab
 #menuGlob {
     display: flex;
     flex-direction: column;
@@ -281,6 +291,7 @@ footer ul {
 footer li {
     margin-inline: 1%;
 }
+<<<<<<< HEAD
 
 #reseauxSociauxFooterUl {
     display: flex;
@@ -296,6 +307,19 @@ footer li {
     transform: rotate(360deg);
 }
 
+=======
+#reseauxSociauxFooterUl{
+    display: flex;
+    flex-direction: row;
+}
+#reseauxSociauxFooterUl li img{
+    width: 2rem;
+    transition: transform 0.3s ease;
+}
+#reseauxSociauxFooterUl li img:hover{
+    transform: rotate(360deg);
+}
+>>>>>>> 51bcc67d322c91bfc4d6818296104fd9884a64ab
 /*---------------*/
 /*CONTENU ACCUEIL*/
 /*---------------*/
@@ -592,7 +616,11 @@ footer li {
 #infosFournisseur {
     margin: 10vh 10vw;
     background-image: url("/Images/fondDroiteFournisseursFlou.jpg");
+<<<<<<< HEAD
     background-attachment: fixed;
+=======
+    background-attachment:fixed;
+>>>>>>> 51bcc67d322c91bfc4d6818296104fd9884a64ab
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -611,31 +639,45 @@ footer li {
 #infosFournisseur img {
     width: 20rem;
     justify-self: center;
+<<<<<<< HEAD
     display: block;
     margin: 1%;
 }
 
 #infosFournisseur h2 {
+=======
+    display:block;
+    margin: 1%;
+}
+#infosFournisseur h2{
+>>>>>>> 51bcc67d322c91bfc4d6818296104fd9884a64ab
     background-color: #aa7d00;
     color: #005000;
     text-transform: uppercase;
     padding: 2%;
     text-align: center;
 }
+<<<<<<< HEAD
 
 #infosFournisseur h3 {
+=======
+#infosFournisseur h3{
+>>>>>>> 51bcc67d322c91bfc4d6818296104fd9884a64ab
     background-color: #aa7d00;
     color: white;
     text-transform: uppercase;
     padding: 2%;
     text-align: center;
 }
+<<<<<<< HEAD
 
 #infosFournisseur p {
+=======
+#infosFournisseur p{
+>>>>>>> 51bcc67d322c91bfc4d6818296104fd9884a64ab
     padding-inline: 1%;
     font-size: 1.5rem;
 }
-
 /*----------------*/
 /*CONTENU PRODUITS*/
 /*----------------*/
@@ -933,7 +975,11 @@ button[type="submit"]:hover {
     .switch {
         display: none;
     }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 51bcc67d322c91bfc4d6818296104fd9884a64ab
 
     body {
         flex-direction: column;
