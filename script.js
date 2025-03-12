@@ -118,66 +118,89 @@ function burgerMenuClic() {
     burgerMenuTurn = !burgerMenuTurn;
 }
 
-let nombreEltDansPanier = 0;
-function ajouterAuPanier(idElementAAjouterAuPanier) {
-    const indicateurPanierMenu = document.getElementById('numPanier');
-    nombreEltDansPanier++;
-    indicateurPanierMenu.textContent = nombreEltDansPanier;
-    alert('Ajout effectué avec succès')
+function obtenirSessionStorageJSON(cle) {
+    let data = sessionStorage.getItem(cle);
+    return data ? JSON.parse(data) : [];
 }
 
-<<<<<<< HEAD
+function ajouterAuPanier(idElement) {
+    let nomProd = idElement.substring(11); 
+    let images = document.querySelectorAll("img"); 
+    let liParent = null;
 
-
-=======
-function changeTheme() {
-    const styleSheets = document.styleSheets;
-    for (let i = 0; i < styleSheets.length; i++) {
-        const cssRules = styleSheets[i].cssRules;
-        for (let j = 0; j < cssRules.length; j++) {
-            const style = cssRules[j].style;
-            if (style) {
-                for (let k = 0; k < style.length; k++) {
-                    const propertyName = style[k];
-                    let propertyValue = style.getPropertyValue(propertyName).trim();
-
-                    if (propertyValue.startsWith("#")) continue;
-
-                    if (propertyValue === "black") {
-                        style.setProperty(propertyName, "white");
-                    } else if (propertyValue === "white") {
-                        style.setProperty(propertyName, "black");
-                    }
-
-                    const rgbaMatch = propertyValue.match(/^rgba\((\d+),\s*(\d+),\s*(\d+),\s*([\d.]+)\)$/);
-                    if (rgbaMatch) {
-                        let r = parseInt(rgbaMatch[1]);
-                        let g = parseInt(rgbaMatch[2]);
-                        let b = parseInt(rgbaMatch[3]);
-                        let a = rgbaMatch[4];
-
-                        if (r === 0 && g === 0 && b === 0) {
-                            style.setProperty(propertyName, `rgba(255, 255, 255, ${a})`);
-                        } else if (r === 255 && g === 255 && b === 255) {
-                            style.setProperty(propertyName, `rgba(0, 0, 0, ${a})`);
-                        }
-                    }
-                }
-            }
+    for (let img of images) {
+        if (img.src.includes(nomProd)) { 
+            liParent = img.closest("li"); // Trouver le <li> parent
+            if (liParent) break; // Arrêter dès qu'on trouve le premier
         }
     }
 
+    if (!liParent) {
+        console.error("Aucun élément <li> trouvé pour", idElement);
+        return;
+    }
+
+    let contenuPanierSession = obtenirSessionStorageJSON("articlesStockeSession");
+
+    let produit = {
+        id: idElement,
+        contenu: liParent.outerHTML // Stocke tout le contenu du <li>
+    };
+
+    contenuPanierSession.push(produit);
+    sessionStorage.setItem("articlesStockeSession", JSON.stringify(contenuPanierSession));
+
+    console.log("Produit ajouté au panier :", produit);
+    mettreAJourCompteurPanier()
 }
->>>>>>> 51bcc67d322c91bfc4d6818296104fd9884a64ab
 
-  
 
+
+
+
+
+function afficherPanier() {
+    let contenuPanierSession = obtenirSessionStorageJSON("articlesStockeSession");
+    let listeProduits = document.getElementById("listesProduitsUl");
+    listeProduits.innerHTML = ""; 
+
+    contenuPanierSession.forEach(produit => {
+        let wrapper = document.createElement("div");
+        wrapper.innerHTML = produit.contenu;
+
+
+        let bouton = wrapper.querySelector("#buttonEnSavoirPlusSurProduitsOuFournisseur");
+        if (bouton) {
+            bouton.remove();
+        }
+
+
+        while (wrapper.firstChild) {
+            listeProduits.appendChild(wrapper.firstChild);
+        }
+    });
+
+    mettreAJourCompteurPanier();
+}
+
+function mettreAJourCompteurPanier() {
+    let contenuPanierSession = obtenirSessionStorageJSON("articlesStockeSession");
+    let compteur = document.getElementById("numPanier");
+    
+    if (compteur) {
+        compteur.textContent = contenuPanierSession.length; // Met à jour le nombre d'articles
+    }
+}
 
   
 
 //APPEL AUTOMATIQUE DE FONCTIONS
 document.addEventListener('DOMContentLoaded', () => {
+    mettreAJourCompteurPanier()
     manageScrollAnimations();
+    if (window.location.href.includes('monpanier.html')){
+        afficherPanier();
+    }
     if (window.location.href.includes('personnel.html')) {
         const urlHash = window.location.hash;
         if (urlHash) {
