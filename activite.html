@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#aa7d00" />
     <title>Le Terroir Comtois - Notre Activité</title>
     <link rel="icon" type="image/png" href="Images/logo.png">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -24,9 +25,10 @@
     <nav id="navGlob">
         <img src="Images/flecheGauche.png" id="flecheNav" onclick="manageNavOpenClose()">
             <img src="Images/logo.png" alt="Logo de notre entreprise" id="logoEntrepriseRond">
+            <p id="slogan">Le Terroir Comtois : Goûtez la tradition, vivez la passion !</p>
             <ul id="menuGlob">
                 <li id="mainMenuLi"><a href="index.html">Accueil</a></li><br>
-                <li id="mainMenuLi"><a href="activite.html">Notre activité</a></li><br>
+                <li id="mainMenuLi"><a href="activite.html" style="color: #aa7d00;">Notre activité</a></li><br>
                 <li id="mainMenuLi"><a href="histoire.html">Notre histoire</a></li><br>
                 <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="produits.html">Nos produits </a></li><br>
                 <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="fournisseurs.html">Nos fournisseurs</a>
@@ -79,11 +81,8 @@
                     </ul>
                 </li><br>
                 <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a><span id="numPanier">0</span></li><br>
+                <li id="mainMenuLi"><a href="contacts.html">Contactez-nous</a></li><br>
                 <li id="mainMenuLi"><a href="connexionCompte.html">Me connecter</a></li><br>
-                <label class="switch">
-                    <input type="checkbox" onclick="changeTheme()">
-                    <span class="slider round"></span>
-                </label>
             </ul>
 
     </nav>
@@ -187,8 +186,15 @@
             --- <br>
             Tous droits réservés - Le Terroir Comtois © 2025 <br>
             --- <br>
-            L'abus d'alcool est dangereux pour la santé, sachez consommer avec modération. Interdit aux moins de 18 ans. <br>
+            L'abus d'alcool est dangereux pour la santé, sachez consommer avec modération. Interdit aux moins de 18 ans.
+            <br>
             --- <br>
+            Contactez nous sur <a style="color: #ffffff;font-style: normal;" href="mailto:leterroircomtois25@gmail.com">leterroircomtois25@gmail.com</a> ou sur nos réseaux sociaux :
+            <ul id="reseauxSociauxFooterUl">
+                <li><a href="https://www.instagram.com/le_terroir_comtois/" target="_blank"><img src="Images/Logo Insta Noir.webp"></a></li>
+                <li><a href="https://www.tiktok.com/@le_terroir_comtois" target="_blank"><img src="Images/Logo Tiktok noir.webp"></a></li>
+                <li><a href="https://x.com/terroircomtois" target="_blank"><img src="Images/LogoXNoir.png"></a></li>
+            </ul>
         </footer>
     </section>
 

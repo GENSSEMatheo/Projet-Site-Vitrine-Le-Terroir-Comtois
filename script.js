@@ -3,7 +3,7 @@ function manageScrollAnimations() {
         const rect = el.getBoundingClientRect();
         return (
             rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) );
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight));
     }
 
     function checkElementsVisibility() {
@@ -90,22 +90,22 @@ function manageNavOpenClose() {
         fleche.style.transform = 'rotate(0deg)'
     }
 
-    navOpen =!navOpen;
+    navOpen = !navOpen;
 }
 
 
 let burgerMenuTurn = true;
-function burgerMenuClic(){
+function burgerMenuClic() {
     const burgerMenu = document.getElementById('burgerMenu');
     const navGlob = document.getElementById('navGlob');
     const menuGlob = document.getElementById('menuGlob');
     const flecheNav = document.getElementById('flecheNav');
-    if (burgerMenuTurn){
-        flecheNav.style.display ='none';
+    if (burgerMenuTurn) {
+        flecheNav.style.display = 'none';
         burgerMenu.style.transform = 'rotate(90deg)';
         document.body.style.overflowY = 'hidden';
-        navGlob.style.overflowY = 'scroll';
-        menuGlob.style.overflowY = 'scroll';
+        navGlob.style.overflowY = 'auto';
+        menuGlob.style.overflowY = 'auto';
         navGlob.style.bottom = '0%';
     } else {
         burgerMenu.style.transform = 'rotate(0deg)';
@@ -113,70 +113,23 @@ function burgerMenuClic(){
         navGlob.style.overflowY = 'hidden';
         menuGlob.style.overflowY = 'hidden';
         navGlob.style.bottom = '100%';
-        flecheNav.style.display ='flex';
+        flecheNav.style.display = 'flex';
     }
-    burgerMenuTurn =! burgerMenuTurn;
+    burgerMenuTurn = !burgerMenuTurn;
 }
 
 let nombreEltDansPanier = 0;
-function ajouterAuPanier(idElementAAjouterAuPanier){
+function ajouterAuPanier(idElementAAjouterAuPanier) {
     const indicateurPanierMenu = document.getElementById('numPanier');
     nombreEltDansPanier++;
     indicateurPanierMenu.textContent = nombreEltDansPanier;
     alert('Ajout effectué avec succès')
 }
 
-function changeTheme() {
-    const styleSheets = document.styleSheets;
 
-    for (let i = 0; i < styleSheets.length; i++) {
-        const cssRules = styleSheets[i].cssRules;
-        for (let j = 0; j < cssRules.length; j++) {
-            const style = cssRules[j].style;
-            if (style) {
-                for (let k = 0; k < style.length; k++) {
-                    const propertyName = style[k];
-                    let propertyValue = style.getPropertyValue(propertyName).trim();
 
-                    if (propertyValue.startsWith("#")) continue;
 
-                    if (propertyValue === "black") {
-                        style.setProperty(propertyName, "white");
-                    } else if (propertyValue === "white") {
-                        style.setProperty(propertyName, "black");
-                    }
-
-                    const rgbaMatch = propertyValue.match(/^rgba\((\d+),\s*(\d+),\s*(\d+),\s*([\d.]+)\)$/);
-                    if (rgbaMatch) {
-                        let r = parseInt(rgbaMatch[1]);
-                        let g = parseInt(rgbaMatch[2]);
-                        let b = parseInt(rgbaMatch[3]);
-                        let a = rgbaMatch[4];
-
-                        if (r === 0 && g === 0 && b === 0) {
-                            style.setProperty(propertyName, `rgba(255, 255, 255, ${a})`);
-                        } else if (r === 255 && g === 255 && b === 255) {
-                            style.setProperty(propertyName, `rgba(0, 0, 0, ${a})`);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    // 🔹 Stocker la préférence du thème dans localStorage
-    const currentTheme = document.body.classList.contains("dark-mode") ? "dark-mode" : "light-mode";
-    localStorage.setItem("theme", currentTheme);
-}
-document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-        document.body.classList.add(savedTheme);
-    } else {
-        document.body.classList.add("light-mode"); // Par défaut en clair
-    }
-});
-
+  
 
 //APPEL AUTOMATIQUE DE FONCTIONS
 document.addEventListener('DOMContentLoaded', () => {
@@ -208,17 +161,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function filtrerProduits() {
             const filtresActifs = Array.from(casesACocher)
-                .filter(caseACocher => caseACocher.checked) 
-                .map(caseACocher => caseACocher.value.toLowerCase()); 
+                .filter(caseACocher => caseACocher.checked)
+                .map(caseACocher => caseACocher.value.toLowerCase());
 
             produits.forEach(produit => {
                 const classesProduit = Array.from(produit.classList);
                 const correspondAuFiltre = filtresActifs.length === 0 || filtresActifs.some(filtre => classesProduit.includes(filtre));
 
                 if (correspondAuFiltre) {
-                    produit.style.display = 'block'; 
+                    produit.style.display = 'block';
                 } else {
-                    produit.style.display = 'none'; 
+                    produit.style.display = 'none';
                 }
             });
         }
@@ -228,13 +181,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const searchInput = document.getElementById('searchInput');
         const resultatsRecherche = document.getElementById('resultatsRecherche');
 
-        searchInput.addEventListener('keyup', function() {
+        searchInput.addEventListener('keyup', function () {
             const texte = zoneTexte.value.toLowerCase();
             const recherche = searchInput.value.toLowerCase();
             const mots = texte.split(' ');
             const resultats = mots.filter(mot => mot.includes(recherche));
 
-            resultatsRecherche.innerHTML = ''; 
+            resultatsRecherche.innerHTML = '';
             resultats.forEach(mot => {
                 const div = document.createElement('div');
                 div.textContent = mot;

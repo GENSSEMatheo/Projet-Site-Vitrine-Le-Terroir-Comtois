@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#aa7d00" />
-    <title>Le Terroir Comtois - Accueil</title>
+    <title>Le Terroir Comtois - Contactez-nous</title>
     <link rel="icon" type="image/png" href="Images/logo.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
         <img src="Images/logo.png" alt="Logo de notre entreprise" id="logoEntrepriseRond">
         <p id="slogan">Le Terroir Comtois : Goûtez la tradition, vivez la passion !</p>
         <ul id="menuGlob">
-            <li id="mainMenuLi"><a href="index.html" style="color: #aa7d00;">Accueil</a></li><br>
+            <li id="mainMenuLi"><a href="index.html">Accueil</a></li><br>
             <li id="mainMenuLi"><a href="activite.html">Notre activité</a></li><br>
             <li id="mainMenuLi"><a href="histoire.html">Notre histoire</a></li><br>
             <li id="mainMenuLi" class="interfaceSousMenuGlob"><a href="produits.html">Nos produits </a></li><br>
@@ -82,56 +82,46 @@
                 </ul>
             </li><br>
             <li id="mainMenuLi"><a href="monpanier.html">Mon panier</a><span id="numPanier">0</span></li><br>
-            <li id="mainMenuLi"><a href="contacts.html">Contactez-nous</a></li><br>
+            <li id="mainMenuLi"><a href="contacts.html" style="color: #aa7d00;">Contactez-nous</a></li><br>
             <li id="mainMenuLi"><a href="connexionCompte.html">Me connecter</a></li><br>
         </ul>
 
     </nav>
     <section id="contenu"
-        style="background-image: url(Images/fondDroiteAccueil.jpg);background-repeat: no-repeat;background-size:cover;background-attachment: fixed;">
+        style="background-image: url(Images/imageFondDroiteContact.png);background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
         <header id="entetePage">
             <div id="texteTitresEntete">
-                <p class="slide-in">Accueil</p>
+                <p class="slide-in">Contactez-nous</p>
                 <h1 class="slide-in">Le Terroir Comtois</h1>
             </div>
-            <img class="slide-in" id="imageDroiteEntete" src="Images/imageBoutique.jpeg" alt="Image Boutique">
         </header>
-        <section id="sectionGlobFondBlanc">
-            <img src="Images/carteFC.png" alt="Carte Franche Comté">
-            <div id="sectionFondBlancTexte">
-                <h2 class="slide-in">Le Terroir Comtois : Goûtez la tradition, vivez la passion ! </h2>
-                <p class="slide-in">Fondé en 1985, le Terroir Comtois est une boutique emblématique dédiée à la mise en
-                    valeur des produits locaux de Franche-Comté. Située dans le charmant village de Larnod, à seulement
-                    quelques kilomètres de Besançon, la boutique offre un véritable écrin pour découvrir le meilleur des
-                    saveurs régionales.</p>
-                <p class="slide-in">Le Terroir Comtois travaille main dans la main avec des producteurs locaux pour
-                    proposer une gamme variée de produits d'exception. Fromagers, vignerons, brasseurs et artisans
-                    régionaux sont soigneusement sélectionnés afin de garantir des produits authentiques et de qualité.
-                    Grâce à ces partenariats, la boutique regroupe les meilleurs trésors culinaires de la Franche-Comté,
-                    permettant ainsi de découvrir des saveurs uniques et typiques du terroir.</p>
-                <p class="slide-in">Dans un espace chaleureux et convivial de 120 m², le Terroir Comtois offre une
-                    expérience de shopping agréable. Chaque produit raconte une histoire : celle d’un savoir-faire local
-                    transmis de génération en génération.</p>
-                <p class="slide-in">Vous y trouverez une large sélection de fromages AOP comme le Comté, le Morbier ou
-                    le Mont d’Or, provenant des meilleures fruitières régionales. À cela s’ajoutent des spécialités
-                    locales comme la cancoillotte, des petits fromages fermiers, ainsi que des produits laitiers frais.
-                </p>
-                <p class="slide-in">Côté charcuterie, la célèbre saucisse de Morteau, le jambon fumé et d'autres délices
-                    artisanaux raviront les amateurs de viande.</p>
-                <p class="slide-in">Pour accompagner ces mets, la boutique propose une sélection de vins régionaux issus
-                    des vignobles jurassiens, des bières artisanales, et même des spiritueux locaux.</p>
-            </div>
-        </section>
-        <section id="horaireSection">
-            <div id="horaireTexte">
-                <h2 class="slide-in">Horaires d'ouverture</h2>
-                <h3 class="slide-in">Lundi, mardi, mercredi, jeudi et samedi</h3>
-                <p class="slide-in">9h00-12h30 et 14h00-18h30</p>
-                <h3 class="slide-in">Vendredi</h3>
-                <p class="slide-in">9h00-19h00</p>
-                <h3 class="slide-in">Fermé le dimanche et les jours fériés.</h3>
-            </div>
-        </section>
+        <ul id="contact_section_glob">
+            <li>
+                <div id="contact">
+                    <h2 class="slide-in">Contactez-nous</h2>
+                    <form action="contact.php" method="POST">
+                        <input type="text" name="nom" placeholder="Nom" required>
+                        <input type="email" name="email" placeholder="Adresse e-mail" required>
+                        <textarea name="message" placeholder="Votre message" required></textarea>
+                        <button type="submit" class="slide-in">Envoyer</button>
+                    </form>
+                </div>
+            </li>
+            <li id="contact_reseaux_glob">
+                <h2 class="slide-in">....Ou contactez-nous sur mes réseaux</h2>
+                <ul id="reseaux_contact">
+                    <li><a href="https://www.instagram.com/le_terroir_comtois/" target="_blank"><img
+                                src="Images/Logo Insta Noir.webp"><br>
+                        </a></li>
+                    <li><a href="https://www.tiktok.com/@le_terroir_comtois" target="_blank"><img
+                                src="Images/Logo Tiktok noir.webp"><br>
+                        </a></li>
+                    <li><a href="https://x.com/terroircomtois" target="_blank"><img src="Images/LogoXNoir.png"><br> </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
         <footer>
 
             A propos <br>
@@ -144,10 +134,13 @@
             L'abus d'alcool est dangereux pour la santé, sachez consommer avec modération. Interdit aux moins de 18 ans.
             <br>
             --- <br>
-            Contactez nous sur <a style="color: #ffffff;font-style: normal;" href="mailto:leterroircomtois25@gmail.com">leterroircomtois25@gmail.com</a> ou sur nos réseaux sociaux :
+            Contactez nous sur <a style="color: #ffffff;font-style: normal;"
+                href="mailto:leterroircomtois25@gmail.com">leterroircomtois25@gmail.com</a> ou sur nos réseaux sociaux :
             <ul id="reseauxSociauxFooterUl">
-                <li><a href="https://www.instagram.com/le_terroir_comtois/" target="_blank"><img src="Images/Logo Insta Noir.webp"></a></li>
-                <li><a href="https://www.tiktok.com/@le_terroir_comtois" target="_blank"><img src="Images/Logo Tiktok noir.webp"></a></li>
+                <li><a href="https://www.instagram.com/le_terroir_comtois/" target="_blank"><img
+                            src="Images/Logo Insta Noir.webp"></a></li>
+                <li><a href="https://www.tiktok.com/@le_terroir_comtois" target="_blank"><img
+                            src="Images/Logo Tiktok noir.webp"></a></li>
                 <li><a href="https://x.com/terroircomtois" target="_blank"><img src="Images/LogoXNoir.png"></a></li>
             </ul>
         </footer>
