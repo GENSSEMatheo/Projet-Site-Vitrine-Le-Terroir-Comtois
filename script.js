@@ -22,6 +22,42 @@ function manageScrollAnimations() {
     checkElementsVisibility();
 }
 
+function retourHautPage() {
+    let boutonHaut = document.getElementById("btnRetourHaut");
+
+    if (!boutonHaut) {
+        boutonHaut = document.createElement("button");
+        boutonHaut.innerText = "⬆ Haut de page";
+        boutonHaut.id = "btnRetourHaut";
+        document.body.appendChild(boutonHaut);
+
+        Object.assign(boutonHaut.style, {
+            position: "fixed",
+            bottom: "20px",
+            right: "-1000px",
+            padding: "10px 15px",
+            fontSize: "16px",
+            backgroundColor: "#aa7d00",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+            transition: "right 0.5s ease-in-out",
+            zIndex: "1000"
+        });
+
+
+        boutonHaut.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+
+    if (window.scrollY > 0) {
+        boutonHaut.style.right = "20px";
+    } else {
+        boutonHaut.style.right = "-1000px";
+    }
+}
 function ouvertureFicheDePoste(idFichePoste) {
     if (!window.location.href.includes('personnel.html')) {
         window.location.href = `personnel.html${idFichePoste}`;
@@ -120,31 +156,30 @@ function burgerMenuClic() {
 
 function obtenirSessionStorageJSON(cle) {
     let data = sessionStorage.getItem(cle);
-    return data ? JSON.parse(data) : [];
+    if (data) {
+        return JSON.parse(data)
+    } else {
+        return [];
+    }
 }
 
 function ajouterAuPanier(idElement) {
-    let nomProd = idElement.substring(11); 
-    let images = document.querySelectorAll("img"); 
+    let nomProd = idElement.substring(11);
+    let images = document.querySelectorAll("img");
     let liParent = null;
 
     for (let img of images) {
-        if (img.src.includes(nomProd)) { 
-            liParent = img.closest("li"); // Trouver le <li> parent
-            if (liParent) break; // Arrêter dès qu'on trouve le premier
+        if (img.src.includes(nomProd)) {
+            liParent = img.closest("li");
+            break;
         }
-    }
-
-    if (!liParent) {
-        console.error("Aucun élément <li> trouvé pour", idElement);
-        return;
     }
 
     let contenuPanierSession = obtenirSessionStorageJSON("articlesStockeSession");
 
     let produit = {
         id: idElement,
-        contenu: liParent.outerHTML // Stocke tout le contenu du <li>
+        contenu: liParent.outerHTML
     };
 
     contenuPanierSession.push(produit);
@@ -152,6 +187,26 @@ function ajouterAuPanier(idElement) {
 
     console.log("Produit ajouté au panier :", produit);
     mettreAJourCompteurPanier()
+////////////
+    boutonAjoutPanier = document.createElement("button");
+        boutonHaut.innerText = "⬆ Haut de page";
+        boutonHaut.id = "btnRetourHaut";
+        document.body.appendChild(boutonHaut);
+
+        Object.assign(boutonHaut.style, {
+            position: "fixed",
+            bottom: "20px",
+            right: "-1000px",
+            padding: "10px 15px",
+            fontSize: "16px",
+            backgroundColor: "#aa7d00",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+            transition: "right 0.5s ease-in-out",
+            zIndex: "1000"
+        });
 }
 
 
@@ -162,7 +217,7 @@ function ajouterAuPanier(idElement) {
 function afficherPanier() {
     let contenuPanierSession = obtenirSessionStorageJSON("articlesStockeSession");
     let listeProduits = document.getElementById("listesProduitsUl");
-    listeProduits.innerHTML = ""; 
+    listeProduits.innerHTML = "";
 
     contenuPanierSession.forEach(produit => {
         let wrapper = document.createElement("div");
@@ -186,19 +241,52 @@ function afficherPanier() {
 function mettreAJourCompteurPanier() {
     let contenuPanierSession = obtenirSessionStorageJSON("articlesStockeSession");
     let compteur = document.getElementById("numPanier");
-    
+
     if (compteur) {
-        compteur.textContent = contenuPanierSession.length; // Met à jour le nombre d'articles
+        compteur.textContent = contenuPanierSession.length;
     }
 }
 
-  
+function searchFunction() {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let items = document.querySelectorAll("#listesProduitsUl li"); 
+
+    items.forEach(item => {
+        let text = item.innerText.toLowerCase();
+        if (text.includes(input)) {
+            item.style.display = "";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+
+function updatePriceValue(value) {
+    document.getElementById("priceValue").textContent = value;
+    filterByPrice(value);
+}
+
+function filterByPrice(maxPrice) {
+    let items = document.querySelectorAll("#listesProduitsUl li");
+
+    items.forEach(item => {
+        let priceText = item.querySelector("h3").innerText.replace("€", "").replace(",", ".").trim();
+        let price = parseFloat(priceText);
+
+        if (price <= maxPrice) {
+            item.style.display = "";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
 
 //APPEL AUTOMATIQUE DE FONCTIONS
 document.addEventListener('DOMContentLoaded', () => {
-    mettreAJourCompteurPanier()
+    window.addEventListener("scroll", retourHautPage);
+    mettreAJourCompteurPanier();
     manageScrollAnimations();
-    if (window.location.href.includes('monpanier.html')){
+    if (window.location.href.includes('monpanier.html')) {
         afficherPanier();
     }
     if (window.location.href.includes('personnel.html')) {

@@ -131,7 +131,23 @@
                     </ul>
                 </div>
             </div>
+            <input style="width: 60%;margin: 2% 20%;" type="text" id="searchBar" placeholder="Rechercher..." onkeyup="searchFunction()">
+            <div class="range-container">
+                <label class="price-label" for="priceRange">💰 Filtrer par prix :</label>
+                <input 
+                    type="range" 
+                    id="priceRange" 
+                    min="0" 
+                    max="40" 
+                    value="40" 
+                    step="0.01"
+                    oninput="updatePriceValue(this.value)"
+                    class="range-slider"
+                >
+                <p class="price-label">Prix max : <span id="priceValue">40</span> €</p>
+            </div>
         </div>
+
         <section id="sectionProduitsGlob">
             <ul id="listesProduitsUl">
                 <li class="cremant">
