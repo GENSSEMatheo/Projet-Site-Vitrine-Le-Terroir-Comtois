@@ -187,26 +187,33 @@ function ajouterAuPanier(idElement) {
 
     console.log("Produit ajouté au panier :", produit);
     mettreAJourCompteurPanier()
-////////////
-    boutonAjoutPanier = document.createElement("button");
-        boutonHaut.innerText = "⬆ Haut de page";
-        boutonHaut.id = "btnRetourHaut";
-        document.body.appendChild(boutonHaut);
 
-        Object.assign(boutonHaut.style, {
-            position: "fixed",
-            bottom: "20px",
-            right: "-1000px",
-            padding: "10px 15px",
-            fontSize: "16px",
-            backgroundColor: "#aa7d00",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-            transition: "right 0.5s ease-in-out",
-            zIndex: "1000"
-        });
+    boutonAjoutPanier = document.createElement("button");
+    boutonAjoutPanier.innerText = "1 article ajouté à votre panier";
+    boutonAjoutPanier.id = "btnAjoutPanier";
+    document.body.appendChild(boutonAjoutPanier);
+
+    Object.assign(boutonAjoutPanier.style, {
+        position: "fixed",
+        top:"-1000px",
+        right: "40px",
+        padding: "10px 15px",
+        fontSize: "16px",
+        backgroundColor: "#aa7d00",
+        color: "white",
+        border: "none",
+        cursor: "pointer",
+        transition: "top 0.5s ease-in-out",
+        zIndex: "1000"
+    });
+    boutonAjoutPanier.style.top="0px";
+    console.log("Début");
+    setTimeout(() => {
+        boutonAjoutPanier.style.top="-1000px";
+    }, 2000);
+
+
+
 }
 
 
