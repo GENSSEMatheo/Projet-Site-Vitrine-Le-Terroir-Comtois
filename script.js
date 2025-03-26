@@ -231,12 +231,6 @@ function afficherPanier() {
         wrapper.innerHTML = produit.contenu;
 
 
-        let bouton = wrapper.querySelector("#buttonEnSavoirPlusSurProduitsOuFournisseur");
-        if (bouton) {
-            bouton.remove();
-        }
-
-
         while (wrapper.firstChild) {
             listeProduits.appendChild(wrapper.firstChild);
         }
@@ -287,6 +281,10 @@ function filterByPrice(maxPrice) {
         }
     });
 }
+fetch('majBDD.php')
+.then(response => response.text())
+.then(data => console.log(data));
+
 
 //APPEL AUTOMATIQUE DE FONCTIONS
 document.addEventListener('DOMContentLoaded', () => {
