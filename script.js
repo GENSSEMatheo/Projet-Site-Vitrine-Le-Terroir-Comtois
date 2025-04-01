@@ -154,103 +154,105 @@ function burgerMenuClic() {
     burgerMenuTurn = !burgerMenuTurn;
 }
 
-function obtenirSessionStorageJSON(cle) {
-    let data = sessionStorage.getItem(cle);
-    if (data) {
-        return JSON.parse(data)
+
+function ajouterAuPanier(idProduit) {
+    if (sessionStorage.getItem('connexion_reussie') === 'true'){
+        const idUtilisateur = sessionStorage.getItem('user_id'); 
+
+        fetch('ajoutPanier.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                id_produit: idProduit.slice(1), 
+                id_client: idUtilisateur 
+            })
+        })
+        afficherMessageAjout();
     } else {
-        return [];
+        window.location.href = `connexionCompte.html`;
     }
+
+
 }
 
-function ajouterAuPanier(idElement) {
-    let nomProd = idElement.substring(11);
-    let images = document.querySelectorAll("img");
-    let liParent = null;
-
-    for (let img of images) {
-        if (img.src.includes(nomProd)) {
-            liParent = img.closest("li");
-            break;
-        }
+function afficherMessageAjout() {
+    let message = document.getElementById("messageAjout");
+    if (!message) {
+        message = document.createElement("div");
+        message.id = "messageAjout";
+        document.body.appendChild(message);
     }
 
-    let contenuPanierSession = obtenirSessionStorageJSON("articlesStockeSession");
-
-    let produit = {
-        id: idElement,
-        contenu: liParent.outerHTML
-    };
-
-    contenuPanierSession.push(produit);
-    sessionStorage.setItem("articlesStockeSession", JSON.stringify(contenuPanierSession));
-
-    console.log("Produit ajouté au panier :", produit);
-    mettreAJourCompteurPanier()
-
-    boutonAjoutPanier = document.createElement("button");
-    boutonAjoutPanier.innerText = "1 article ajouté à votre panier";
-    boutonAjoutPanier.id = "btnAjoutPanier";
-    document.body.appendChild(boutonAjoutPanier);
-
-    Object.assign(boutonAjoutPanier.style, {
+    message.innerText = "1 article ajouté au panier";
+    Object.assign(message.style, {
         position: "fixed",
-        top:"-1000px",
+        top: "10px",
         right: "40px",
         padding: "10px 15px",
         fontSize: "16px",
         backgroundColor: "#aa7d00",
         color: "white",
-        border: "none",
-        cursor: "pointer",
-        transition: "top 0.5s ease-in-out",
-        zIndex: "1000"
+        borderRadius: "5px",
+        zIndex: "1000",
+        transition: "opacity 0.5s ease-in-out"
     });
-    boutonAjoutPanier.style.top="0px";
-    console.log("Début");
+
+    message.style.opacity = "1";
     setTimeout(() => {
-        boutonAjoutPanier.style.top="-1000px";
+        message.style.opacity = "0";
     }, 2000);
-
-
-
 }
-
-
 
 
 
 
 function afficherPanier() {
-    let contenuPanierSession = obtenirSessionStorageJSON("articlesStockeSession");
-    let listeProduits = document.getElementById("listesProduitsUl");
-    listeProduits.innerHTML = "";
-
-    contenuPanierSession.forEach(produit => {
-        let wrapper = document.createElement("div");
-        wrapper.innerHTML = produit.contenu;
-
-
-        while (wrapper.firstChild) {
-            listeProduits.appendChild(wrapper.firstChild);
-        }
-    });
-
-    mettreAJourCompteurPanier();
-}
-
-function mettreAJourCompteurPanier() {
-    let contenuPanierSession = obtenirSessionStorageJSON("articlesStockeSession");
-    let compteur = document.getElementById("numPanier");
-
-    if (compteur) {
-        compteur.textContent = contenuPanierSession.length;
+    const idUtilisateur = sessionStorage.getItem('user_id');
+    const listeProduits = document.getElementById('listesProduitsUl');
+    
+    if (!idUtilisateur) {
+        listeProduits.innerHTML = '<li>Connectez-vous pour voir votre panier</li>';
+        return;
     }
+
+    fetch('obtenirPanier.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({id_client: idUtilisateur})
+    })
+    .then(response => response.json())
+    .then(panier => {
+        if (!panier || panier.length === 0) {
+            listeProduits.innerHTML = '<li>Votre panier est vide</li>';
+            return;
+        }
+
+        let html = '';
+        panier.forEach(item => {
+            html += `
+                <li>
+                    ${item.nom} - 
+                    ${item.prix}€ x 
+                    ${item.quantite} = 
+                    ${(item.prix * item.quantite).toFixed(2)}€
+                </li>
+            `;
+        });
+
+        listeProduits.innerHTML = html;
+    })
+    .catch(error => {
+        console.error(error);
+        listeProduits.innerHTML = '<li>Erreur de chargement</li>';
+    });
 }
+
+
+
 
 function searchFunction() {
     let input = document.getElementById("searchBar").value.toLowerCase();
-    let items = document.querySelectorAll("#listesProduitsUl li"); 
+    let items = document.querySelectorAll("#listesProduitsUl li");
 
     items.forEach(item => {
         let text = item.innerText.toLowerCase();
@@ -282,17 +284,31 @@ function filterByPrice(maxPrice) {
     });
 }
 fetch('majBDD.php')
-.then(response => response.text())
-.then(data => console.log(data));
+    .then(response => response.text())
+    .then(data => console.log(data));
 
 
 //APPEL AUTOMATIQUE DE FONCTIONS
 document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener("scroll", retourHautPage);
-    mettreAJourCompteurPanier();
     manageScrollAnimations();
-    if (window.location.href.includes('monpanier.html')) {
-        afficherPanier();
+    // Vérifier l'état de connexion au chargement de la page
+    if (sessionStorage.getItem('connexion_reussie') === 'true') {
+        document.getElementById('loginLink').style.display = 'none';
+        document.getElementById('logoutLink').style.display = 'block';
+        
+        document.getElementById('logoutLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            sessionStorage.removeItem('connexion_reussie');
+            sessionStorage.removeItem('user_id');
+            window.location.href = 'index.html';
+        });
+    }
+    if (window.location.href.includes('monpanier.html')){
+        if (sessionStorage.getItem('connexion_reussie') === 'true'){
+            afficherPanier();
+        }
+
     }
     if (window.location.href.includes('personnel.html')) {
         const urlHash = window.location.hash;
