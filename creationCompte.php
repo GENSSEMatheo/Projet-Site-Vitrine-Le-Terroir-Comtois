@@ -1,49 +1,48 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nom = strtoupper($_POST['nom']);
-    $prenom = strtoupper($_POST['prenom'][0]).strtolower(substr($_POST['prenom'], 1));
-    $email = $_POST['email'];
-    $mdp = password_hash($_POST['mdp'], PASSWORD_BCRYPT);
+    // Récupération et sécurisation des données du formulaire
+    $nom = strtoupper(trim($_POST['nom']));
+    $prenom = ucfirst(strtolower(trim($_POST['prenom'])));
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $mdp = $_POST['mdp'];
+
+    // Validation des données
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo json_encode(['success' => false, 'message' => 'Adresse e-mail invalide']);
+        exit;
+    }
+
+    // Hachage du mot de passe
+    $mdpHash = password_hash($mdp, PASSWORD_BCRYPT);
 
     // Connexion à la base de données
-    $conn = new mysqli('localhost', 'root', '', 'db_terroircomtois');
-    // Vérifier la connexion
-    if ($conn->connect_error) {
-        die('Erreur de connexion : ' . $conn->connect_error);
-    }
+    include_once "./connexionBDD.php";
+    $conn = donneConnexionBDD();
 
-    // Vérifier si l'adresse e-mail existe déjà
-    $checkEmailQuery = $conn->prepare("SELECT COUNT(*) FROM compte_client WHERE email_client = ?");
-    $checkEmailQuery->bind_param("s", $email);
-    $checkEmailQuery->execute();
-    $checkEmailQuery->bind_result($emailCount);
-    $checkEmailQuery->fetch();
-    $checkEmailQuery->close();
+    try {
+        // Vérifier si l'adresse e-mail existe déjà
+        $checkEmailQuery = $conn->prepare("SELECT COUNT(*) FROM compte_client WHERE email_client = ?");
+        $checkEmailQuery->execute([$email]);
+        $emailCount = $checkEmailQuery->fetchColumn();
 
-    if ($emailCount > 0) {
-        echo "<script>
-                alert('Cette adresse e-mail est déjà utilisée. Veuillez en choisir une autre.');
-                window.location.href='creationCompte.html';
-              </script>";
-    } else {
-        $stmt = $conn->prepare("INSERT INTO compte_client (nom_client, prenom_client, email_client, hash_mdp_client) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $nom, $prenom, $email, $mdp);
-
-        if ($stmt->execute()) {
-            echo "<script>
-                    alert('Compte créé avec succès !');
-                    window.location.href='index.html';
-                  </script>";
+        if ($emailCount > 0) {
+            // E-mail déjà utilisé, renvoi d'une erreur
+            echo json_encode(['success' => false, 'message' => 'Cette adresse e-mail est déjà utilisée. Veuillez en choisir une autre.']);
         } else {
-            echo "<script>
-                    alert('Erreur dans l'ajout de vos coordonnées !');
-                    window.location.href='creationCompte.html';
-                  </script>";
+            // Insérer les nouvelles informations du compte
+            $stmt = $conn->prepare("INSERT INTO compte_client (nom_client, prenom_client, email_client, hash_mdp_client) VALUES (?, ?, ?, ?)");
+            
+            if ($stmt->execute([$nom, $prenom, $email, $mdpHash])) {
+                // Compte créé avec succès
+                echo json_encode(['success' => true, 'message' => 'Compte créé avec succès !']);
+            } else {
+                // Erreur lors de l'insertion
+                echo json_encode(['success' => false, 'message' => 'Erreur dans l\'ajout de vos coordonnées !']);
+            }
         }
-
-        $stmt->close();
+    } catch (PDOException $e) {
+        // Erreur de base de données
+        echo json_encode(['success' => false, 'message' => 'Erreur de requête: ' . $e->getMessage()]);
     }
-
-    $conn->close();
 }
 ?>

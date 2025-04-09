@@ -1,27 +1,44 @@
 <?php
 header('Content-Type: application/json');
 
+// Récupérer les données envoyées par le client
 $data = json_decode(file_get_contents('php://input'), true);
 
-if (!isset($data['id_client'])) {
-    echo json_encode([]);
+// Vérifier si l'ID client est fourni
+if (empty($data['id_client'])) {
+    echo json_encode(['error' => 'ID client manquant ou invalide']);
     exit;
 }
 
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=db_terroircomtois;charset=utf8', 'root', '');
-    
-    $stmt = $pdo->prepare('
-        SELECT p.nom, p.prix, pc.quantite_ajoute as quantite
+    include_once "./connexionBDD.php";
+    $conn = donneConnexionBDD();
+
+    $stmt = $conn->prepare('
+        SELECT 
+            p.id_prod, 
+            p.nom_prod AS nom, 
+            p.prix, 
+            p.image, 
+            p.producteur,
+            pc.quantite_ajoute AS quantite
         FROM panier_client pc
         JOIN stocks_total_actuel p ON pc.id_prod = p.id_prod
         WHERE pc.id_client = ?
     ');
-    $stmt->execute([$data['id_client']]);
-    
-    echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
-    
+
+    $stmt->execute([intval($data['id_client'])]);
+    $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if (empty($resultats)) {
+        echo json_encode(['message' => 'Votre panier est vide']);
+        exit;
+    }
+
+    // Retourner les produits du panier sous forme de JSON
+    echo json_encode($resultats);
+
 } catch (PDOException $e) {
-    echo json_encode([]);
+    echo json_encode(['error' => 'Erreur lors de la récupération des données : ' . $e->getMessage()]);
 }
 ?>

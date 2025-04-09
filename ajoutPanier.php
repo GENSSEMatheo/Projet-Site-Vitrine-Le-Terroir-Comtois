@@ -1,58 +1,90 @@
 <?php
-header('Content-Type: application/json');
-
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    echo json_encode(['success' => false, 'message' => 'Méthode non autorisée']);
     exit;
 }
 
 $data = json_decode(file_get_contents('php://input'), true);
-
-if (!isset($data['id_produit']) || !isset($data['id_client'])) {
+$idProd = $data['id_produit'] ?? null;
+$idClient = $data['id_client'] ?? null;
+$idProd = substr($idProd,10);
+if (!$idProd || !$idClient) {
     http_response_code(400);
-    echo json_encode(['success' => false, 'message' => 'Données manquantes']);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Données manquantes'
+    ]);
     exit;
 }
 
-try {
-    $pdo = new PDO('mysql:host=localhost;dbname=db_terroircomtois;charset=utf8', 'root', '', [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ]);
+require_once './connexionBDD.php';
+$conn = donneConnexionBDD();
 
-    // Vérification produit
-    $stmt = $pdo->prepare('SELECT id_prod FROM stocks_total_actuel WHERE id_prod = ?');
-    $stmt->execute([$data['id_produit']]);
-    
-    if (!$stmt->fetch()) {
+try {
+    // Vérification du stock disponible
+    $stmtStock = $conn->prepare('SELECT quantite_restante FROM stocks_total_actuel WHERE id_prod = ?');
+    $stmtStock->execute([$idProd]);
+    $stock = $stmtStock->fetch();
+
+    if (!$stock) {
         http_response_code(404);
-        echo json_encode(['success' => false, 'message' => 'Produit introuvable']);
+        echo json_encode([
+            'success' => false,
+            'message' => 'Produit introuvable'
+        ]);
         exit;
     }
 
-    // Vérifier si le produit est déjà dans le panier du client
-    $stmt = $pdo->prepare('SELECT quantite_ajoute FROM panier_client WHERE id_client = ? AND id_prod = ?');
-    $stmt->execute([$data['id_client'], $data['id_produit']]);
-    $existingProduct = $stmt->fetch();
+    if ($stock['quantite_restante'] <= 0) {
+        http_response_code(400);
+        echo json_encode([
+            'success' => false,
+            'message' => 'Rupture de stock'
+        ]);
+        exit;
+    }
 
-    if ($existingProduct) {
-        // Produit déjà présent - incrémenter la quantité
-        $stmt = $pdo->prepare('UPDATE panier_client SET quantite_ajoute = quantite_ajoute + 1 
-                              WHERE id_client = ? AND id_prod = ?');
-        $stmt->execute([$data['id_client'], $data['id_produit']]);
-        $message = 'Quantité mise à jour dans le panier';
+    // Vérification si le produit est déjà dans le panier
+    $stmtPanier = $conn->prepare('SELECT quantite_ajoute FROM panier_client WHERE id_client = ? AND id_prod = ?');
+    $stmtPanier->execute([$idClient, $idProd]);
+    $ligne = $stmtPanier->fetch();
+
+    if ($ligne) {
+        if ($ligne['quantite_ajoute'] >= $stock['quantite_restante']) {
+            http_response_code(400);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Quantité maximale atteinte'
+            ]);
+            exit;
+        }
+
+        $stmtUpdate = $conn->prepare('
+            UPDATE panier_client 
+            SET quantite_ajoute = quantite_ajoute + 1 
+            WHERE id_client = ? AND id_prod = ?
+        ');
+        $stmtUpdate->execute([$idClient, $idProd]);
+        $message = 'Quantité mise à jour';
     } else {
-        // Nouveau produit - ajouter avec quantité 1
-        $stmt = $pdo->prepare('INSERT INTO panier_client (id_client, id_prod, quantite_ajoute) 
-                              VALUES (?, ?, 1)');
-        $stmt->execute([$data['id_client'], $data['id_produit']]);
+        $stmtInsert = $conn->prepare('
+            INSERT INTO panier_client (id_client, id_prod, quantite_ajoute)
+            VALUES (?, ?, 1)
+        ');
+        $stmtInsert->execute([$idClient, $idProd]);
         $message = 'Produit ajouté au panier';
     }
 
-    echo json_encode(['success' => true, 'message' => $message]);
-    
+    echo json_encode([
+        'success' => true,
+        'message' => $message
+    ]);
+
 } catch (PDOException $e) {
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'Erreur de base de données: ' . $e->getMessage()]);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Erreur lors de la communication avec la base de données'
+        // Pour le dev : 'error' => $e->getMessage()
+    ]);
 }
-?>
