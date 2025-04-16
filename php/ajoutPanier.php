@@ -7,7 +7,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $data = json_decode(file_get_contents('php://input'), true);
 $idProd = $data['id_produit'] ?? null;
 $idClient = $data['id_client'] ?? null;
-$idProd = substr($idProd,10);
+$idProd = substr($idProd, 10);
+
 if (!$idProd || !$idClient) {
     http_response_code(400);
     echo json_encode([
@@ -75,9 +76,15 @@ try {
         $message = 'Produit ajouté au panier';
     }
 
+    // Calcul du nombre total d'articles dans le panier
+    $stmtTotal = $conn->prepare('SELECT SUM(quantite_ajoute) AS totalQuantite FROM panier_client WHERE id_client = ?');
+    $stmtTotal->execute([$idClient]);
+    $totalQuantite = $stmtTotal->fetchColumn() ?? 0;
+
     echo json_encode([
         'success' => true,
-        'message' => $message
+        'message' => $message,
+        'totalQuantite' => $totalQuantite // Inclure le total des quantités dans la réponse
     ]);
 
 } catch (PDOException $e) {

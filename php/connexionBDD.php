@@ -5,9 +5,9 @@ function donneConnexionBDD()
     static $conn = null;
 
     if ($conn === null) {
-        $dsn = 'mysql:host=localhost;dbname=db_terroircomtois;charset=utf8';
-        $utilisateur = 'root';
-        $motDePasse = '';
+        $dsn = 'mysql:host=192.168.1.24;dbname=db_terroircomtois;charset=utf8';
+        $utilisateur = 'userbdd';
+        $motDePasse = 'secret';
 
         try {
             $conn = new PDO($dsn, $utilisateur, $motDePasse, [

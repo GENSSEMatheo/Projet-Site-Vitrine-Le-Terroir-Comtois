@@ -9,9 +9,11 @@
     <link rel="icon" type="image/png" href="Images/logo.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="js/jsOnclick/fiches.js"></script>
+    <script src="js/jsOnclick/burgerMenuClic.js"></script>
 
-
+    
 </head>
 
 <body>
@@ -23,9 +25,9 @@
         </span>
     </div>
     <nav id="navGlob">
-        <img src="Images/flecheGauche.png" id="flecheNav" onclick="manageNavOpenClose()">
+         
         <img src="Images/logo.png" alt="Logo de notre entreprise" id="logoEntrepriseRond">
-        <p id="slogan">Le Terroir Comtois : Goûtez la tradition, vivez la passion !</p>
+        
         <ul id="menuGlob">
             <li id="mainMenuLi"><a href="index.html" style="color: #aa7d00;">Accueil</a></li><br>
             <li id="mainMenuLi"><a href="activite.html">Notre activité</a></li><br>
@@ -131,6 +133,22 @@
                 <h3 class="slide-in">Vendredi</h3>
                 <p class="slide-in">9h00-19h00</p>
                 <h3 class="slide-in">Fermé le dimanche et les jours fériés.</h3>
+            </div>
+        </section>
+        <section id="avisSection">
+            <h2>Donnez votre avis</h2>
+            <form id="avisForm">
+                <label for="nom">Votre nom :</label><br>
+                <input type="text" id="nom" name="nom" required><br><br>
+        
+                <label for="avis">Votre avis :</label><br>
+                <textarea id="avis" name="avis" rows="4" required></textarea><br><br>
+        
+                <button type="submit">Envoyer</button>
+            </form>
+        
+            <h2>Les avis de nos clients</h2>
+            <div id="avisList">
             </div>
         </section>
         <footer>

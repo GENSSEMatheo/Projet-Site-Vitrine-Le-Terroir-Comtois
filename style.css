@@ -52,27 +52,10 @@ body {
     position: fixed;
     margin-left: 0%;
     transition: all ease 0.5s;
+    font-size: 10%;
 }
 
-#navGlob #flecheNav {
-    position: absolute;
-    width: 5%;
-    left: 90%;
-    top: 2%;
-    cursor: pointer;
-    display: flex;
-    transition: all ease 0.2s;
-}
 
-#slogan {
-    text-align: center;
-    margin-bottom: 0;
-    margin-top: 8%;
-    text-transform: uppercase;
-    font-style: italic;
-    color: black;
-    font-size: 1vw;
-}
 
 #menuGlob {
     display: flex;
@@ -169,9 +152,12 @@ body {
     color: white;
     padding: 1% 2%;
     border-radius: 50vw;
-    position: absolute;
+    position: relative;
+    width: max-content;
     font-size: 60%;
     right: 5%;
+    left: 0%;
+    display: none;
 }
 
 #TitreSousMenu {
@@ -309,6 +295,73 @@ footer li {
 
 #horaireSection h2 {
     text-transform: uppercase;
+}
+
+#avisSection {
+    margin: 2vh 0;
+    width: 100%;
+    padding: 2vh 0;
+    background-color: rgba(255, 255, 255, 0.712);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#avisForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+#avisForm input,
+#avisForm textarea {
+    max-width: 100%;
+    padding: 0.5vw;
+    margin: 1vh 0;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#avisForm button {
+    max-width: 100%;
+    background-color: #aa7d00;
+    color: white;
+    border: none;
+    padding: 1vh 2vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#avisForm button:hover {
+    background-color: #8a5e00;
+}
+
+#avisList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+#avisList .avis {
+    margin: 1vh 2vw;
+    padding: 1vw;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#avisList .avis h3 {
+    margin: 1vh 0;
+    color: #aa7d00;
+}
+
+#avisList .avis p {
+    margin: 1vh 0;
+    color: #005000;
 }
 
 /*----------------*/
@@ -667,6 +720,7 @@ footer li {
     border-left: solid 1px black;
     padding-left: 1%;
 }
+
 .range-container {
     width: 60%;
     margin: 2% 20%;
@@ -716,6 +770,7 @@ footer li {
     font-size: 1.2em;
     color: #aa7d00;
 }
+
 #sectionProduitsGlob {
     background-color: #0000006e;
     text-align: center;
@@ -775,6 +830,7 @@ footer li {
     right: 0;
     margin: 1% 2%;
     cursor: pointer;
+    z-index: 2;
 }
 
 
@@ -880,6 +936,31 @@ footer li {
     background-color: #aa7d009a;
 }
 
+/*--------------*/
+/*CONTENU PANIER*/
+/*--------------*/
+#buttonPanier {
+    background-color: #aa7d00;
+    color: white;
+    border-radius: 100%;
+    font-size: 2rem;
+    width: 2vw;
+    height: 2vw;
+}
+
+#btnCommander {
+    background-color: #aa7d00;
+    color: white;
+    border: none;
+    margin: 2% 40%;
+    padding: 1% 2%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: none;
+    width: 15%;
+
+}
 
 /*----------------*/
 /*CONTENU CONTACTS*/
@@ -1267,6 +1348,18 @@ button[type="submit"]:hover {
     .infosProdGlob #partieDroiteTexte button {
         width: 80%;
         margin: 2% 10%;
+    }
+
+    /*--------------*/
+    /*CONTENU PANIER*/
+    /*--------------*/
+    #buttonPanier {
+        background-color: #aa7d00;
+        color: white;
+        border-radius: 100%;
+        font-size: 2rem;
+        width: 10vw;
+        height: 5vh;
     }
 
 }

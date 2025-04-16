@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $conn = donneConnexionBDD();
 
     try {
-        // Préparation de la requête
+        // Préparation de la requête pour récupérer les informations utilisateur
         $stmt = $conn->prepare("SELECT id_client, prenom_client, hash_mdp_client FROM compte_client WHERE email_client = ?");
         if (!$stmt) {
             http_response_code(500);
@@ -45,23 +45,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Sécuriser la session
             session_regenerate_id(true);
 
-            // Informations à stocker en session ou localStorage
+            // Récupérer le nombre total d'articles dans le panier
+            $stmtPanier = $conn->prepare("SELECT SUM(quantite_ajoute) AS total_articles FROM panier_client WHERE id_client = ?");
+            $stmtPanier->execute([$user['id_client']]);
+            $panier = $stmtPanier->fetch(PDO::FETCH_ASSOC);
+            $nbrArticlesPanier = $panier['total_articles'] ?? 0;
+
+            // Récupérer le nombre total de produits distincts dans le panier
+            $stmtProduits = $conn->prepare("SELECT COUNT(*) AS total_produits FROM panier_client WHERE id_client = ?");
+            $stmtProduits->execute([$user['id_client']]);
+            $produits = $stmtProduits->fetch(PDO::FETCH_ASSOC);
+            $nbrProduitsDistincts = $produits['total_produits'] ?? 0;
+
+            // Informations à stocker en session
             $_SESSION['user_id'] = $user['id_client'];
             $_SESSION['user_prenom'] = $user['prenom_client'];
 
-            // Redirection JavaScript
+            // Redirection JavaScript avec mise à jour de sessionStorage et innerText
+
             echo "<script>
                     alert('Connexion réussie !');
                     sessionStorage.setItem('connexion_reussie', 'true');
                     sessionStorage.setItem('user_id', '".$user['id_client']."');
                     sessionStorage.setItem('user_prenom', '".$user['prenom_client']."');
-                    window.location.href='index.html';
+                    sessionStorage.setItem('nbrArticlesPanier', '".$nbrArticlesPanier."');
+                    sessionStorage.setItem('nbrProduitsDistincts', '".$nbrProduitsDistincts."');
+                    window.location.href='/index.html';
                   </script>";
         } else {
             http_response_code(401);
             echo "<script>
                     alert('Adresse e-mail ou mot de passe incorrect.');
-                    window.location.href='connexionCompte.html';
+                    window.location.href='/connexionCompte.html';
                   </script>";
         }
     } catch (PDOException $e) {

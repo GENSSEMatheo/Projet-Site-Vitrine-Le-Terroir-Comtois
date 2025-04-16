@@ -35,7 +35,7 @@ try {
         $nouvelleQuantite = $produit['quantite_ajoute'] + $data['variation'];
 
         // Empêcher la quantité de devenir inférieure à 0
-        if ($nouvelleQuantite < 0) {
+        if ($nouvelleQuantite < 1) {
             $nouvelleQuantite = 0;
         }
 
