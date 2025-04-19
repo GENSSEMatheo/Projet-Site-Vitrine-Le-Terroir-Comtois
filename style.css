@@ -952,7 +952,7 @@ footer li {
     background-color: #aa7d00;
     color: white;
     border: none;
-    margin: 2% 40%;
+    margin: 2% 0;
     padding: 1% 2%;
     cursor: pointer;
     border-radius: 5px;
@@ -960,6 +960,17 @@ footer li {
     display: none;
     width: 15%;
 
+}
+
+#viderPanier {
+    background-color: #aa7d00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 /*----------------*/

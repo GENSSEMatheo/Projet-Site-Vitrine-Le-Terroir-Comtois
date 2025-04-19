@@ -27,7 +27,6 @@ function ajouterAuPanier(idProduit) {
             zIndex: "1000",                         
         });
     
-        // Style du contenu du message
         const messageContent = document.getElementById("messageContent");
         messageContent.style.position = "relative";  
         messageContent.style.padding = "30px";
@@ -36,12 +35,10 @@ function ajouterAuPanier(idProduit) {
         messageContent.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.6)";
         messageContent.style.fontSize = "20px"; 
     
-        // Fonction pour fermer la fenêtre/modal
         document.getElementById("closeMessage").addEventListener("click", function() {
             messageDemandeConnection.style.display = "none";  
         });
     
-        // Fonction pour rediriger vers la page de connexion
         document.getElementById("redirectToLogin").addEventListener("click", function() {
             window.location.href = 'connexionCompte.html';  
         });
@@ -63,27 +60,37 @@ function ajouterAuPanier(idProduit) {
             message.id = "messageAjout";
             document.body.appendChild(message);
         
-            message.innerText = "1 article ajouté au panier";
+            message.innerHTML = `
+                <div style="display: flex; align-items: center;">
+                    <img src="images/panier-icon.png" alt="Panier" style="width: 50px; height: 50px; margin-right: 10px;">
+                    <span>Vous avez ajouté 1 article au panier</span>
+                </div>
+                <button id="voirPanier" style="margin-top: 10px; background-color: white; color: #aa7d00; border: 1px solid #aa7d00; padding: 10px 20px; cursor: pointer; border-radius: 5px; font-size: 16px;">Voir le panier</button>
+            `;
+
             Object.assign(message.style, {
                 position: "fixed",
                 top: "10px",
-                right: "40px",
-                padding: "10px 15px",
-                fontSize: "16px",
+                right: "10px",
+                width: "300px",
+                padding: "20px",
+                fontSize: "1rem",
                 backgroundColor: "#aa7d00",
                 color: "white",
-                borderRadius: "5px",
+                borderRadius: "10px",
                 zIndex: "1000",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
                 transition: "opacity 0.5s ease-in-out",
-                opacity: "1"
+                opacity: "1",
             });
-        
-            setTimeout(() => { message.style.opacity = "0"; }, 2000);
 
-            // Mettre à jour sessionStorage avec le total des quantités
+            setTimeout(() => { message.style.opacity = "0"; }, 7000);
+
+            document.getElementById("voirPanier").addEventListener("click", function() {
+                window.location.href = 'monpanier.html';
+            });
+
             sessionStorage.setItem('nbrArticlesPanier', data.totalQuantite);
-
-            // Mettre à jour l'affichage du nombre d'articles dans le panier
             document.getElementById('numPanier').innerText = data.totalQuantite;
 
             if (window.location.href.includes('monpanier.html')) afficherPanier();

@@ -12,8 +12,8 @@
     <script type="module" src="script.js"></script>
     <script src="js/jsOnclick/burgerMenuClic.js"></script>
     <script src="js/jsOnclick/modifierQuantite.js"></script>
-    <script src="js/commander.js"></script>
-
+    <script src="js/jsOnclick/commander.js"></script>
+    <script src="js/jsOnclick/viderPanier.js"></script>
 </head>
 
 <body>
@@ -100,7 +100,11 @@
             </div>
         </header>
         <h2 id="cadrePanier" style="display: none;"></h2>
+
         <section id="sectionProduitsGlob">
+            <button id="viderPanier" onclick="viderPanier()">
+                Vider le panier
+            </button>
             <ul id="listesProduitsUl">
             </ul>
             <button id="btnCommander" onclick="commander()">

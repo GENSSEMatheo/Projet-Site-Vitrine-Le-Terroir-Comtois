@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($stmt->execute([$nom, $prenom, $email, $mdpHash])) {
                 // Compte créé avec succès
                 echo json_encode(['success' => true, 'message' => 'Compte créé avec succès !']);
+                echo "<script>window.location.href = '../connexionCompte.html';</script>";
             } else {
                 // Erreur lors de l'insertion
                 echo json_encode(['success' => false, 'message' => 'Erreur dans l\'ajout de vos coordonnées !']);
